@@ -5,7 +5,7 @@ import java.nio.IntBuffer;
 /**
  * @ClassName BasicBuffer
  * @Description buffer类型基本使用
- * @Author liuxian2
+ * @Author noodles
  * @Date 2020/12/25 15:41
  */
 public class BasicBuffer {
