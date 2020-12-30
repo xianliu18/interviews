@@ -20,6 +20,11 @@ public class NioServer {
 
     public static void main(String[] args) throws IOException {
 
+        /*
+         * ServerSocketChannel： 负责监听新的客户端Socket连接
+         * SocketChannel: 负责具体的读写操作
+         */
+
         // 创建 ServerSocketChannel
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 
