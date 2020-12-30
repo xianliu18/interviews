@@ -1,6 +1,5 @@
 package com.noodles.nio.channel;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -12,7 +11,7 @@ import java.nio.channels.FileChannel;
  * @Author noodles
  * @Date 2020/12/25 16:58
  */
-public class NioFileChannel {
+public class NioFileChannelWrite {
     /*
      * 需求：
      *     1，使用ByteBuffer和FileChannel，将“测试001”写入file01.txt中
