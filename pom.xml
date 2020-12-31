@@ -23,6 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <guava.version>29.0-jre</guava.version>
         <netty-all.version>4.1.36.Final</netty-all.version>
+        <protobuf-java.version>3.14.0</protobuf-java.version>
         <java.version>1.8</java.version>
     </properties>
 
@@ -43,6 +44,12 @@
             <artifactId>netty-all</artifactId>
             <version>${netty-all.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf-java.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>netty</finalName>
