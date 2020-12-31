@@ -2,6 +2,7 @@ package com.noodles.netty.simple;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -22,7 +23,7 @@ public class NettyServer {
          * 2, BossGroup 负责接收客户端的连接；
          *    WorkerGroup 负责网络的读写
          */
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
@@ -45,6 +46,19 @@ public class NettyServer {
             System.out.println(".....服务器准备好了.....");
             // 绑定端口,启动服务器
             ChannelFuture cf = bootstrap.bind(6668).sync();
+
+            // Future-Listener 机制
+            // 给 ChannelFuture 注册监听器，监听端口绑定事件
+            cf.addListener(new ChannelFutureListener() {
+                @Override
+                public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                    if (cf.isSuccess()) {
+                        System.out.println("监听端口6668成功~");
+                    } else {
+                        System.out.println("监听端口6668失败！");
+                    }
+                }
+            });
 
             // 对关闭通道事件进行监听
             cf.channel().closeFuture().sync();
