@@ -29,6 +29,7 @@ public abstract class ChannelAdapter implements CompletionHandler<Integer, Objec
     @Override
     public void completed(Integer result, Object attachment) {
         try {
+            System.out.println("我被调用了~~~~~~");
             final ByteBuffer buffer = ByteBuffer.allocate(1024);
             final long timeout = 60 * 60L;
             channel.read(buffer, timeout, TimeUnit.SECONDS, null, new CompletionHandler<Integer, Object>() {
