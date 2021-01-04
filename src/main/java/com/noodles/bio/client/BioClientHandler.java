@@ -29,6 +29,6 @@ public class BioClientHandler extends ChannelAdapter {
     @Override
     public void channelRead(ChannelHandler ctx, Object msg) {
         System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "接收到消息:" + msg);
-        ctx.writeAndFlush("hi 我已经接收到你的消息了！\r\n");
+        ctx.writeAndFlush("hi 客户端已经接收到你的消息了！\r\n");
     }
 }
