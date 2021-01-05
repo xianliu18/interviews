@@ -51,16 +51,17 @@ public class MyBeanDefinitionParser implements BeanDefinitionParser {
 
         Class<?> type = method.getParameterTypes()[0];
         try {
+            // methodName 是以 set 开头，所以从第四位开始取
             getter = beanClass.getMethod("get" + methodName.substring(3));
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            // 忽略该异常
         }
 
         if (null == getter) {
             try {
                 getter = beanClass.getMethod("is" + methodName.substring(3));
             } catch (NoSuchMethodException e) {
-                e.printStackTrace();
+                // 忽略该异常
             }
         }
 
