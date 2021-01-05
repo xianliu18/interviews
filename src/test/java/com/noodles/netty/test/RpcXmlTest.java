@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class RpcXmlTest {
     public static void main(String[] args) {
-        String[] configs = {"rpc-consumer.xml", "rpc-provider.xml"};
+        String[] configs = {"rpc-center.xml", "rpc-consumer.xml", "rpc-provider.xml"};
         new ClassPathXmlApplicationContext(configs);
     }
 }

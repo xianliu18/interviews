@@ -6,7 +6,7 @@
         http://rpc.itstack.org/schema/rpc http://rpc.itstack.org/schema/rpc/rpc.xsd">
 
     <!-- redis 配置,用于存储链接 -->
-    <rpc:server id="consumer_itstack" host="127.0.0.1" port="6379"/>
+<!--    <rpc:server id="consumer_itstack" host="127.0.0.1" port="6379"/>-->
 
     <rpc:consumer id="consumer_helloServide" nozzle="com.noodles.netty.test.service.HelloService" alias="itStackRpc"/>
 </beans>

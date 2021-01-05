@@ -1,1 +1,1 @@
-http\://rpc.itstack.org/schema/rpc=com.noodles.netty.rpc.config.spring.MyNameSpaceHandler
+http\://rpc.itstack.org/schema/rpc=com.noodles.netty.rpc.newrpc.config.spring.MyNamespaceHandler
