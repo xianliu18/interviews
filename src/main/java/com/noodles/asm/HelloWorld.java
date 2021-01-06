@@ -5,7 +5,7 @@ package com.noodles.asm;
  * @Author: noodles
  * @create: 2021-01-06 08:39
  */
-public class HelloWord {
+public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
