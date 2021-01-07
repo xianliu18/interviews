@@ -29,6 +29,11 @@
         <fastjson.version>1.2.75</fastjson.version>
         <jedis.version>3.3.0</jedis.version>
         <slf4j.version>1.7.5</slf4j.version>
+        <javassist.version>3.12.1.GA</javassist.version>
+        <byte-buddy.version>1.10.9</byte-buddy.version>
+        <byte-buddy-agent.version>1.10.9</byte-buddy-agent.version>
+        <asm-commons.version>6.2.1</asm-commons.version>
+        <redisson.version>3.14.1</redisson.version>
         <java.version>1.8</java.version>
     </properties>
 
@@ -37,6 +42,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <!--lombok-->
         <dependency>
@@ -95,25 +105,25 @@
         <dependency>
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
-            <version>3.12.1.GA</version>
+            <version>${javassist.version}</version>
             <type>jar</type>
         </dependency>
         <!-- Byte-buddy -->
         <dependency>
             <groupId>net.bytebuddy</groupId>
             <artifactId>byte-buddy</artifactId>
-            <version>1.10.9</version>
+            <version>${byte-buddy.version}</version>
         </dependency>
         <dependency>
             <groupId>net.bytebuddy</groupId>
             <artifactId>byte-buddy-agent</artifactId>
-            <version>1.10.9</version>
+            <version>${byte-buddy-agent.version}</version>
         </dependency>
         <!--ASM-->
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-commons</artifactId>
-            <version>6.2.1</version>
+            <version>${asm-commons.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.ow2.asm</groupId>
@@ -124,6 +134,12 @@
                     <artifactId>asm-tree</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <!-- redisson -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${redisson.version}</version>
         </dependency>
     </dependencies>
     <build>
