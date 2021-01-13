@@ -5,7 +5,7 @@ server:
 spring:
   redis:
     database: 0
-    host: 10.110.147.198
+    host: 127.0.0.1
     port: 6379
     lettuce:
       pool:
