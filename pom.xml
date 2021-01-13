@@ -6,7 +6,12 @@
 
     <groupId>org.noodles</groupId>
     <artifactId>netty</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>boot_redis01</module>
+        <module>boot_redis02</module>
+    </modules>
 
     <name>netty</name>
 
