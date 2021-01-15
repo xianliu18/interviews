@@ -7,7 +7,9 @@ import com.noodles.utils.RateInfo;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -25,7 +27,7 @@ public class ApiTest {
 
     private Set<String> words;
 
-    @Before
+//    @Before
     public void before() {
         // 读取文件
         System.out.println(System.getProperty("user.dir"));
@@ -184,7 +186,7 @@ public class ApiTest {
     /**
      * @Description 初始化链表数组
      */
-    @Before
+//    @Before
     public void init() {
         for (int i = 0; i < 10000000; i++) {
             list.add(i);
@@ -241,5 +243,74 @@ public class ApiTest {
             System.out.println(integer);
         });
         System.out.println("Stream 耗时：" + (System.currentTimeMillis() - startTime));
+    }
+
+    @Test
+    public void test_ArrayDeque() {
+        Deque<String> deque = new ArrayDeque<String>(1);
+
+        deque.push("a");
+        deque.push("b");
+        deque.push("c");
+        deque.push("d");
+
+        deque.offerLast("e");
+        deque.offerLast("f");
+        deque.offerLast("g");
+        deque.offerLast("h");
+
+        deque.push("i");
+        deque.offerLast("j");
+
+        System.out.println("数据出栈：");
+
+        while (!deque.isEmpty()) {
+            System.out.println(deque.pop() + " ");
+        }
+    }
+
+    @Test
+    public void test_arraycopy() {
+        int head = 0, tail = 0;
+        Object[] elements = new Object[8];
+        elements[head = (head - 1) & (elements.length - 1)] = "a";
+        elements[head = (head - 1) & (elements.length - 1)] = "b";
+        elements[head = (head - 1) & (elements.length - 1)] = "c";
+        elements[head = (head - 1) & (elements.length - 1)] = "d";
+
+        elements[tail] = "e";
+        tail = (tail + 1) & (elements.length - 1);
+        elements[tail] = "f";
+        tail = (tail + 1) & (elements.length - 1);
+        elements[tail] = "g";
+        tail = (tail + 1) & (elements.length - 1);
+        elements[tail] = "h";
+        tail = (tail + 1) & (elements.length - 1);
+
+        System.out.println("head: " + head);
+        System.out.println("tail: " + tail);
+
+        int p = head;
+        int n = elements.length;
+        int r = n - p;
+
+        System.out.println(JSON.toJSONString(elements));
+
+        // head == tail 扩容
+        Object[] a= new Object[8 << 1];
+        Object[] b= new Object[8 << 1];
+        System.arraycopy(elements, p, a, 0, r);
+        System.out.println(JSON.toJSONString(a));
+        System.arraycopy(elements, 0, a, r, p);
+        System.out.println(JSON.toJSONString(a));
+        System.arraycopy(elements,0, b, 0, n);
+        System.out.println("b 数组：" + JSON.toJSONString(b));
+
+        elements = a;
+        head = 0;
+        tail = n;
+        a[head = (head - 1) & (a.length - 1)] = "i";
+        System.out.println(JSON.toJSONString(a));
+
     }
 }
