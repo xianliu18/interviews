@@ -4,6 +4,15 @@ import com.alibaba.fastjson.JSON;
 import com.noodles.utils.FileUtil;
 import com.noodles.utils.HashCode;
 import com.noodles.utils.RateInfo;
+import com.noodles.utils.TestDelayed;
+
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Random;
+import java.util.concurrent.DelayQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,6 +32,7 @@ import java.util.Set;
  * @Author noodles
  * @Date 2021/1/14 16:58
  */
+@Slf4j
 public class ApiTest {
 
     private Set<String> words;
@@ -313,4 +323,147 @@ public class ApiTest {
         System.out.println(JSON.toJSONString(a));
 
     }
+
+    @Test
+    public void test_Deque_LinkedList() {
+        Deque<String> deque = new LinkedList<>();
+        deque.push("a");
+        deque.push("b");
+        deque.push("c");
+        deque.push("d");
+        deque.offerLast("e");
+        deque.offerLast("f");
+        deque.offerLast("g");
+        deque.offerLast("h");
+        deque.push("i");
+        deque.offerLast("j");
+
+        System.out.println("数据出栈:");
+        while (!deque.isEmpty()) {
+            System.out.println(deque.pop() + " ");
+        }
+    }
+
+    @Test
+    public void test_DelayedQueue() throws InterruptedException {
+        DelayQueue<TestDelayed> delayedQueue = new DelayQueue<>();
+        delayedQueue.offer(new TestDelayed("aaa", 5, TimeUnit.SECONDS));
+        delayedQueue.offer(new TestDelayed("ccc", 1, TimeUnit.SECONDS));
+        delayedQueue.offer(new TestDelayed("bbb", 3, TimeUnit.SECONDS));
+
+        log.info(((TestDelayed)delayedQueue.take()).getStr());
+        log.info(((TestDelayed)delayedQueue.take()).getStr());
+        log.info(((TestDelayed)delayedQueue.take()).getStr());
+    }
+
+    @Test
+    public void test_binarySearch() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+        list.add("6");
+        list.add("7");
+        list.add("8");
+
+        int idx = Collections.binarySearch(list, "5");
+        System.out.println("二分查找:" + idx);
+    }
+
+    @Test
+    public void test_shuffle() {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+        list.add("5");
+        list.add("6");
+        list.add("7");
+        list.add("8");
+
+        Random random = new Random();
+        for (int i = list.size(); i > 1; i--) {
+            int ri = random.nextInt(i);
+            int ji = i - 1;
+            System.out.println("ri: " + ri + "\t ji: " + ji);
+            list.set(ji, list.set(ri, list.get(ji)));
+        }
+        System.out.println(list);
+    }
+
+    @Test
+    public void test_Rotate() {
+        List<String> list = new ArrayList<>();
+        list.add("7");
+        list.add("4");
+        list.add("8");
+        list.add("3");
+        list.add("9");
+        Collections.rotate(list, 2);
+        System.out.println(list);
+    }
+
+    @Test
+    public void test_String() {
+        long startTime = System.currentTimeMillis();
+        String str = "";
+        for (int i = 0; i < 100000; i++) {
+            str += i;
+        }
+        System.out.println("String 耗时:" + (System.currentTimeMillis() - startTime) + "毫秒");
+    }
+
+    @Test
+    public void test_StringBuilder() {
+        long startTime = System.currentTimeMillis();
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < 10000000; i++) {
+            str.append(i);
+            System.out.println(i);
+        }
+        System.out.println("StringBuilder 耗时" + (System.currentTimeMillis() - startTime) + "毫秒");
+    }
+
+    @Test
+    public void test_StringBuffer() {
+        long startTime = System.currentTimeMillis();
+        StringBuffer str = new StringBuffer();
+        for (int i = 0; i < 10000000; i++) {
+            str.append(i);
+            System.out.println(i);
+        }
+        System.out.println("StringBuffer 耗时:" + (System.currentTimeMillis() - startTime) + "耗时");
+    }
+
+    @Test
+    public void test_initStr() {
+        String str_01 = "abc";
+        System.out.println("默认方式:" + str_01);
+
+        String str_02 = new String(new char[]{'a', 'b', 'c'});
+        System.out.println("char方式:" + str_02);
+
+        String str_03 = new String(new int[]{0x61, 0x62, 0x63}, 0, 3);
+        System.out.println("int 方式:" + str_03);
+
+        String str_04 = new String(new byte[]{0x61, 0x62, 0x63});
+        System.out.println("byte 方式:" + str_04);
+    }
+
+    @Test
+    public void test_strEqual() {
+        String str_1 = new String("ab");
+        String str_2 = new String("ab");
+        String str_3 = "ab";
+
+        System.out.println(str_1 == str_2);
+        System.out.println(str_1 == str_2.intern());
+        System.out.println(str_1.intern() == str_2.intern());
+        System.out.println(str_1 == str_3);
+        System.out.println(str_1.intern() == str_3);
+    }
+
 }
