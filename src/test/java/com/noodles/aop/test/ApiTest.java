@@ -6,6 +6,7 @@ import com.noodles.utils.HashCode;
 import com.noodles.utils.RateInfo;
 import com.noodles.utils.TestDelayed;
 
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.Random;
@@ -464,6 +465,28 @@ public class ApiTest {
         System.out.println(str_1.intern() == str_2.intern());
         System.out.println(str_1 == str_3);
         System.out.println(str_1.intern() == str_3);
+    }
+
+    private static final int HASH_INCREMENT = 0x61c88647;
+
+    @Test
+    public void test_idx() {
+        int hashCode = 0;
+        for (int i = 0; i < 16; i++){
+            hashCode = i * HASH_INCREMENT + HASH_INCREMENT;
+            int idx = hashCode & 15;
+            System.out.println("斐波那契散列：" + idx + "\t 普通散列：" + (String.valueOf(i).hashCode() & 15));
+        }
+    }
+
+    @Test
+    public void test_threadLocalHashCode() throws NoSuchFieldException, IllegalAccessException {
+        for (int i = 0; i < 5; i++){
+            ThreadLocal<String> stringThreadLocal = new ThreadLocal<>();
+            Field threadLocalHashCode = stringThreadLocal.getClass().getDeclaredField("threadLocalHashCode");
+            threadLocalHashCode.setAccessible(true);
+            System.out.println("stringThreadLocal:" + threadLocalHashCode.get(stringThreadLocal));
+        }
     }
 
 }

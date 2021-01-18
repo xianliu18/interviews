@@ -18,10 +18,10 @@ public class CustomDateFormat {
     private static ThreadLocal<SimpleDateFormat> threadLocal = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
 
     public static void main(String[] args) {
-        System.out.println(BigDecimal.valueOf(Math.pow(2, 32) * 0.6180339887).intValue());
-        String str = BigDecimal.valueOf(Math.pow(2, 32) * 0.6180339887).intValue() + "";
-
-        System.out.println(new BigInteger(str, 16).toString());
+        int temp = BigDecimal.valueOf(Math.pow(2, 32) * 0.6180339887).intValue();
+        System.out.println(temp);
+        // 十六进制
+        System.out.println(Integer.toString(temp, 16));
     }
 
     public static void notSafe() {
