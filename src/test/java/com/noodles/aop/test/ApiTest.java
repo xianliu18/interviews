@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
@@ -28,6 +29,7 @@ import java.util.Map;
 import java.util.Set;
 import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.vm.VM;
+import sun.misc.Unsafe;
 
 /**
  * @ClassName ApiTest
@@ -497,6 +499,19 @@ public class ApiTest {
         Object obj = new Object();
         System.out.println(obj + "十六进制哈希: " + Integer.toHexString(obj.hashCode()));
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
+    }
+
+    @Test
+    public void test_stateOffset() throws NoSuchFieldException, IllegalAccessException {
+        Unsafe unsafe = getUnsafeInstance();
+        long state = unsafe.objectFieldOffset(AbstractQueuedSynchronizer.class.getDeclaredField("state"));
+        System.out.println(state);
+    }
+
+    private static Unsafe getUnsafeInstance() throws SecurityException,NoSuchFieldException,IllegalArgumentException,IllegalAccessException{
+        Field theUnsafeInstance = Unsafe.class.getDeclaredField("theUnsafe");
+        theUnsafeInstance.setAccessible(true);
+        return(Unsafe) theUnsafeInstance.get(Unsafe.class);
     }
 
 }
