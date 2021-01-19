@@ -66,6 +66,11 @@
             <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-cli</artifactId>
+            <version>0.14</version>
+        </dependency>
         <!-- guava -->
         <dependency>
             <groupId>com.google.guava</groupId>

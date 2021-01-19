@@ -26,6 +26,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import org.openjdk.jol.info.ClassLayout;
+import org.openjdk.jol.vm.VM;
 
 /**
  * @ClassName ApiTest
@@ -487,6 +489,14 @@ public class ApiTest {
             threadLocalHashCode.setAccessible(true);
             System.out.println("stringThreadLocal:" + threadLocalHashCode.get(stringThreadLocal));
         }
+    }
+
+    @Test
+    public void test_jvmCore() {
+        System.out.println(VM.current().details());
+        Object obj = new Object();
+        System.out.println(obj + "十六进制哈希: " + Integer.toHexString(obj.hashCode()));
+        System.out.println(ClassLayout.parseInstance(obj).toPrintable());
     }
 
 }
