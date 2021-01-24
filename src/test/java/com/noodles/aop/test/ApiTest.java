@@ -514,4 +514,26 @@ public class ApiTest {
         return(Unsafe) theUnsafeInstance.get(Unsafe.class);
     }
 
+    @Test
+    public void test() {
+        B b = new B();
+        b.scan();
+    }
+
+    static class A {
+        public void scan() {
+            doScan();
+        }
+        protected void doScan() {
+            System.out.println("A.doScan");
+        }
+    }
+
+    static class B extends A {
+        @Override
+        protected void doScan() {
+            System.out.println("B.doScan");
+        }
+    }
+
 }
