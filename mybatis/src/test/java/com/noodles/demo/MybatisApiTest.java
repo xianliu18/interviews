@@ -1,6 +1,7 @@
 package com.noodles.demo;
 
 import com.alibaba.fastjson.JSON;
+import com.noodles.demo.dao.IUserDao;
 import com.noodles.demo.po.User;
 
 import java.io.IOException;
@@ -10,6 +11,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Description: 测试类
@@ -37,5 +40,12 @@ public class MybatisApiTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void test_IUserDao() {
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring-config.xml");
+        IUserDao userDao = beanFactory.getBean("userDao", IUserDao.class);
+        System.out.println("测试结果:" + userDao.queryUserInfo());
     }
 }

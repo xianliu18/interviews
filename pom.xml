@@ -59,7 +59,7 @@
                 <artifactId>jcommander</artifactId>
                 <version>1.72</version>
             </dependency>
-            <!--lombok-->
+            <!--java.sql.Connection 包-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

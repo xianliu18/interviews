@@ -10,6 +10,8 @@
 
         <aop:aspectj-autoproxy/>
 
+        <bean id="userDao" class="com.noodles.demo.proxy.RegisterBeanFactory"/>
+
         <!-- 属性文件读入 -->
         <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
             <property name="locations">
