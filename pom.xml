@@ -14,6 +14,8 @@
         <module>jvm</module>
         <module>mybatis</module>
         <module>schedule</module>
+        <module>spring</module>
+        <module>custom_mybatis</module>
     </modules>
 
     <name>netty</name>
