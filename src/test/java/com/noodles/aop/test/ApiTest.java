@@ -536,4 +536,12 @@ public class ApiTest {
         }
     }
 
+    @Test
+    public void testMap() {
+        Map<String, String> map = new HashMap<>();
+        map.put(null, "abc");
+        map.put(null, "def");
+        System.out.println(map.get(null));
+    }
+
 }

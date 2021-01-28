@@ -1,7 +1,8 @@
 package com.noodles.aop.test;
 
 import com.noodles.aop.CalcService;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.SpringBootVersion;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.SpringVersion;
