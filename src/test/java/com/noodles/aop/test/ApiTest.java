@@ -130,11 +130,17 @@ public class ApiTest {
 
     @Test
     public void test_copy_remove() {
-        int[] oldArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int index = 2;
-        int numMoved = 10 - index - 1;
-        System.arraycopy(oldArr, index + 1, oldArr, index, numMoved);
-        System.out.println("数组元素：" + JSON.toJSONString(oldArr));
+//        int[] oldArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        int index = 2;
+//        int numMoved = 10 - index - 1;
+//        System.arraycopy(oldArr, index + 1, oldArr, index, numMoved);
+//        System.out.println("数组元素：" + JSON.toJSONString(oldArr));
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
+        list.remove(2);
+        System.out.println(list.get(2));
     }
 
     @Test
@@ -201,7 +207,7 @@ public class ApiTest {
     /**
      * @Description 初始化链表数组
      */
-//    @Before
+    @Before
     public void init() {
         for (int i = 0; i < 10000000; i++) {
             list.add(i);
