@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
@@ -486,6 +487,23 @@ public class ApiTest {
             hashCode = i * HASH_INCREMENT + HASH_INCREMENT;
             int idx = hashCode & 15;
             System.out.println("斐波那契散列：" + idx + "\t 普通散列：" + (String.valueOf(i).hashCode() & 15));
+        }
+    }
+
+    @Test
+    public void test_Atomic() {
+        AtomicInteger ai = new AtomicInteger(5);
+        ai.getAndAdd(6);
+        System.out.println(ai);
+    }
+
+    @Test
+    public void test_nextHashCode() throws NoSuchFieldException, IllegalAccessException {
+        for (int i = 0; i < 5; i++){
+            ThreadLocal<String> stringThreadLocal = new ThreadLocal<>();
+            Field threadLocalHashCode = stringThreadLocal.getClass().getDeclaredField("nextHashCode");
+            threadLocalHashCode.setAccessible(true);
+            System.out.println("nextHashCode:" + threadLocalHashCode.get(stringThreadLocal));
         }
     }
 
