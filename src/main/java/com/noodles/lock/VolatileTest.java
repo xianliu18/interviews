@@ -29,11 +29,10 @@ public class VolatileTest {
 }
 
 class VT implements Runnable {
-    public boolean sign = false;
+    public volatile boolean sign = false;
 
     public void run() {
         while (!sign) {
-            System.out.println("hello world");
         }
         System.out.println(Thread.currentThread().getName() + " 测试通过!");
     }

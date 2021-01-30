@@ -19,6 +19,7 @@ public class VisibilityTest {
             while (!sign) {
                 i++;
                 add(i);
+                System.out.println(Thread.currentThread().getName() + i);
             }
         }, "thread01");
 
