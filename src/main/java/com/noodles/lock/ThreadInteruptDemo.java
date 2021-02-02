@@ -77,7 +77,7 @@ public class ThreadInteruptDemo {
             } finally {
                 lock1.unlock();
                 lock2.unlock();
-                System.out.println("DemoThread 线程:" + Thread.currentThread().getName() + "正常结束");
+                System.out.println("线程:" + Thread.currentThread().getName() + "正常结束");
             }
         }
     }

@@ -1,6 +1,5 @@
 package com.noodles.redis.config;
 
-import com.google.common.primitives.Chars;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.RedisStringCommands;
 import org.springframework.data.redis.connection.ReturnType;
