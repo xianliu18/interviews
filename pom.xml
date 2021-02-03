@@ -16,6 +16,7 @@
         <module>schedule</module>
         <module>spring</module>
         <module>custom_mybatis</module>
+        <module>demo-spring-boot-starter</module>
     </modules>
     <dependencies>
         <dependency>

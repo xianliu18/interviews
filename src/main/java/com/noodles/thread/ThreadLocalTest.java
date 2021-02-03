@@ -33,7 +33,7 @@ public class ThreadLocalTest {
             System.out.println(Thread.currentThread().getName() + holder.get().messages);
         }).start();
 
-        System.out.println(holder.get().messages);
+        System.out.println("main类线程变量： " + holder.get().messages);
         ThreadLocalTest.clear();
     }
 

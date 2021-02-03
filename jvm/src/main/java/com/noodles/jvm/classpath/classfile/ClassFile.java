@@ -2,7 +2,7 @@ package com.noodles.jvm.classpath.classfile;
 
 import com.noodles.jvm.classpath.classfile.attributes.AttributeInfo;
 
-import sun.jvm.hotspot.oops.ConstantPool;
+//import sun.jvm.hotspot.oops.ConstantPool;
 
 /**
  * @Description:
@@ -13,7 +13,7 @@ public class ClassFile {
 
     private int minorVersion;
     private int majorVersion;
-    private ConstantPool constantPool;
+//    private ConstantPool constantPool;
     private int accessFlags;
     private int thisClassIdx;
     private int[] interfaces;

@@ -115,6 +115,12 @@ public class ApiTest {
     }
 
     @Test
+    public void test_MapSize() {
+        int m = 17;
+
+    }
+
+    @Test
     public void test_Arraycopy() {
         int[] oldArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] newArr = new int[oldArr.length + (oldArr.length >> 1)];
@@ -563,8 +569,22 @@ public class ApiTest {
     @Test
     public void testMap() {
         Map<String, String> map = new HashMap<>();
-        map.put(null, "abc");
-        map.put(null, "def");
+        map.put("jlkk", "uu");
+        map.put("lopi", "mvp");
+        map.put("jmdw", "mvp");
+        map.put("e4we", "mvp");
+        map.put("io98", "mvp");
+        map.put("nmhg", "mvp");
+        map.put("vfg6", "mvp");
+        map.put("gfrt", "mvp");
+        map.put("alpo", "mvp");
+        map.put("vfbh", "mvp");
+        map.put("bnhj", "mvp");
+//        map.put("zuio", "mvp");
+//        map.put("iu8e", "mvp");
+//        map.put("yhjk", "mvp");
+//        map.put("plop", "mvp");
+//        map.put("dd0p", "mvp");
         System.out.println(map.get(null));
     }
 
