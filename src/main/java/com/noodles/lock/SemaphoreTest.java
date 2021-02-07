@@ -20,7 +20,7 @@ public class SemaphoreTest {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    semaphore.release();
+                    semaphore.release(2);
                 }
             }, "线程名称: " + i).start();
         }
