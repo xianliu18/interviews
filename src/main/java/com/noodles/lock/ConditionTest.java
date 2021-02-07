@@ -21,8 +21,15 @@ public class ConditionTest {
         ExecutorService proService = Executors.newFixedThreadPool(2);
         ExecutorService conService = Executors.newFixedThreadPool(4);
 
-        proService.execute(new Producer(r));
-        conService.execute(new Consumer(r));
+        for (int i = 0; i < 4; i++) {
+            proService.execute(new Producer(r));
+        }
+        for (int i = 0; i < 4; i++) {
+            conService.execute(new Consumer(r));
+        }
+
+        proService.shutdown();
+        conService.shutdown();
     }
 
 }
