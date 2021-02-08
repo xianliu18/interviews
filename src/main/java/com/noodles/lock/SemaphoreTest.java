@@ -14,13 +14,13 @@ public class SemaphoreTest {
         for (int i = 0; i < 8; i++) {
             new Thread(() -> {
                 try {
-                    semaphore.acquire(2);
+                    semaphore.acquire();
                     System.out.println(Thread.currentThread().getName() + "占用");
                     Thread.sleep(1000L);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    semaphore.release(2);
+                    semaphore.release();
                 }
             }, "线程名称: " + i).start();
         }
