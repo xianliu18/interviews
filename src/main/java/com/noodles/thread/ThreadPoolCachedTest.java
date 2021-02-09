@@ -27,6 +27,7 @@ public class ThreadPoolCachedTest {
                 }
             });
         }
+        executorService.shutdown();
     }
 
 }

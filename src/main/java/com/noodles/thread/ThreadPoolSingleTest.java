@@ -27,6 +27,7 @@ public class ThreadPoolSingleTest {
                 }
             });
         }
+        executorService.shutdown();
     }
 
 }
