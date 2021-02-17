@@ -6,6 +6,8 @@ import java.lang.ref.WeakReference;
  * @ClassName WeakReferenceDemo
  * @Description 弱引用
  * @Author noodles
+ * 启动参数:
+ *  -Xmx16m  -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:NewSize=2m -XX:MaxNewSize=2m
  * @Date 2021/1/11 12:20
  */
 public class WeakReferenceDemo {
