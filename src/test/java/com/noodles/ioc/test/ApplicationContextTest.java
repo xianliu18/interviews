@@ -22,6 +22,14 @@ public class ApplicationContextTest {
     }
 
     @Test
+    public void testParentBean() {
+        String configLocation = "src/test/resources/applicationContext.xml";
+        ApplicationContext context = new FileSystemXmlApplicationContext(configLocation);
+        System.out.println("hello -> " + context.getBean("hello"));
+        System.out.println("hello-child -> " + context.getBean("hello-child"));
+    }
+
+    @Test
     public void testAutowired() {
         String configLocation = "src/test/resources/applicationContext.xml";
         ApplicationContext context = new FileSystemXmlApplicationContext(configLocation);

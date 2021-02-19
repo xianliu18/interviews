@@ -14,8 +14,14 @@
     <bean id="hello" class="com.noodles.ioc.service.Hello">
         <property name="content" value="hello"/>
     </bean>
+
     <alias name="hello" alias="alias-hello"/>
     <alias name="alias-hello" alias="double-alias-hello"/>
+
+    <!-- 配置父子类继承关系 -->
+    <bean id="hello-child" parent="hello">
+        <property name="content" value="i'm hello-child"/>
+    </bean>
 
     <bean name="mongoDao" class="com.noodles.ioc.dao.MongoDao"/>
     <bean name="mysqlDao" class="com.noodles.ioc.dao.MySqlDao"/>
