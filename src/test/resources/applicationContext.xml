@@ -28,4 +28,24 @@
 
     <!-- 通过配置 autowire 属性 -->
     <bean name="service-with-autowire" class="com.noodles.ioc.service.Service" autowire="byName"/>
+
+    <bean id="helloFactory" class="com.noodles.ioc.HelloFactoryBean"/>
+
+    <bean id="staticHelloFactory" class="com.noodles.ioc.StaticHelloFactory" factory-method="getHello"/>
+
+    <bean id="news" class="com.noodles.ioc.beanfactory.News" scope="prototype"/>
+    <bean id="newsProvider" class="com.noodles.ioc.beanfactory.NewsProvider">
+        <property name="news" ref="news"/>
+    </bean>
+
+    <bean id="newsProvider2" class="com.noodles.ioc.beanfactory.NewsProvider2">
+        <property name="news" ref="news"/>
+    </bean>
+
+    <bean id="newsProvider3" class="com.noodles.ioc.beanfactory.NewsProvider">
+        <lookup-method name="getNews" bean="news"/>
+    </bean>
+
+    <bean class="com.noodles.ioc.beanpostprocessor.LoggerBeanPostProcessor"/>
+
 </beans>

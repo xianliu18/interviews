@@ -23,9 +23,10 @@ public class Service {
     }
 
     public void setMysqlDao(MySqlDao mysqlDao) {
+        this.mysqlDao = mysqlDao;
     }
 
     public void setMongoDao(MongoDao mongoDao) {
+        this.mongoDao = mongoDao;
     }
-
 }
