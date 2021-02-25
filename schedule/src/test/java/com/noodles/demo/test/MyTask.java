@@ -33,7 +33,7 @@ public class MyTask {
         cronTriggerFactoryBean.setName("demoTask");
         cronTriggerFactoryBean.afterPropertiesSet();
 
-        // 定义了 执行的功能
+        // 调度执行计划
         SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
         schedulerFactoryBean.setTriggers(cronTriggerFactoryBean.getObject());
         schedulerFactoryBean.setAutoStartup(true);

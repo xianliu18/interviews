@@ -7,6 +7,9 @@
 
     <bean id="task" class="com.noodles.demo.DemoTask"/>
 
-
+<!--    <bean id="taskTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+<!--        <property name="jobDetail" ref="taskHandler"/>-->
+<!--        <property name="cronExpression" value="0/5 * * * * ?"/>-->
+<!--    </bean>-->
 
 </beans>
