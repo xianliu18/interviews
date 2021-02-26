@@ -95,6 +95,10 @@
             <artifactId>transmittable-thread-local</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.13</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
         </dependency>
@@ -127,6 +131,7 @@
         <mysql.version>5.1.20</mysql.version>
         <fastjson.version>1.2.75</fastjson.version>
         <jedis.version>3.3.0</jedis.version>
+        <kafka.version>2.6.0</kafka.version>
         <slf4j.version>1.7.5</slf4j.version>
         <javassist.version>3.12.1.GA</javassist.version>
         <byte-buddy.version>1.10.9</byte-buddy.version>
@@ -223,6 +228,11 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.13</artifactId>
+                <version>${kafka.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
