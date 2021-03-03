@@ -14,4 +14,6 @@ public interface ArticleDao {
 
     List<Article> findByAuthorAndCreateTime(@Param("author") String author, @Param("createTime") String createTime);
 
+    Article findOne(@Param("id") Integer id);
+
 }

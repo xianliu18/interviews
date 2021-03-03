@@ -3,11 +3,14 @@
 <mapper namespace="com.noodles.demo.dao.ArticleDao">
 
     <resultMap id="articleResult" type="com.noodles.demo.po.Article">
+        <constructor>
+            <idArg column="id" name="id"/>
+            <arg column="title" name="title"/>
+            <arg column="content" name="content"/>
+        </constructor>
         <id property="id" column="id"/>
-        <id property="title" column="title"/>
-        <id property="author" column="author"/>
-        <id property="content" column="content"/>
-        <id property="createTime" column="create_time"/>
+        <result property="author" column="author"/>
+        <result property="createTime" column="create_time"/>
     </resultMap>
     <select id="findByAuthorAndCreateTime" resultMap="articleResult">
         SELECT
@@ -16,5 +19,19 @@
             article
         WHERE
             author = #{author} and create_time > #{createTime}
+    </select>
+
+    <sql id="table">
+        ${table_name}
+    </sql>
+
+    <select id="findOne" resultType="com.noodles.demo.po.Article">
+        SELECT
+            id, title
+        FROM
+            <include refid="table">
+                <property name="table_name" value="article"/>
+            </include>
+        WHERE id = #{id}
     </select>
 </mapper>

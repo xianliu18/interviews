@@ -29,11 +29,8 @@ public class SpringJdbcTest {
         String date = "2021-01-01";
         String sql = "SELECT id, title, author, content, create_time FROM article WHERE author = '" + author + "' AND create_time > '" + date + "'";
         List<Article> articleList = jdbcTemplate.query(sql, (rs, rowNum) -> {
-           Article article = new Article();
-           article.setId(rs.getInt("id"));
-           article.setTitle(rs.getString("title"));
+           Article article = new Article(rs.getInt("id"), rs.getString("title"), rs.getString("content"));
            article.setAuthor(rs.getString("author"));
-           article.setContent(rs.getString("content"));
            article.setCreateTime(rs.getDate("create_time"));
            return article;
         });

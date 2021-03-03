@@ -2,6 +2,7 @@ package com.noodles.demo.po;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 
@@ -15,6 +16,15 @@ import java.util.Date;
 @Getter
 @Setter
 public class Article {
+
+    public Article(){}
+
+    public Article(@Param("id") Integer id, @Param("title") String title, @Param("content") String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
+
     private Integer id;
     private String title;
     private String author;
