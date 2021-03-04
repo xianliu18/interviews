@@ -13,6 +13,13 @@ public class Author {
     private Integer sex;
     private String email;
 
+    public Author(String name, Integer age, Integer sex, String email) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.email = email;
+    }
+
     public Integer getId() {
         return id;
     }
