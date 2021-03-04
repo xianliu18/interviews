@@ -8,6 +8,13 @@
 
     <!-- 配置全局属性 -->
     <settings>
+        <!-- 开启延迟加载 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 关闭积极的加载策略 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 延迟加载的触发方法 -->
+        <setting name="lazyLoadTriggerMethods" value=""/>
+
         <!-- 使用jdbc的 getGeneratedKeys 获取数据库自增主键值 -->
         <setting name="useGeneratedKeys" value="true"/>
         <!-- 使用列别名替换列名, 默认为 true -->
@@ -29,6 +36,6 @@
     </environments>
 
     <mappers>
-        <mapper resource="mapper/ArticleMapper.xml"/>
+        <mapper resource="mapper/ArticleNewMapper.xml"/>
     </mappers>
 </configuration>
