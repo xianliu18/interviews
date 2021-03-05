@@ -22,4 +22,13 @@
         WHERE
             id = #{id}
     </update>
+
+    <select id="findByPaging" resultType="com.noodles.demo.po.Student">
+        SELECT
+            `id`, `name`, `age`
+        FROM
+            student
+        WHERE
+            id > #{id}
+    </select>
 </mapper>

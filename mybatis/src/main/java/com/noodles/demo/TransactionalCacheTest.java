@@ -20,6 +20,7 @@ import org.junit.Test;
 
 /**
  * @Description: 不可重复读测试
+ * 参考连接: www.tianxiaobo.com/2018/08/25/MyBatis-源码分析-缓存原理/
  * @Author: noodles
  * @create: 2021-03-05 10:56
  */
