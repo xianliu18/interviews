@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.noodles.demo.dao.StudentDao">
+
+    <!-- 缓存 -->
+    <cache/>
+
+    <select id="findOne" resultType="com.noodles.demo.po.Student">
+        SELECT
+            `id`, `name`, `age`
+        FROM
+             student
+        WHERE
+            id = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE
+            student
+        SET
+            `name` = #{name}
+        WHERE
+            id = #{id}
+    </update>
+</mapper>

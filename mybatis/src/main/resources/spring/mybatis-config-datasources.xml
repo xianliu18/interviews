@@ -38,5 +38,6 @@
     <mappers>
         <mapper resource="mapper/ArticleNewMapper.xml"/>
         <mapper resource="mapper/AuthorMapper.xml"/>
+        <mapper resource="mapper/StudentMapper.xml"/>
     </mappers>
 </configuration>
