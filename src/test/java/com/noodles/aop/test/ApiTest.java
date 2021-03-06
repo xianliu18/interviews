@@ -115,6 +115,22 @@ public class ApiTest {
     }
 
     @Test
+    public void test_ArrayList_Remove() {
+        List<String> a = new ArrayList<>();
+        a.add("1");
+        a.add("2");
+        a.add("3");
+        Iterator<String> iter = a.iterator();
+        while (iter.hasNext()) {
+            String temp = iter.next();
+            System.out.println("temp: " + temp);
+            if ("1".equals(temp)) {
+                a.remove(temp);
+            }
+        }
+    }
+
+    @Test
     public void test_MapSize() {
         int m = 17;
 
@@ -586,6 +602,23 @@ public class ApiTest {
 //        map.put("plop", "mvp");
 //        map.put("dd0p", "mvp");
         System.out.println(map.get(null));
+    }
+
+    @Test
+    public void test_MapTraversal() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(7, "");
+        map.put(11, "");
+        map.put(43, "");
+        map.put(59, "");
+        map.put(19, "");
+        map.put(3, "");
+        map.put(35, "");
+
+        System.out.println("遍历结果:");
+        for (Integer key : map.keySet()) {
+            System.out.print(key + " -> ");
+        }
     }
 
 }
