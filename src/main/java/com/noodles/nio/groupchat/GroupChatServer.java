@@ -70,7 +70,7 @@ public class GroupChatServer {
                         keyIter.remove();
                     }
                 } else {
-                    System.out.println("暂时没有连接发生，等待中。。。");
+//                    System.out.println("暂时没有连接发生，等待中。。。");
                 }
             }
         } catch(IOException e) {

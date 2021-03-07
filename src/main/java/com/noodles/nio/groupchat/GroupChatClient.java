@@ -34,7 +34,7 @@ public class GroupChatClient {
             socketChannel.register(selector, SelectionKey.OP_READ);
             // 得到userName
             userName = socketChannel.getLocalAddress().toString().substring(1);
-
+            System.out.println(userName + " is ok...");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -75,6 +75,8 @@ public class GroupChatClient {
                     // 移除当前SelectionKey
                     keyIter.remove();
                 }
+            } else {
+                System.out.println("没有可用的通道~~");
             }
         } catch (IOException e) {
             e.printStackTrace();
