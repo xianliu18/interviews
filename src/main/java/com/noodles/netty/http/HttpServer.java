@@ -27,7 +27,7 @@ public class HttpServer {
                      .childHandler(new HttpServerInitializer());
 
             // 绑定端口
-            ChannelFuture cf = bootstrap.bind(6668).sync();
+            ChannelFuture cf = bootstrap.bind(8015).sync();
 
             // 对关闭通道事件监听
             cf.channel().closeFuture().sync();

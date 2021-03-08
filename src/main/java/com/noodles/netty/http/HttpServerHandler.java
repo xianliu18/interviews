@@ -13,6 +13,8 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.util.CharsetUtil;
 
+import java.net.URI;
+
 /**
  * @ClassName HttpServerHandler
  * @Description 自定义Handler类
@@ -26,8 +28,18 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
     protected void channelRead0(ChannelHandlerContext ctx, HttpObject msg) throws Exception {
         if (msg instanceof HttpRequest) {
 
+            System.out.println("pipeline hashcode" + ctx.pipeline().hashCode() + ", HttpServerHandler hash=" + this.hashCode());
+
             System.out.println("msg 类型为：" + msg.getClass());
             System.out.println("客户端地址为：" + ctx.channel().remoteAddress());
+
+            HttpRequest httpRequest = (HttpRequest)msg;
+            // 获取到 uri
+            URI uri = new URI(httpRequest.uri());
+            if ("/favicon.ico".equals(uri.getPath())) {
+                System.out.println("请求了 favicon.ico, 不做响应");
+                return;
+            }
 
             // 响应客户端请求，需要按http协议组装
             ByteBuf content = Unpooled.copiedBuffer("Response from netty server", CharsetUtil.UTF_8);
