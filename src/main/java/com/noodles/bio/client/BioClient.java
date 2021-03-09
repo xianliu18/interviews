@@ -14,7 +14,7 @@ public class BioClient {
 
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("127.0.0.1", 8015);
-        System.out.println("bio client start done");
+        System.out.println("Bio client start done");
         BioClientHandler bioClientHandler = new BioClientHandler(socket, Charset.forName("utf-8"));
         bioClientHandler.start();
     }

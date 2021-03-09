@@ -9,7 +9,6 @@ import io.netty.util.concurrent.DefaultEventExecutorGroup;
 import io.netty.util.concurrent.EventExecutorGroup;
 
 import java.io.UnsupportedEncodingException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName NettyServerHandler
