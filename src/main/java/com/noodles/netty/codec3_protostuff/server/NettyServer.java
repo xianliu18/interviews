@@ -10,6 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 /**
  * @ClassName NettyServer
  * @Description netty 服务器端
+ * 参考链接: https://bugstack.cn/itstack-demo-netty-2/2019/08/18/netty案例-netty4.1中级拓展篇三-Netty传输Java对象.html
  * @Author noodles
  * @Date 2021/3/9 16:49
  */
