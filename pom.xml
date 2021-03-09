@@ -69,6 +69,10 @@
             <artifactId>protobuf-java</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+        </dependency>
+        <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
         </dependency>
@@ -81,6 +85,10 @@
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
         </dependency>
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
@@ -128,6 +136,7 @@
         <objenesis.version>2.4</objenesis.version>
         <mybatis.version>3.4.6</mybatis.version>
         <protobuf-java.version>3.14.0</protobuf-java.version>
+        <protostuff-core.version>1.7.2</protostuff-core.version>
         <mysql.version>5.1.20</mysql.version>
         <fastjson.version>1.2.75</fastjson.version>
         <jedis.version>3.3.0</jedis.version>
@@ -183,6 +192,16 @@
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
                 <version>${protobuf-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-core</artifactId>
+                <version>${protostuff-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.protostuff</groupId>
+                <artifactId>protostuff-runtime</artifactId>
+                <version>${protostuff-core.version}</version>
             </dependency>
             <!-- mysql -->
             <dependency>
