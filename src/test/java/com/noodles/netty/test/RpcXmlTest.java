@@ -1,6 +1,6 @@
 package com.noodles.netty.test;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * @Description: 读取自定义XML配置测试类
@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class RpcXmlTest {
     public static void main(String[] args) {
-        String[] configs = {"rpc-center.xml", "rpc-consumer.xml", "rpc-provider.xml"};
-        new ClassPathXmlApplicationContext(configs);
+        String[] configs = {"src/test/resources/rpc-center.xml", "src/test/resources/rpc-consumer.xml", "src/test/resources/rpc-provider.xml"};
+        new FileSystemXmlApplicationContext(configs);
     }
 }
