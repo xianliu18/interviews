@@ -18,6 +18,7 @@
         <module>custom_mybatis</module>
         <module>demo-spring-boot-starter</module>
         <module>spring_schedule</module>
+        <module>dubbo</module>
     </modules>
     <dependencies>
         <dependency>
