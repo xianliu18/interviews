@@ -20,8 +20,6 @@
         <module>spring_schedule</module>
         <module>dubbo</module>
         <module>dubbo_consumer</module>
-        <module>dubbo_provider_one</module>
-        <module>dubbo_pro01</module>
         <module>dubbo_provider</module>
     </modules>
     <dependencies>
