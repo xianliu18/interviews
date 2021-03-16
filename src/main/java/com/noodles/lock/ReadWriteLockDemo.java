@@ -1,7 +1,5 @@
 package com.noodles.lock;
 
-import com.noodles.netty.codec3_protostuff.codec.ObjDecoder;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -58,16 +56,12 @@ public class ReadWriteLockDemo {
 
         for (int i = 1; i <= 5; i++) {
             final int tempInt = i;
-            new Thread(() -> {
-                myCache.put(tempInt + "", tempInt + "");
-            }, String.valueOf(i)).start();
+            new Thread(() -> myCache.put(tempInt + "", tempInt + ""), String.valueOf(i)).start();
         }
 
         for (int i = 1; i <= 5; i++) {
             final int tempInt = i;
-            new Thread(() -> {
-                myCache.get(tempInt + "");
-            }, String.valueOf(i)).start();
+            new Thread(() -> myCache.get(tempInt + ""), String.valueOf(i)).start();
         }
 
     }
