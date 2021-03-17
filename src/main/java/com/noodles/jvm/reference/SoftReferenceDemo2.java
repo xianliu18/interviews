@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.jvm.reference;
 
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;

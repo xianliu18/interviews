@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.jvm.reference;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,6 +7,7 @@ import java.util.WeakHashMap;
 /**
  * @ClassName WeakHashMapDemo
  * @Description weakHashMap
+ * 参考链接：https://www.bilibili.com/video/BV1zb411M7NQ?p=76
  * @Author noodles
  * @Date 2021/1/11 13:43
  */

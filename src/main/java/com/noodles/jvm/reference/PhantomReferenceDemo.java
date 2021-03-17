@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.jvm.reference;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
@@ -6,6 +6,7 @@ import java.lang.ref.ReferenceQueue;
 /**
  * @ClassName PhantomReferenceDemo
  * @Description 虚引用
+ * 参考地址：https://www.bilibili.com/video/BV1zb411M7NQ?p=79
  * @Author noodles
  * @Date 2021/1/11 14:06
  */
@@ -28,7 +29,5 @@ public class PhantomReferenceDemo {
         System.out.println(o1);
         System.out.println(phantomReference.get());
         System.out.println(referenceQueue.poll());
-
-
     }
 }
