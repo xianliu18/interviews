@@ -105,7 +105,7 @@ public class ThreadPoolTrader implements Executor {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("任务编号: " + temp);
+                System.out.println("线程名称："+Thread.currentThread().getName()+" -----> 任务编号: " + temp);
             });
         }
     }

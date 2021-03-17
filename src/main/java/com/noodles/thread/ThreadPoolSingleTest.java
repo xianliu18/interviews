@@ -23,7 +23,7 @@ public class ThreadPoolSingleTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    log.info("第 {} 组任务, 第 {} 次执行完成", groupId, j);
+                    log.info("线程名称：{} -----> 第 {} 组任务, 第 {} 次执行完成", Thread.currentThread().getName(), groupId, j);
                 }
             });
         }
