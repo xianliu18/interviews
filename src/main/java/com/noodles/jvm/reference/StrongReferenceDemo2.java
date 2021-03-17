@@ -6,12 +6,16 @@ import java.util.List;
 /**
  * @Description: 强引用示例
  * @Author: noodles
- * 启动参数:
+ *
  * -Xms: 等价于 -XX:InitialHeapSize
  * -Xmx: 等价于 -XX:MaxHeapSize
  * -Xss: 等价于 -XX:ThreadStackSize   单个线程栈的大小
- * -Xmx16m  -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:NewSize=2m -XX:MaxNewSize=2m
  * -XX:MaxTenuringThreshold=15 设置垃圾最大年龄，默认为15
+ *
+ *
+ * 启动参数:
+ * -Xmx16m  -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:NewSize=2m -XX:MaxNewSize=2m
+ *
  * @create: 2021-02-16 21:51
  */
 public class StrongReferenceDemo2 {

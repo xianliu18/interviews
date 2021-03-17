@@ -1,10 +1,16 @@
-package com.noodles.asm;
+package com.noodles.jvm.oom;
 
 import java.nio.ByteBuffer;
 
 /**
  * @ClassName DirectBufferMemoryDemo
- * @Description 直接引用
+ * @Description 直接引用  OutOfMemoryError: Direct buffer memory
+ *
+ * 参考链接：https://www.bilibili.com/video/BV1zb411M7NQ?p=84
+ *
+ * 启动参数：
+ *   -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m
+ *
  * @Author noodles
  * @Date 2021/1/11 14:44
  */

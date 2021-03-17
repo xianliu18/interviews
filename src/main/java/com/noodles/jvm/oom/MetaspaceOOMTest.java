@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.jvm.oom;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
@@ -9,6 +9,12 @@ import java.lang.reflect.Method;
 /**
  * @ClassName MetaspaceOOMTest
  * @Description 元空间
+ *
+ * 参考链接：https://www.bilibili.com/video/BV1zb411M7NQ?p=87
+ *
+ * 启动命令：
+ *   -XX:MetaspaceSize=8m -XX:MaxMetaspaceSize=10m
+ *
  * @Author noodles
  * @Date 2021/1/11 15:26
  */

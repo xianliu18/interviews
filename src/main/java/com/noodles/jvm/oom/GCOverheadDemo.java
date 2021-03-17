@@ -1,11 +1,17 @@
-package com.noodles.asm;
+package com.noodles.jvm.oom;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @ClassName GCOverheadDemo
- * @Description GC 异常示例
+ * @Description GC 异常示例 OutOfMemoryError: GC overhead limit exceeded
+ *
+ * 参考链接：https://www.bilibili.com/video/BV1zb411M7NQ?p=83
+ *
+ * 启动参数：
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m
+ *
  * @Author noodles
  * @Date 2021/1/11 14:31
  */
