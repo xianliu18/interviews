@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
@@ -9,6 +9,9 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @ClassName LockSupportDemo
  * @Description LockSupport 示例
+ *
+ * 参考链接: https://www.bilibili.com/video/BV1zb411M7NQ?p=131
+ *
  * @Author noodles
  * @Date 2021/1/12 11:40
  */

@@ -1,4 +1,4 @@
-package com.noodles.asm;
+package com.noodles.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
