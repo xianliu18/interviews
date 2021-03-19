@@ -2,11 +2,10 @@ package com.noodles.aop.test;
 
 import com.noodles.aop.CalcService;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.SpringBootVersion;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.SpringVersion;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
