@@ -7,6 +7,9 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 /**
  * @ClassName ClientSpringContainer
  * @Description spring 容器
+ *
+ * 参考链接: https://www.bilibili.com/video/BV1zb411M7NQ?p=154
+ *
  * @Author noodles
  * @Date 2021/1/12 16:08
  */
