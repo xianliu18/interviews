@@ -1,0 +1,12 @@
+# Queue 配置文件
+server:
+  port: 7777
+
+spring:
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+  jms:
+    pub-sub-domain: false    # false = Queue,     true = Topic
+
+# 自定义队列名称
+myqueue: boot-activemq-queue
