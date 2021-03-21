@@ -21,6 +21,7 @@
         <module>dubbo</module>
         <module>dubbo_consumer</module>
         <module>dubbo_provider</module>
+        <module>activemq</module>
     </modules>
     <dependencies>
         <dependency>
