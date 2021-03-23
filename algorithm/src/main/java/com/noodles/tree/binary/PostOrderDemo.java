@@ -17,6 +17,8 @@ public class PostOrderDemo {
         System.out.println();
         System.out.println("\nOne Stack:");
         postOrderIterOneStack(TreeNode.NodeDemo());
+        System.out.println("\nMorris 遍历:");
+        postOrderMorris(TreeNode.NodeDemo());
     }
 
     /**
@@ -67,6 +69,74 @@ public class PostOrderDemo {
                 } else {
                     current = temp;
                 }
+            }
+        }
+    }
+
+    /**
+     * Morris 遍历
+     *   - 参考资料：
+     *      - Morris 后序遍历： https://zhuanlan.zhihu.com/p/34125755
+     *      - Morris： https://www.cnblogs.com/anniekim/archive/2013/06/15/morristraversal.html
+     */
+    public static void postOrderMorris(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        TreeNode dummy = new TreeNode();
+        dummy.left = root;
+        TreeNode current = dummy;
+
+        while (current != null) {
+            if (current.left == null) {
+                current = current.right;
+            } else {
+                TreeNode predecessor = current.left;
+                while (predecessor.right != null && predecessor.right != current) {
+                    predecessor = predecessor.right;
+                }
+
+                if (predecessor.right == null) {
+                    predecessor.right = current;
+                    current = current.left;
+                } else {
+                    printReverse(current.left, predecessor);
+                    predecessor.right = null;
+                    current = current.right;
+                }
+            }
+        }
+    }
+
+    private static void printReverse(TreeNode from, TreeNode to) {
+        reverse(from, to);
+
+        TreeNode temp = to;
+        while (true) {
+            System.out.print(temp.val + "\t");
+            if (temp == from) {
+                break;
+            }
+            temp = temp.right;
+        }
+
+        reverse(to, from);
+    }
+
+    private static void reverse(TreeNode from, TreeNode to) {
+        if (from == to) {
+            return;
+        }
+        TreeNode nodeA = from;
+        TreeNode nodeB = from.right;
+        TreeNode temp;
+        while (true) {
+            temp = nodeB.right;
+            nodeB.right = nodeA;
+            nodeA = nodeB;
+            nodeB = temp;
+            if (nodeA == to) {
+                break;
             }
         }
     }
