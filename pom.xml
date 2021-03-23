@@ -25,6 +25,7 @@
         <module>activemq_boot_producer</module>
         <module>activemq_boot_consumer</module>
         <module>rocketmq</module>
+        <module>algorithm</module>
     </modules>
     <dependencies>
         <dependency>
