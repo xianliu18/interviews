@@ -1,4 +1,4 @@
-package com.noodles.rocketmq.base.async;
+package com.noodles.rocketmq.base.producer;
 
 import java.util.concurrent.TimeUnit;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
