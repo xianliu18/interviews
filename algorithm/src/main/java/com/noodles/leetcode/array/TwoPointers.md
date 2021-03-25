@@ -13,4 +13,21 @@ Two Pointers:
 4, Capacity To Ship Packages Within D Days(1011)
 5, Maimum Side Length of a Square with(1292)
 
-==== 
+==== Linked List Node
+1, Delete Node In a Linked List(237)
+2, Linked List Cycle(141)
+3, Reverse Linked List II(92)
+4, Reverse Nodes In K-Group(25)
+
+=== Stack
+1, Daily Temperatures(739)
+2, Asteriod Collision(735)
+3, Valid Parentheses(20)
+4, Next Greater Element I(496)
+5, Next Greater Element II(503)
+6, Decode String(394)
+7, Exclusive Time of Functions(636)
+8, Largest Rectangle in Histogram(84) 
+
+=== Heap
+1, 
