@@ -1,7 +1,10 @@
 package com.noodles.tree.avl;
 
 /**
- * @Description: AVL 树
+ * @Description: AVL 树   平衡二叉搜索树
+ *              Self-balancing Binary Search Tree
+ *
+ *              参考链接：https://www.cnblogs.com/skywang12345/p/3577479.html
  * @Author: noodles
  * @create: 2021-03-23 21:27
  */
