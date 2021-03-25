@@ -36,6 +36,7 @@ public class SortAnArray {
     private static int partition(int[] nums, int low, int hi) {
         int i = low;
         int j = hi + 1;
+        // 头部，作为pivot
         int pivot = nums[low];
         while (true) {
             while (nums[++i] < pivot) {
@@ -55,6 +56,30 @@ public class SortAnArray {
         }
         swap(nums, low, j);
         return j;
+    }
+
+    /**
+     * 参考资料： https://www.bilibili.com/video/BV1QE41177ST
+     */
+    private static int partition2(int[] nums, int left, int right) {
+        // 末尾作为 pivot
+        int pivot = nums[right];
+        int leftIndex = left;
+        int rightIndex = right - 1;
+        while (true) {
+            while (leftIndex < right && nums[leftIndex] <= pivot) {
+                leftIndex++;
+            }
+            while (rightIndex >= left && nums[rightIndex] > pivot) {
+                rightIndex--;
+            }
+            if (leftIndex > rightIndex) {
+                break;
+            }
+            swap(nums, leftIndex, rightIndex);
+        }
+        swap(nums, leftIndex, right);
+        return leftIndex;
     }
 
     private static void swap(int[] nums, int a, int b) {
