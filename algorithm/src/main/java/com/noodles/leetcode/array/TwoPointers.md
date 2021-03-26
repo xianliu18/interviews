@@ -98,6 +98,59 @@ Two Pointers:
 5, Is Graph Bipartite(785)
 6, Keys and Rooms(841)
 
+=== Search, Dynamic Programming1
+1, Subsets(78)
+2, Word Break(139)
+3, Subsets II(90)
+4, Generate Parentheses(22)
+5, Min Cost Climbing Stairs(746)
+6, Climbing Stairs(70)
+7, Maximum Subarray(35)
+
+=== 1D Dynamic Programming
+1, Unique Binary Search Trees(96)
+2, Decode Ways(91)
+3, Maximum Subarray(53)
+4, Integer Break(343)
+5, Perfect Squares(279)
+6, Counting Bits(338)
+7, Range Sum Query - Immutable(303)
+8, Word Break II(140)
+
+=== 2D Dynamic Programming 1
+1, Unique Paths II(63)
+2, Longest Common Subsequence(1143)
+3, Longest Common Subarray
+4, Minimum Falling Path Sum(931)
+5, Unique Paths(62)
+6, Triangle(20)
+7, Range Sum Query 2D - Immutable(304)
+8, Distinct Subsequences(115)
+
+=== 2D Dynamic Programming 2
+1, Stone Game(877)
+2, Longest Palindromic Substring(5)
+3, Longest Palindromic Subsequence(516)
+4, Length of Longest Fibonacci Subsequence(873)
+5, Minimum Insertion Steps to Make a String Palindrome(1312)
+6, Burst Balloons(312)
+7, Minimum Cost to Merge Stones(1000)
+
+=== 2D Dynamic Programming 3
+1, Split Array Largest Sum(410)
+2, Range Sum Query - Immutable(303)
+3, Best Time to Buy and Sell Stock IV(188)
+4, Best Time To Buy and Sell Stock II(122)
+5, Coin Change(322)
+6, Best Time to Buy and Sell Stock III(123)
+7, Super Egg Drop(887)
+8, Minimum Difficulty of a Job Schedule(1335)
+9, Valid Palindrome III(1216)
+
+=== Backtrack 解题模板
+1, Permutations(46)
+2, Permutations II(47)
+
 
 
 
