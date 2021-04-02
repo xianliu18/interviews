@@ -22,6 +22,9 @@ public class CuratorLockDemo {
         curatorFramework.start();
 
         // InterProcessMutex, 可重入锁
+        // InterProcessSemaphoreMutex: 分布式排它锁
+        // InterProcessReadWriteLock: 分布式读写锁
+        // InterProcessMultiLock: 将多个锁作为单个实体管理的容器
         InterProcessMutex interProcessMutex = new InterProcessMutex(curatorFramework, "/locks");
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 5; i++) {
