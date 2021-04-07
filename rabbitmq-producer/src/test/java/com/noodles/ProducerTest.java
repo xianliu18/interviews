@@ -2,7 +2,9 @@ package com.noodles;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,5 +71,52 @@ public class ProducerTest {
         });
         // 发送消息
         rabbitTemplate.convertAndSend("confirm_exchange", "confirm", "message for return...");
+    }
+
+    /**
+     * TTL: 过期时间
+     *      1, 队列统一过期
+     *
+     *      2, 消息单独过期
+     *
+     */
+    @Test
+    public void testTTL() {
+        for (int i = 0; i < 10; i++) {
+            // 发送消息
+            rabbitTemplate.convertAndSend("test_exchange_ttl", "ttl.hello", "message for queue ttl...");
+        }
+    }
+
+    /**
+     * 消息单独过期
+     */
+    @Test
+    public void testMessageTtl() {
+        rabbitTemplate.convertAndSend("test_exchange_ttl", "ttl.hello", "message for ttl...", new MessagePostProcessor() {
+            @Override
+            public Message postProcessMessage(Message message) throws AmqpException {
+                // 1, 设置message的消息
+                message.getMessageProperties().setExpiration("5000");
+                // 2, 返回该消息
+                return message;
+            }
+        });
+    }
+
+    /**
+     * 死信队列:
+     *      1, 过期时间
+     *      2, 队列长度限制
+     *      3, 消息拒收
+     */
+    @Test
+    public void testDlx() {
+        // 1, 过期时间
+        rabbitTemplate.convertAndSend("test_exchange_dlx", "test.dlx.test001", "test001~~~");
+        // 2, 队列长度限制
+        for (int i = 0; i < 20; i++) {
+            rabbitTemplate.convertAndSend("test_exchange_dlx", "test.dlx.messageLength", "message length " + i);
+        }
     }
 }

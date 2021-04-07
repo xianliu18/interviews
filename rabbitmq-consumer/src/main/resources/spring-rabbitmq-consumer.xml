@@ -17,9 +17,11 @@
 
     <bean id="springQueueListener" class="com.noodles.spring.listener.SpringQueueListener"/>
     <bean id="ackListener" class="com.noodles.spring.listener.AckListener"/>
+    <bean id="qosListener" class="com.noodles.spring.listener.QosListener"/>
 
-    <rabbit:listener-container connection-factory="connectionFactory" auto-declare="true" acknowledge="manual">
+    <rabbit:listener-container connection-factory="connectionFactory" auto-declare="true" acknowledge="manual" prefetch="1">
         <rabbit:listener ref="springQueueListener" queue-names="spring_queue"/>
-        <rabbit:listener ref="ackListener" queue-names="test_queue_confirm"/>
+<!--        <rabbit:listener ref="ackListener" queue-names="test_queue_confirm"/>-->
+        <rabbit:listener ref="qosListener" queue-names="test_queue_confirm"/>
     </rabbit:listener-container>
 </beans>
