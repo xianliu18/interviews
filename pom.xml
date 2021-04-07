@@ -26,6 +26,11 @@
         <module>activemq_boot_consumer</module>
         <module>rocketmq</module>
         <module>algorithm</module>
+        <module>rabbitmq</module>
+        <module>rabbitmq-producer</module>
+        <module>rabbitmq-consumer</module>
+        <module>rabbitmq-boot-producer</module>
+        <module>rabbitmq-boot-consumer</module>
     </modules>
     <dependencies>
         <dependency>

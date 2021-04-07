@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd">
+
+    <context:property-placeholder location="classpath:rabbit.properties"/>
+
+    <!-- 定义 rabbitmq connectionFactory -->
+    <rabbit:connection-factory id="connectionFactory" host="${rabbitmq.host}"
+                               port="${rabbitmq.port}"
+                               virtual-host="${rabbitmq.virtual.host}"/>
+
+    <bean id="springQueueListener" class="com.noodles.spring.listener.SpringQueueListener"/>
+
+    <rabbit:listener-container connection-factory="connectionFactory" auto-declare="true">
+        <rabbit:listener ref="springQueueListener" queue-names="spring_queue"/>
+    </rabbit:listener-container>
+</beans>
