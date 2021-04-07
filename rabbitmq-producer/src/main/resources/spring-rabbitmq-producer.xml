@@ -13,7 +13,9 @@
     <!-- 定义 rabbitmq connectionFactory -->
     <rabbit:connection-factory id="connectionFactory" host="${rabbitmq.host}"
                                port="${rabbitmq.port}"
-                               virtual-host="${rabbitmq.virtual.host}"/>
+                               virtual-host="${rabbitmq.virtual.host}"
+                                publisher-confirms="true"
+                                publisher-returns="true"/>
 
     <!-- 定义管理交换机， 队列 -->
     <rabbit:admin connection-factory="connectionFactory"/>
@@ -41,6 +43,16 @@
         </rabbit:bindings>
     </rabbit:topic-exchange>
 
+    <!-- 消息可靠性投递（生产端）-->
+    <rabbit:queue id="test_queue_confirm" name="test_queue_confirm"/>
+    <rabbit:direct-exchange name="confirm_exchange">
+        <rabbit:bindings>
+            <rabbit:binding queue="test_queue_confirm" key="confirm"></rabbit:binding>
+        </rabbit:bindings>
+    </rabbit:direct-exchange>
+
     <!-- 定义 rabbitTemplate -->
     <rabbit:template id="rabbitTemplate" connection-factory="connectionFactory"/>
+
+
 </beans>

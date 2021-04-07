@@ -16,8 +16,10 @@
                                virtual-host="${rabbitmq.virtual.host}"/>
 
     <bean id="springQueueListener" class="com.noodles.spring.listener.SpringQueueListener"/>
+    <bean id="ackListener" class="com.noodles.spring.listener.AckListener"/>
 
-    <rabbit:listener-container connection-factory="connectionFactory" auto-declare="true">
+    <rabbit:listener-container connection-factory="connectionFactory" auto-declare="true" acknowledge="manual">
         <rabbit:listener ref="springQueueListener" queue-names="spring_queue"/>
+        <rabbit:listener ref="ackListener" queue-names="test_queue_confirm"/>
     </rabbit:listener-container>
 </beans>
