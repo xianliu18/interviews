@@ -8,6 +8,7 @@ import com.noodles.utils.TestDelayed;
 
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.DelayQueue;
@@ -107,6 +108,10 @@ public class ApiTest {
         }
     }
 
+    /***
+     * @Description ArrayList
+     *      参考连接：https://bugstack.cn/interview/2020/08/27/面经手册-第7篇-ArrayList也这么多知识-一个指定位置插入就把谢飞机面晕了.html
+     */
     @Test
     public void test_ArrayList() {
         List<String> list = new ArrayList<>(10);
@@ -131,9 +136,14 @@ public class ApiTest {
     }
 
     @Test
-    public void test_MapSize() {
-        int m = 17;
+    public void test_ArrayList_Transfer() {
+        List<Integer> list1 = Arrays.asList(1, 2, 3);
+        System.out.println("通过数组转换：" + (list1.toArray().getClass() == Object[].class));
 
+        System.out.println("数组转换的class为：" + list1.toArray().getClass());
+
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 3));
+        System.out.println("通过集合转换：" + (list2.toArray().getClass() == Object[].class));
     }
 
     @Test
@@ -152,12 +162,25 @@ public class ApiTest {
     }
 
     @Test
-    public void test_copy_remove() {
-//        int[] oldArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//        int index = 2;
-//        int numMoved = 10 - index - 1;
-//        System.arraycopy(oldArr, index + 1, oldArr, index, numMoved);
-//        System.out.println("数组元素：" + JSON.toJSONString(oldArr));
+    public void test_ArrayList_add() {
+        List<String> list = new ArrayList<>(Collections.nCopies(9, "a"));
+        System.out.println("初始化:" + JSON.toJSONString(list));
+
+        list.add(2, "b");
+        System.out.println("添加后：" + JSON.toJSONString(list));
+    }
+
+    @Test
+    public void test_copy_remove1() {
+        int[] oldArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int index = 2;
+        int numMoved = 10 - index - 1;
+        System.arraycopy(oldArr, index + 1, oldArr, index, numMoved);
+        System.out.println("数组元素：" + JSON.toJSONString(oldArr));
+    }
+
+    @Test
+    public void test_copy_remove2() {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             list.add(i);
@@ -186,6 +209,11 @@ public class ApiTest {
         System.out.println("耗时：" + (System.currentTimeMillis() - startTime));
     }
 
+    /**
+     * @Description 尾部插入
+     *      ArrayList： 5224
+     *      LinkedList： 7348
+     */
     @Test
     public void test_ArrayList_addLast() {
         ArrayList<Integer> list = new ArrayList<>();
@@ -223,70 +251,6 @@ public class ApiTest {
         for (int i = 0; i < 10000000; i++) {
             list.add(list.size() >> 1, i);
         }
-    }
-
-    private LinkedList<Integer> list = new LinkedList<>();
-    private int xx = 0;
-    /**
-     * @Description 初始化链表数组
-     */
-    @Before
-    public void init() {
-        for (int i = 0; i < 10000000; i++) {
-            list.add(i);
-        }
-    }
-
-    @Test
-    public void test_LinkedList_for0() {
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i < list.size(); i++) {
-            xx += list.get(i);
-            System.out.println(i);
-        }
-        System.out.println("for0 耗时：" + (System.currentTimeMillis() - startTime));
-    }
-
-    @Test
-    public void test_LinkedList_for1() {
-        long startTime = System.currentTimeMillis();
-        for (Integer itr : list) {
-            xx += itr;
-            System.out.println(itr);
-        }
-        System.out.println("for1 耗时：" + (System.currentTimeMillis() - startTime));
-    }
-
-    @Test
-    public void test_LinkedList_Iterator() {
-        long startTime = System.currentTimeMillis();
-        Iterator<Integer> iter = list.iterator();
-        while (iter.hasNext()) {
-            Integer next = iter.next();
-            xx += next;
-            System.out.println(next);
-        }
-        System.out.println("iterator 耗时：" + (System.currentTimeMillis() - startTime));
-    }
-
-    @Test
-    public void test_LinkedList_forEach() {
-        long startTime = System.currentTimeMillis();
-        list.forEach(integer -> {
-            xx += integer;
-            System.out.println(integer);
-        });
-        System.out.println("forEach 耗时：" + (System.currentTimeMillis() - startTime));
-    }
-
-    @Test
-    public void test_LinkedList_stream() {
-        long startTime = System.currentTimeMillis();
-        list.stream().forEach(integer -> {
-            xx += integer;
-            System.out.println(integer);
-        });
-        System.out.println("Stream 耗时：" + (System.currentTimeMillis() - startTime));
     }
 
     @Test

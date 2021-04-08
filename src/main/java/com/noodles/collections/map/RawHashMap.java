@@ -1,4 +1,4 @@
-package com.noodles.basic;
+package com.noodles.collections.map;
 
 import com.alibaba.fastjson.JSON;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Author noodles
  * @Date 2021/1/14 18:09
  */
-public class RowHashMap {
+public class RawHashMap {
     public static void main(String[] args) {
         // 初始化一组字符串
         List<String> list = new ArrayList<>();
