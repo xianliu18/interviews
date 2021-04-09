@@ -341,66 +341,6 @@ public class ApiTest {
         System.out.println(list);
     }
 
-    @Test
-    public void test_String() {
-        long startTime = System.currentTimeMillis();
-        String str = "";
-        for (int i = 0; i < 100000; i++) {
-            str += i;
-        }
-        System.out.println("String 耗时:" + (System.currentTimeMillis() - startTime) + "毫秒");
-    }
-
-    @Test
-    public void test_StringBuilder() {
-        long startTime = System.currentTimeMillis();
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < 10000000; i++) {
-            str.append(i);
-            System.out.println(i);
-        }
-        System.out.println("StringBuilder 耗时" + (System.currentTimeMillis() - startTime) + "毫秒");
-    }
-
-    @Test
-    public void test_StringBuffer() {
-        long startTime = System.currentTimeMillis();
-        StringBuffer str = new StringBuffer();
-        for (int i = 0; i < 10000000; i++) {
-            str.append(i);
-            System.out.println(i);
-        }
-        System.out.println("StringBuffer 耗时:" + (System.currentTimeMillis() - startTime) + "耗时");
-    }
-
-    @Test
-    public void test_initStr() {
-        String str_01 = "abc";
-        System.out.println("默认方式:" + str_01);
-
-        String str_02 = new String(new char[]{'a', 'b', 'c'});
-        System.out.println("char方式:" + str_02);
-
-        String str_03 = new String(new int[]{0x61, 0x62, 0x63}, 0, 3);
-        System.out.println("int 方式:" + str_03);
-
-        String str_04 = new String(new byte[]{0x61, 0x62, 0x63});
-        System.out.println("byte 方式:" + str_04);
-    }
-
-    @Test
-    public void test_strEqual() {
-        String str_1 = new String("ab");
-        String str_2 = new String("ab");
-        String str_3 = "ab";
-
-        System.out.println(str_1 == str_2);
-        System.out.println(str_1 == str_2.intern());
-        System.out.println(str_1.intern() == str_2.intern());
-        System.out.println(str_1 == str_3);
-        System.out.println(str_1.intern() == str_3);
-    }
-
     private static final int HASH_INCREMENT = 0x61c88647;
 
     @Test
