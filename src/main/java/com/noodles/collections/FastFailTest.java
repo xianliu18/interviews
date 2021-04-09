@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.collections;
 
 import java.util.ArrayList;
 import java.util.Iterator;
