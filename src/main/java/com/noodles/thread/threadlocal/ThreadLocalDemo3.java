@@ -1,14 +1,15 @@
-package com.noodles.thread;
+package com.noodles.thread.threadlocal;
 
 import java.lang.reflect.Field;
 
 /**
  * @ClassName ThreadLocalDemo
- * @Description ThreadLocalDemo相关
+ * @Description ThreadLocalDemo 弱引用
+ *      参考链接： https://www.cnblogs.com/wang-meng/p/12856648.html
  * @Author noodles
  * @Date 2021/1/18 12:06
  */
-public class ThreadLocalDemo {
+public class ThreadLocalDemo3 {
 
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(() -> test("abc", false));

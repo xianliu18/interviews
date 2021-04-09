@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.threadlocal;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
 import io.netty.util.concurrent.FastThreadLocal;

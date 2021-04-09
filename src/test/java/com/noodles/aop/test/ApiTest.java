@@ -341,43 +341,11 @@ public class ApiTest {
         System.out.println(list);
     }
 
-    private static final int HASH_INCREMENT = 0x61c88647;
-
-    @Test
-    public void test_idx() {
-        int hashCode = 0;
-        for (int i = 0; i < 16; i++){
-            hashCode = i * HASH_INCREMENT + HASH_INCREMENT;
-            int idx = hashCode & 15;
-            System.out.println("斐波那契散列：" + idx + "\t 普通散列：" + (String.valueOf(i).hashCode() & 15));
-        }
-    }
-
     @Test
     public void test_Atomic() {
         AtomicInteger ai = new AtomicInteger(5);
         ai.getAndAdd(6);
         System.out.println(ai);
-    }
-
-    @Test
-    public void test_nextHashCode() throws NoSuchFieldException, IllegalAccessException {
-        for (int i = 0; i < 5; i++){
-            ThreadLocal<String> stringThreadLocal = new ThreadLocal<>();
-            Field threadLocalHashCode = stringThreadLocal.getClass().getDeclaredField("nextHashCode");
-            threadLocalHashCode.setAccessible(true);
-            System.out.println("nextHashCode:" + threadLocalHashCode.get(stringThreadLocal));
-        }
-    }
-
-    @Test
-    public void test_threadLocalHashCode() throws NoSuchFieldException, IllegalAccessException {
-        for (int i = 0; i < 5; i++){
-            ThreadLocal<String> stringThreadLocal = new ThreadLocal<>();
-            Field threadLocalHashCode = stringThreadLocal.getClass().getDeclaredField("threadLocalHashCode");
-            threadLocalHashCode.setAccessible(true);
-            System.out.println("stringThreadLocal:" + threadLocalHashCode.get(stringThreadLocal));
-        }
     }
 
     @Test
