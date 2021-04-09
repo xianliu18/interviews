@@ -2,6 +2,7 @@ package com.noodles.lock;
 
 /**
  * @Description: volatile 测试
+ *     参考连接: https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html
  * @Author: noodles
  * @create: 2021-01-18 22:53
  */
