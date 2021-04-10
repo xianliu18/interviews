@@ -1,6 +1,5 @@
 package com.noodles.design_pattern.singleton;
 
-import com.noodles.lock.Singleton;
 import org.junit.Test;
 
 import java.io.File;

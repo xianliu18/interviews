@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 /**
  * @Description: 线程通信
+ *      参考链接: https://www.cnblogs.com/noteless/p/10468834.html
  * @Author: noodles
  * @create: 2021-02-02 23:46
  */

@@ -1,6 +1,6 @@
 package com.noodles.aop.test;
 
-import com.noodles.lock.SyncLock;
+import com.noodles.thread.lock.SyncLock;
 import org.junit.Test;
 
 /**
