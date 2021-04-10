@@ -349,14 +349,6 @@ public class ApiTest {
     }
 
     @Test
-    public void test_jvmCore() {
-        System.out.println(VM.current().details());
-        Object obj = new Object();
-        System.out.println(obj + "十六进制哈希: " + Integer.toHexString(obj.hashCode()));
-        System.out.println(ClassLayout.parseInstance(obj).toPrintable());
-    }
-
-    @Test
     public void test_stateOffset() throws NoSuchFieldException, IllegalAccessException {
         Unsafe unsafe = getUnsafeInstance();
         long state = unsafe.objectFieldOffset(AbstractQueuedSynchronizer.class.getDeclaredField("state"));

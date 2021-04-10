@@ -1,10 +1,11 @@
-package com.noodles.lock;
+package com.noodles.lock.synchronizeddemo;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * @ClassName VisibilityTest
- * @Description 可见性测试
+ * @Description synchronized 可见性测试
+ *      参考链接: https://bugstack.cn/interview/2020/10/28/面经手册-第15篇-码农会锁-synchronized-解毒-剖析源码深度分析.html
  * @Author noodles
  * @Date 2021/1/19 11:10
  */

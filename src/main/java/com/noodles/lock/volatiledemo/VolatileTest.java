@@ -1,4 +1,4 @@
-package com.noodles.lock;
+package com.noodles.lock.volatiledemo;
 
 /**
  * @Description: volatile 测试

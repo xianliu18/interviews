@@ -1,4 +1,4 @@
-package com.noodles.lock;
+package com.noodles.lock.synchronizeddemo;
 
 /**
  * @ClassName ReentryTest
