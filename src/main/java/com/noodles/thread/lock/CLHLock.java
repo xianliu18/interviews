@@ -8,6 +8,7 @@ import java.util.concurrent.locks.Lock;
 /**
  * @ClassName CLHLock
  * @Description CLH 锁实现
+ *      参考链接:  https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html
  * @Author noodles
  * @Date 2021/1/19 17:57
  */
