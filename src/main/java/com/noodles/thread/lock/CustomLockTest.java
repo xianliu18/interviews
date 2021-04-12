@@ -3,6 +3,7 @@ package com.noodles.thread.lock;
 /**
  * @ClassName CustomLockTest
  * @Description 自定义锁测试
+ *      参考链接： https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html
  * @Author noodles
  * @Date 2021/2/8 11:17
  */

@@ -5,6 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Description: Condition 示例
+ *      参考链接： https://www.cnblogs.com/wang-meng/p/12816829.html
  * @Author: noodles
  * @create: 2021-02-07 23:02
  */
