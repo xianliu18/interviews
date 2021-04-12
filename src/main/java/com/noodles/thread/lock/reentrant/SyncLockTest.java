@@ -1,15 +1,15 @@
-package com.noodles.aop.test;
+package com.noodles.thread.lock.reentrant;
 
-import com.noodles.thread.lock.SyncLock;
 import org.junit.Test;
 
 /**
  * @ClassName LockTest
  * @Description 锁测试
+ *      参考链接： https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html
  * @Author noodles
  * @Date 2021/1/19 19:33
  */
-public class LockTest {
+public class SyncLockTest {
 
     @Test
     public void test_SyncLock() throws InterruptedException {

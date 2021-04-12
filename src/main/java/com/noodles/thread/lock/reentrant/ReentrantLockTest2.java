@@ -1,11 +1,12 @@
-package com.noodles.thread.lock;
+package com.noodles.thread.lock.reentrant;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @Description: 可重入锁测试
+ * @Description: 可重入以及公平锁测试
+ *      参考链接： https://zhuanlan.zhihu.com/p/88884729
  * @Author: noodles
  * @create: 2021-02-06 20:58
  */
@@ -25,7 +26,7 @@ public class ReentrantLockTest2 {
         for (int i = 0; i < 2; i++) {
             lock.lock();
             try {
-                System.out.println(Thread.currentThread().getName() + "获取了锁");
+                System.out.println(Thread.currentThread().getName() + "获取了锁,循环次数：" + i);
                 TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();

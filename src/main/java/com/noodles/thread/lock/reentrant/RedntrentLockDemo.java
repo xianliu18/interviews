@@ -1,4 +1,4 @@
-package com.noodles.thread.lock;
+package com.noodles.thread.lock.reentrant;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Author noodles
  * @Date 2021/1/12 10:59
  */
-public class ReEntrentLockDemo {
+public class RedntrentLockDemo {
 
     static Lock lock = new ReentrantLock();
 

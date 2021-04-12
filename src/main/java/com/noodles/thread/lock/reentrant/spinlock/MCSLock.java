@@ -1,4 +1,4 @@
-package com.noodles.thread.lock;
+package com.noodles.thread.lock.reentrant.spinlock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;

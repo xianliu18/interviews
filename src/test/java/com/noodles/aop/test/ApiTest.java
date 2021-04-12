@@ -6,18 +6,13 @@ import com.noodles.utils.HashCode;
 import com.noodles.utils.RateInfo;
 import com.noodles.utils.TestDelayed;
 
-import java.lang.reflect.Field;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.AbstractQueuedSynchronizer;
-import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayDeque;
@@ -29,9 +24,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.openjdk.jol.info.ClassLayout;
-import org.openjdk.jol.vm.VM;
-import sun.misc.Unsafe;
 
 /**
  * @ClassName ApiTest
@@ -346,19 +338,6 @@ public class ApiTest {
         AtomicInteger ai = new AtomicInteger(5);
         ai.getAndAdd(6);
         System.out.println(ai);
-    }
-
-    @Test
-    public void test_stateOffset() throws NoSuchFieldException, IllegalAccessException {
-        Unsafe unsafe = getUnsafeInstance();
-        long state = unsafe.objectFieldOffset(AbstractQueuedSynchronizer.class.getDeclaredField("state"));
-        System.out.println(state);
-    }
-
-    private static Unsafe getUnsafeInstance() throws SecurityException,NoSuchFieldException,IllegalArgumentException,IllegalAccessException{
-        Field theUnsafeInstance = Unsafe.class.getDeclaredField("theUnsafe");
-        theUnsafeInstance.setAccessible(true);
-        return(Unsafe) theUnsafeInstance.get(Unsafe.class);
     }
 
     @Test
