@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.LongAdder;
 /**
  * @ClassName AtomicLongAdderTest
  * @Description AtomicLong 和 LongAdder 耗时测试
+ *      参考链接： https://www.cnblogs.com/wang-meng/p/12892695.html
  * @Author noodles
  * @Date 2021/2/7 10:47
  */
