@@ -78,6 +78,34 @@ public class ThreadStateTest {
         }
     }
 
+    /**
+     * 参考链接: https://www.cnblogs.com/noteless/p/10443446.html
+     */
+    @Test
+    public void test_TimedWaiting2() {
+        Thread thread = new Thread(() -> {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
+
+        while (true) {
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("线程状态:" + thread.getState());
+            if (Thread.State.TERMINATED.equals(thread.getState())) {
+                System.out.println("线程状态: " + thread.getState());
+                break;
+            }
+        }
+    }
+
     @Test
     public void test_Terminated() {
         Thread thread = new Thread(() -> {});
@@ -89,44 +117,4 @@ public class ThreadStateTest {
         System.out.println(thread.getState());
     }
 
-    private static volatile Map<String, AtomicInteger> countMap = new ConcurrentHashMap<>();
-    static class Y implements Runnable {
-        private String name;
-        private boolean isYield;
-        public Y(String name, boolean isYield) {
-            this.name = name;
-            this.isYield = isYield;
-        }
-
-        @Override
-        public void run() {
-            long startTime = System.currentTimeMillis();
-            for (int i = 0; i < 1000; i++) {
-                if (isYield) {
-                    Thread.yield();
-                }
-                AtomicInteger atomicInteger = countMap.get(name);
-                if (null == atomicInteger) {
-                    countMap.put(name, new AtomicInteger(1));
-                    continue;
-                }
-                atomicInteger.addAndGet(1);
-                countMap.put(name, atomicInteger);
-            }
-            System.out.println("线程编号：" + name + "执行完成耗时：" + (System.currentTimeMillis() - startTime) + "(毫秒)" + (isYield ? "让出CPU---------------" : "不让CPU"));
-        }
-    }
-
-    @Test
-    public void test_Yield() throws InterruptedException {
-        for (int i = 0; i < 50; i++) {
-            if (i < 10) {
-                new Thread(new Y(String.valueOf(i), true)).start();
-                continue;
-            }
-            new Thread(new Y(String.valueOf(i), false)).start();
-        }
-
-        Thread.sleep(50000);
-    }
 }
