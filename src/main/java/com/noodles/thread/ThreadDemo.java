@@ -7,6 +7,7 @@ import java.util.concurrent.locks.LockSupport;
  * @ClassName ThreadDemo
  * @Description AtomicInteger 测试
  *      参考链接： https://blog.csdn.net/zhaow823/article/details/80235463
+ *      https://zhuanlan.zhihu.com/p/286110609
  * @Author noodles
  * @Date 2021/4/12 16:19
  */
