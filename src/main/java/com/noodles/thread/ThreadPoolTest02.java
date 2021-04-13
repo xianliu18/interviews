@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @ClassName ThreadPoolTest02
  * @Description ThreadPool示例
+ *      参考链接： https://www.cnblogs.com/wang-meng/p/12945703.html
  * @Author noodles
  * @Date 2021/2/9 17:40
  */

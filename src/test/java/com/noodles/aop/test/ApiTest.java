@@ -231,15 +231,15 @@ public class ApiTest {
         int n = elements.length;
         int r = n - p;
 
-        System.out.println(JSON.toJSONString(elements));
+        System.out.println("扩容之前，数组：" + JSON.toJSONString(elements));
 
         // head == tail 扩容
         Object[] a= new Object[8 << 1];
         Object[] b= new Object[8 << 1];
         System.arraycopy(elements, p, a, 0, r);
-        System.out.println(JSON.toJSONString(a));
+        System.out.println("复制0到 r(" + r + ")数据：" + JSON.toJSONString(a));
         System.arraycopy(elements, 0, a, r, p);
-        System.out.println(JSON.toJSONString(a));
+        System.out.println("复制r到 p(" + p + ")数据：" + JSON.toJSONString(a));
         System.arraycopy(elements,0, b, 0, n);
         System.out.println("b 数组：" + JSON.toJSONString(b));
 
