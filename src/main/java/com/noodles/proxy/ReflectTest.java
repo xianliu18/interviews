@@ -1,4 +1,4 @@
-package com.noodles.aop.test;
+package com.noodles.proxy;
 
 import com.noodles.proxy.ASMProxy;
 import com.noodles.proxy.ByteBuddyProxy;

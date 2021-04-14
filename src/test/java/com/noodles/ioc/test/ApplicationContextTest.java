@@ -7,7 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
- * @Description:
+ * @Description: Spring applicationContext 属性测试
+ *      参考链接： http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/
  * @Author: noodles
  * @create: 2021-02-19 08:14
  */
