@@ -1,13 +1,13 @@
 package com.noodles.thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.LockSupport;
 
 /**
  * @ClassName ThreadDemo
  * @Description AtomicInteger 测试
  *      参考链接： https://blog.csdn.net/zhaow823/article/details/80235463
  *      https://zhuanlan.zhihu.com/p/286110609
+ *      https://stackoverflow.com/questions/67068057/the-main-thread-exceeds-the-set-sleep-time
  * @Author noodles
  * @Date 2021/4/12 16:19
  */
