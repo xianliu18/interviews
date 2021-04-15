@@ -6,6 +6,7 @@ import org.junit.Test;
 /**
  * @ClassName CglibProxyCreatorTest
  * @Description 测试用例
+ *      参考链接： http://www.tianxiaobo.com/2018/06/20/Spring-AOP-源码分析-创建代理对象/
  * @Author noodles
  * @Date 2021/2/23 13:46
  */

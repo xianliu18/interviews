@@ -43,7 +43,7 @@ public class SystemInfo implements ApplicationContextAware, EnvironmentAware {
         StandardServletEnvironment sse = (StandardServletEnvironment)environment;
         Map<String, Object> envs = sse.getSystemEnvironment();
         StringBuilder sb = new StringBuilder();
-        sb.append("-------------------++ System Environment ++--------------------\n");
+        sb.append("-------------------++ System Environment ++--------------------<br/>");
 
         List<String> list = new ArrayList<>();
         list.addAll(envs.keySet());
@@ -51,17 +51,17 @@ public class SystemInfo implements ApplicationContextAware, EnvironmentAware {
         for (int i = 0; i < 5 && i < list.size(); i++) {
             String key = list.get(i);
             Object val = envs.get(key);
-            sb.append(String.format("%s = %s\n", key, val.toString()));
+            sb.append(String.format("%s = %s<br/>", key, val.toString()));
         }
 
         Map<String, Object> props = sse.getSystemProperties();
-        sb.append("-------------------++ System Properties ++--------------------\n");
+        sb.append("-------------------++ System Properties ++--------------------<br/>");
         list.clear();
         list.addAll(props.keySet());
         for (int i = 0; i < 5 && i < list.size(); i++) {
             String key = list.get(i);
             Object val = props.get(key);
-            sb.append(String.format("%s = %s\n", key, val.toString()));
+            sb.append(String.format("%s = %s<br/>", key, val.toString()));
         }
 
         return sb.toString();
@@ -72,11 +72,11 @@ public class SystemInfo implements ApplicationContextAware, EnvironmentAware {
         ListableBeanFactory lbf = applicationContext;
         String[] beanNames = lbf.getBeanDefinitionNames();
         StringBuilder sb = new StringBuilder();
-        sb.append("--------------------++ Bean Info ++------------------\n");
+        sb.append("--------------------++ Bean Info ++------------------<br/>");
         Arrays.stream(beanNames).forEach(beanName -> {
            Object bean = lbf.getBean(beanName);
-           sb.append(String.format("beanName = %s\n", beanName));
-           sb.append(String.format("beanClass = %s\n\n", bean.getClass().toString()));
+           sb.append(String.format("beanName = %s<br/>", beanName));
+           sb.append(String.format("beanClass = %s<br/><br/>", bean.getClass().toString()));
         });
 
         return sb.toString();
