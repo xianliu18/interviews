@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * @ClassName CronTaskTest
  * @Description CronTask 示例
- * 参考链接： www.cnblogs.com/throwable/p/12616945.html#附录
+ *      参考链接： www.cnblogs.com/throwable/p/12616945.html
  * @Author noodles
  * @Date 2021/2/25 14:38
  */
