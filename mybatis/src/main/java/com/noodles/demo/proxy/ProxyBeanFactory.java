@@ -8,6 +8,7 @@ import org.springframework.beans.factory.FactoryBean;
 
 /**
  * @Description: 代理类S
+ *      参考链接： https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html
  * @Author: noodles
  * @create: 2021-01-25 20:24
  */

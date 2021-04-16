@@ -24,6 +24,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * @Description: 测试类
+ *      参考链接: https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html
  * @Author: noodles
  * @create: 2021-01-24 19:58
  */
