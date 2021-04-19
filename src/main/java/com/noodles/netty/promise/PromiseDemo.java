@@ -10,6 +10,7 @@ import io.netty.util.concurrent.Promise;
 /**
  * @ClassName PromiseDemo
  * @Description Promise测试类
+ *      参考连接: https://javadoop.com/post/netty-part-3
  * @Author noodles
  * @Date 2021/3/11 17:31
  */
