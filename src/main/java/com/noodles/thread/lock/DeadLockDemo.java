@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * @ClassName DeadLockDemo
  * @Description 死锁示例
+ *      查看死锁效果:
+ *          1, jps 查看 pid
+ *          2, jstack pid号
  * @Author nooodles
  * @Date 2021/3/17 11:08
  */
