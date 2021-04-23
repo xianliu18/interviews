@@ -25,22 +25,22 @@ public class SingletonTest {
     @Test
     public void serializeTest() throws IOException, ClassNotFoundException {
         ObjectOutputStream tempFile = new ObjectOutputStream(new FileOutputStream("tempFile"));
-        tempFile.writeObject(SafeTwoCheckSingleton.getSingleton());
+        tempFile.writeObject(SafeDoubleCheckSingleton.getSingleton());
         File file = new File("tempFile");
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
-        SafeTwoCheckSingleton newInstance = (SafeTwoCheckSingleton)ois.readObject();
+        SafeDoubleCheckSingleton newInstance = (SafeDoubleCheckSingleton)ois.readObject();
         // 判断是否是同一个对象
-        System.out.println(newInstance == SafeTwoCheckSingleton.getSingleton());
+        System.out.println(newInstance == SafeDoubleCheckSingleton.getSingleton());
     }
 
     @Test
     public void serializeTest2() throws IOException, ClassNotFoundException {
         ObjectOutputStream tempFile = new ObjectOutputStream(new FileOutputStream("tempFile"));
-        tempFile.writeObject(SafeTwoCheckSingleton2.getSingleton());
+        tempFile.writeObject(SafeDoubleCheckSingleton2.getSingleton());
         File file = new File("tempFile");
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
-        SafeTwoCheckSingleton2 newInstance = (SafeTwoCheckSingleton2)ois.readObject();
+        SafeDoubleCheckSingleton2 newInstance = (SafeDoubleCheckSingleton2)ois.readObject();
         // 判断是否是同一个对象
-        System.out.println(newInstance == SafeTwoCheckSingleton2.getSingleton());
+        System.out.println(newInstance == SafeDoubleCheckSingleton2.getSingleton());
     }
 }

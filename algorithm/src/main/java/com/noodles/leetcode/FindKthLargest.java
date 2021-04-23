@@ -9,6 +9,7 @@ package com.noodles.leetcode;
  */
 public class FindKthLargest {
     public static void main(String[] args) {
+//        int[] nums = {7, 8, 3, 2, 1, 5, 6, 4};
         int[] nums = {3, 2, 1, 5, 6, 4};
         int[] nums2 = {3, 2, 3, 1, 2, 4, 5, 5, 6};
         System.out.println(findKthLargest(nums, 2));
