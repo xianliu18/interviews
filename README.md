@@ -4,10 +4,24 @@
 
 阅读本文之前，请先阅读《[How To Ask Questions The Smart Way(中文版)](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)》。
 
+阅读建议：<br/>
+1，实践出真知
+- 我的初中数学老师曾在数学复习课中讲过，你得在纸上写写划划，自己写一遍演算过程，才能学会。只是瞪眼看，学不到任何内容，而且还容易犯困。
+- 关于代码的学习，也建议你新建一个项目，按照博客中的示例，亲身在IDE中敲一遍，运行一下，验证一下结果。
+
+2，建议阅读三遍
+- 这些博客是写作者多年经验的总结。由于自己没有真正的遇到过相应问题，当阅读第一遍完成时，只能达到“虚假”的理解层次；换句话说，引用的博客作者们是站在地上十八层进行写作的，而当下的自己是站在地下十八层阅读的。因此，并不是阅读一遍就可以跨越这么大的层次。
+- 本文的信息密度较大，由于[艾宾浩斯遗忘曲线](https://baike.baidu.com/item/遗忘曲线)的存在，会产生读完后面，忘记前面的情况，这属于正常情况；
+- 当你阅读完第三遍时，相信会达到“一览众山小”境界；
+
+最后，以人生三境界结束概述：`看山是山；看山不是山；看山是山`。
+
 由于本人的写作水平和能力有限，文中难免存在不妥之处，欢迎大家通过邮箱与我联系，邮箱地址：isliuxian@163.com
 
 - [Java 基础面试题总结](https://mp.weixin.qq.com/s/pTQ2hGYZwTDZocvwSCQHRg)
 - [各公司面经参考](https://www.nowcoder.com/discuss/432605)
+
+----------- 概述 完 ----------
 
 ### 1. JVM 相关内容
 1. [JDK，JRE，JVM 关系](#1.1)
@@ -16,6 +30,8 @@
 4. [垃圾收集算法及对应实现](#1.4)
 5. [JVM 故障处理](#1.5)
 6. [Java 8 新特性总结](#1.6)
+
+----------- 第一章 ----------
 
 #### 1.1 <span id="1.1">JDK，JRE，JVM关系</span>
 - [JDK-JRE-JVM 是什么关系](https://bugstack.cn/interview/2020/12/23/面经手册-第23篇-JDK-JRE-JVM-是什么关系.html)
@@ -53,83 +69,37 @@
 #### 1.6 <span id="1.6">Java 8 新特性总结</span>
 - [JDK 1.8 新特性实战篇](http://bugstack.cn/itstack-demo-any/2019/12/10/有点干货-Jdk1.8新特性实战篇(41个案例).html)
 
+----------- 第一章 完 ----------
 
+### 2. Java 集合相关
+1. String(#2.1)
+2. ArrayList 和 LinkedList(#2.2)
+3. HashMap(#2.3)
 
+#### 2.1 <span id="2.1>String 相关</span>
+- [String，StringBuilder，StringBuffer 分析](https://bugstack.cn/interview/2020/09/17/面经手册-第11篇-StringBuilder-比-String-快-空嘴白牙的-证据呢.html)
 
+#### 2.2 <span id="2.2>ArrayList 和 LinkedList</span>
+- [ArrayList 源码分析](https://bugstack.cn/interview/2020/08/27/面经手册-第7篇-ArrayList也这么多知识-一个指定位置插入就把谢飞机面晕了.html)
+- [ArrayList 和 LinkedList 性能比较](https://bugstack.cn/interview/2020/08/30/面经手册-第8篇-LinkedList插入速度比ArrayList快-你确定吗.html)
+- [CopyOnWriteArrayList 详解](https://segmentfault.com/a/1190000019787913)
+- [CopyOnWriteArrayList 利弊总结](https://stefan.blog.csdn.net/article/details/111601912)
 
+#### 2.3 <span id="2.3>HashMap</span>
+- [HashMap 扰动函数，负载因子，链表扩容](https://bugstack.cn/interview/2020/08/07/面经手册-第3篇-HashMap核心知识-扰动函数-负载因子-扩容链表拆分-深度学习.html)
+- [HashMap 数据插入，查找，删除，遍历](https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html)
+- [HashMap 1.7 与 1.8 区别](https://blog.csdn.net/carson_ho/article/details/79373026)
+- [ConcurrentHashMap 源码解析](https://blog.csdn.net/weixin_36586120/article/details/114808650)
+- [Java 7/8 中的 HashMap 和 ConcurrentHashMap 全解析](https://javadoop.com/post/hashmap)
 
-
-
-
-
-
-
+----------- 第二章 完 ----------
     
 
-JDK 相关：
-
-八种基本数据类型:
-    byte 
-    short 
-    int
-    long
-    float
-    double
-    boolean
-    char
-
-### 1, JAVA 集合相关
-#### 1.1 ArrayList, LinkedList
-    - 是否保证线程安全?
-    - 底层数据结构
-    - 插入和删除是否受元素位置的影响
-    - 是否支持快速随机访问
-    - 内存空间占用
-    - 如何进行扩容,默认初始化空间是多少?
-    - - Fail-fast: 是 Java 集合中的一种错误机制, 当多个线程对同一个集合的内容进行操作时,就可能会产生fail-fast事件
-        当某一个线程A通过iterator去遍历某集合的过程中,若该集合的内容被其他线程所改变了; 那么线程A访问集合时,就会抛出
-        ConcurrentModificationException异常,产生 fail-fast 事件
-
-https://bugstack.cn/interview/2020/08/27/面经手册-第7篇-ArrayList也这么多知识-一个指定位置插入就把谢飞机面晕了.html
-https://bugstack.cn/interview/2020/08/30/面经手册-第8篇-LinkedList插入速度比ArrayList快-你确定吗.html
-
-CopyOnWriteArrayList 详解: 
-    - https://segmentfault.com/a/1190000019787913
-    - https://stefan.blog.csdn.net/article/details/111601912
-
-
-#### 1.2 HashMap
-    HashMap的数据结构(1.7、1.8的区别)
-    HashMap的实现原理
-    HashMap扩容为什么是2^n-1
-    HashMap是线程安全的吗
-    HashMap、HashTable是什么关系？
-
-    hash冲突：拉链法 和 线性探测法
-
-HashMap 1.7:
-    - https://blog.csdn.net/carson_ho/article/details/79373026
-
-HashMap 1.8:
-    - https://blog.csdn.net/carson_ho/article/details/79373134
-
-    https://bugstack.cn/interview/2020/08/07/面经手册-第3篇-HashMap核心知识-扰动函数-负载因子-扩容链表拆分-深度学习.html
-    https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html
     
     
 
-#### 1.2.1 ConcurrentHashMap
 
-    https://javadoop.com/post/hashmap
-    https://blog.csdn.net/weixin_36586120/article/details/114808650
-
-
-#### 1.3 StringBuffer 和 StringBuilder
-- 有什么区别?
-- 是线程安全的么?
-
-https://bugstack.cn/interview/2020/09/17/面经手册-第11篇-StringBuilder-比-String-快-空嘴白牙的-证据呢.html
-
+<!--
 
 
 ### 2, 并发编程
@@ -298,15 +268,7 @@ Java 线程池实现原理及美团实践: https://tech.meituan.com/2020/04/02/j
 
 
 
-### 5, 反射、代理
-- 怎么实现反射调用方法
-- 怎么代理一个类，有什么场景使用
-- 类代理的原理是什么
-- 有什么框架可以做类代理
 
-https://bugstack.cn/interview/2020/10/14/面经手册-第13篇-除了JDK-CGLIB-还有3种类代理方式-面试又卡住.html
-
-JDK 和 Cglib 动态代理的实现和区别: https://juejin.cn/post/6857769271737614349
 
 
 4.3.3 SpringBoot
@@ -317,6 +279,17 @@ JDK 和 Cglib 动态代理的实现和区别: https://juejin.cn/post/68577692717
     Springboot SPI机制: https://blog.csdn.net/pycharm_u/article/details/108196307
     SpringBoot SPI机制: https://www.jianshu.com/p/6756d61b892f
     dubbo，jdk，和 Spring 的 SPI 机制比较: https://juejin.cn/post/6950266942875779108
+
+
+### 5, 反射、代理
+- 怎么实现反射调用方法
+- 怎么代理一个类，有什么场景使用
+- 类代理的原理是什么
+- 有什么框架可以做类代理
+
+https://bugstack.cn/interview/2020/10/14/面经手册-第13篇-除了JDK-CGLIB-还有3种类代理方式-面试又卡住.html
+
+JDK 和 Cglib 动态代理的实现和区别: https://juejin.cn/post/6857769271737614349
 
 4.2.1 Spring
     Bean的注册过程
