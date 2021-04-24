@@ -2,7 +2,7 @@
 
 本项目是以[小傅哥的博客](https://bugstack.cn/itstack/interview.html)为蓝本整理出来的，自认为是面向伪高级程序员一份参考资料。
 
-阅读本文之前，请先阅读[《How To Ask Questions The Smart Way（中文版）》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)。
+阅读本文之前，请先阅读《[How To Ask Questions The Smart Way(中文版)](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)》。
 
 由于本人的写作水平和能力有限，文中难免存在不妥之处，欢迎大家通过邮箱与我联系，邮箱地址：isliuxian@163.com
 
@@ -10,27 +10,27 @@
 - [各公司面经参考](https://www.nowcoder.com/discuss/432605)
 
 ### 1. JVM 相关内容
-1. <span id="ab">JDK，JRE，JVM 关系</span>
-2. <span id="1.2">JVM 内存模型</span>
-3. <span id="1.3">JVM 类加载机制</span>
-4. <span id="1.4">垃圾收集算法及对应实现</span>
-5. <span id="1.5">JVM 故障处理</span>
-6. <span id="bc">Java 8 新特性总结</span>
+1. [JDK，JRE，JVM 关系](#1.1)
+2. [JVM 内存模型](#1.2)
+3. [JVM 类加载机制](#1.3)
+4. [垃圾收集算法及对应实现](#1.4)
+5. [JVM 故障处理](#1.5)
+6. [Java 8 新特性总结](#1.6)
 
-#### 1.1 [JDK，JRE，JVM关系](#ab)
+#### 1.1 <span id="1.1">JDK，JRE，JVM关系</span>
 - [JDK-JRE-JVM 是什么关系](https://bugstack.cn/interview/2020/12/23/面经手册-第23篇-JDK-JRE-JVM-是什么关系.html)
 
-#### 1.2 [JVM 内存模型](#1.2)
+#### 1.2 <span id="1.2">JVM 内存模型</span>
 - [图解 JVM 内存布局](https://segmentfault.com/a/1190000021424972)
 - [Java 版虚拟机](https://bugstack.cn/interview/2021/01/06/面经手册-第25篇-JVM内存模型总结-有各版本JDK对比-有元空间OOM监控案例-有Java版虚拟机-综合学习更容易.html)
 
-#### [1.3 JVM 类加载机制](#1.3)
+#### 1.3 <span id="1.3">JVM 类加载机制</span>
 - [new 一个对象，背后发生了什么](https://zhuanlan.zhihu.com/p/257863129)
 - [JVM 加载机制：双亲委派模型](https://segmentfault.com/a/1190000021448897)
 - [被破坏的双亲委派模型之服务商供应接口Java SPI](https://www.jianshu.com/p/e6f1f89a9e22)
 - [Java 即时编译器原理解析及实践（逃逸分析）](https://tech.meituan.com/2020/10/22/java-jit-practice-in-meituan.html)
 
-#### 1.4 [垃圾收集算法及对应实现（垃圾收集器）](#1.4)
+#### 1.4 <span id="1.4">垃圾收集算法及对应实现（垃圾收集器）</span>
 - [一次性把Java的四种引用说清楚](https://blog.csdn.net/yasinshaw/article/details/106205353)
 - [如何判断对象已死](https://bugstack.cn/interview/2021/01/20/面经手册-第27篇-JVM-判断对象已死-实践验证GC回收.html)
 - [经典垃圾收集器](https://zhuanlan.zhihu.com/p/259740590)
@@ -38,7 +38,7 @@
 - [理解JVM安全点](https://zhuanlan.zhihu.com/p/286110609)
 - [JVM 安全点引起的问题](https://mp.weixin.qq.com/s/KDUccdLALWdjNBrFjVR74Q)
 
-#### 1.5 [JVM 故障处理](#1.5)
+#### 1.5 <span id="1.5">JVM 故障处理</span>
 - [JVM 故障处理工具使用总结](https://bugstack.cn/interview/2021/01/13/面经手册-第26篇-JVM故障处理工具-使用总结.html)
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
@@ -50,7 +50,7 @@
     - 使用`MAT`工具进行分析
 - [聊聊 JStack 工作原理](https://www.cnblogs.com/qingquanzi/p/8974850.html)
 
-#### [1.6 Java 8 新特性总结](#bc)
+#### 1.6 <span id="1.6">Java 8 新特性总结</span>
 - [JDK 1.8 新特性实战篇](http://bugstack.cn/itstack-demo-any/2019/12/10/有点干货-Jdk1.8新特性实战篇(41个案例).html)
 
 
