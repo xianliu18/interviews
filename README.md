@@ -21,7 +21,22 @@
 - [Java 基础面试题总结](https://mp.weixin.qq.com/s/pTQ2hGYZwTDZocvwSCQHRg)
 - [各公司面经参考](https://www.nowcoder.com/discuss/432605)
 
+
+优秀博客推荐：
+- [小傅哥的 butstack 虫洞栈](https://bugstack.cn/)
+- [WangMeng](https://www.cnblogs.com/wang-meng/)
+- [noteless](https://www.cnblogs.com/noteless/p/9400742.html)
+- [编了个程](https://yasinshaw.com/)
+- [田小波](http://www.tianxiaobo.com/)
+- [码哥字节](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3NDkwMjAyOQ==&action=getalbum&album_id=1708320618028318723&scene=173&from_msgid=2247485665&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+- [路人甲Java](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MTkxMDQ4MQ==&action=getalbum&album_id=1322186253722501121&scene=173&from_msgid=2648933422&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+- [美团技术团队](https://tech.meituan.com/tags/java.html)
+
+<br/>
+
 ----------- 概述 完 ----------
+
+<br/>
 
 ### 1. JVM 相关内容
 1. [JDK，JRE，JVM 关系](#1.1)
@@ -31,7 +46,7 @@
 5. [JVM 故障处理](#1.5)
 6. [Java 8 新特性总结](#1.6)
 
------------ 第一章 ----------
+<br/>
 
 #### 1.1 <span id="1.1">JDK，JRE，JVM关系</span>
 - [JDK-JRE-JVM 是什么关系](https://bugstack.cn/interview/2020/12/23/面经手册-第23篇-JDK-JRE-JVM-是什么关系.html)
@@ -69,205 +84,131 @@
 #### 1.6 <span id="1.6">Java 8 新特性总结</span>
 - [JDK 1.8 新特性实战篇](http://bugstack.cn/itstack-demo-any/2019/12/10/有点干货-Jdk1.8新特性实战篇(41个案例).html)
 
+<br/>
+
 ----------- 第一章 完 ----------
 
-### 2. Java 集合相关
-1. String(#2.1)
-2. ArrayList 和 LinkedList(#2.2)
-3. HashMap(#2.3)
+<br/>
 
-#### 2.1 <span id="2.1>String 相关</span>
+### 2. Java 集合相关
+1. [String](#2.1)
+2. [ArrayList 和 LinkedList](#2.2)
+3. [HashMap](#2.3)
+
+#### 2.1 <span id="2.1">String 相关</span>
 - [String，StringBuilder，StringBuffer 分析](https://bugstack.cn/interview/2020/09/17/面经手册-第11篇-StringBuilder-比-String-快-空嘴白牙的-证据呢.html)
 
-#### 2.2 <span id="2.2>ArrayList 和 LinkedList</span>
+#### 2.2 <span id="2.2">ArrayList 和 LinkedList</span>
 - [ArrayList 源码分析](https://bugstack.cn/interview/2020/08/27/面经手册-第7篇-ArrayList也这么多知识-一个指定位置插入就把谢飞机面晕了.html)
 - [ArrayList 和 LinkedList 性能比较](https://bugstack.cn/interview/2020/08/30/面经手册-第8篇-LinkedList插入速度比ArrayList快-你确定吗.html)
 - [CopyOnWriteArrayList 详解](https://segmentfault.com/a/1190000019787913)
 - [CopyOnWriteArrayList 利弊总结](https://stefan.blog.csdn.net/article/details/111601912)
 
-#### 2.3 <span id="2.3>HashMap</span>
+#### 2.3 <span id="2.3">HashMap</span>
 - [HashMap 扰动函数，负载因子，链表扩容](https://bugstack.cn/interview/2020/08/07/面经手册-第3篇-HashMap核心知识-扰动函数-负载因子-扩容链表拆分-深度学习.html)
 - [HashMap 数据插入，查找，删除，遍历](https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html)
 - [HashMap 1.7 与 1.8 区别](https://blog.csdn.net/carson_ho/article/details/79373026)
 - [ConcurrentHashMap 源码解析](https://blog.csdn.net/weixin_36586120/article/details/114808650)
 - [Java 7/8 中的 HashMap 和 ConcurrentHashMap 全解析](https://javadoop.com/post/hashmap)
 
------------ 第二章 完 ----------
-    
+<br/>
 
-    
-    
+----------- 第二章 完 ----------
+
+<br/>
+
+### 3. 并发编程
+1. [Thread 介绍](#3.1)
+2. [多线程协作 wait，notify，notifyAll](#3.2)
+3. [ThreadLocal 介绍](#3.3)
+4. [并发编程基础](#3.4)
+5. [volatile 关键字](#3.5)
+6. [synchronized 关键字](#3.6)
+7. [ReentrantLock](#3.7)
+8. [CAS](#3.8)
+9. [AQS 讲解(AbstractQueuedSynchronizer)](#3.9)
+10. [Semaphore，CountDownLatch，CyclicBarrier](#3.10)
+11. [线程池](#3.11)
+
+#### 3.1 <span id="3.1">Thread 介绍</span>
+- [Java 中创建线程的方式](https://www.cnblogs.com/noteless/p/10354753.html)
+- [Thread.start() 方法调用过程分析](https://bugstack.cn/interview/2020/11/25/面经手册-第19篇-Thread.start()-它是怎么让线程启动的呢.html)
+- [Thread 的状态分析](https://www.cnblogs.com/noteless/p/10372674.html)
+- [通过代码分析 Thread 的状态](https://bugstack.cn/interview/2020/12/02/面经手册-第20篇-Thread-线程-状态转换-方法使用-原理分析.html)
+
+#### 3.2 <span id="3.2">多线程协作 wait，notify，nofityAll</span>
+- [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
+- [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
+- [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
+
+#### 3.3 <span id="3.3">ThreadLocal 介绍</span>
+- [ThreadLocal 源码分析](https://bugstack.cn/interview/2020/09/23/面经手册-第12篇-面试官-ThreadLocal-你要这么问-我就挂了.html)
+- [图文深度解析 ThreadLocal](https://www.cnblogs.com/wang-meng/p/12856648.html)
+- [ThreadLocal 为什么会内存泄漏](https://blog.csdn.net/thewindkee/article/details/89390145)
+- [ThreadLocal 在 Quartz 和 MyBatis 中的应用](https://blog.csdn.net/yasinshaw/article/details/106774620)
+- [TransmittableThreadLocal 原理分析](https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA)
+- [Netty FastThreadLocal 原理分析](https://blog.csdn.net/mycs2012/article/details/90898128)
+
+#### 3.4 <span id="3.4">并发编程基础</span>
+- [Java 内存模型JMM，原子性，可见性，有序性简介](https://www.cnblogs.com/noteless/p/10401193.html)
+- [重排序与happens-before](http://concurrent.redspider.group/article/02/7.html)
+
+#### 3.5 <span id="3.5">volatile 关键字</span>
+- [volatile 实现内存可见性原理](https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html)
+- [图解 volatile 内存屏障](http://concurrent.redspider.group/article/02/8.html)
+- [final 关键字与安全发布](https://www.cnblogs.com/noteless/p/10416678.html)
+
+#### 3.6 <span id="3.6">synchronized 关键字</span>
+- 基于 JVM 层面的悲观锁
+- [synchronized 锁升级过程分析](https://bugstack.cn/interview/2020/10/28/面经手册-第15篇-码农会锁-synchronized-解毒-剖析源码深度分析.html)
+- [通过反编译 synchronized 代码，查看其原理](https://www.cnblogs.com/paddix/p/5367116.html)
+
+#### 3.7 <span id="3.7">ReentrantLock</span>
+- JDK 层面的悲观锁
+- [Lock 接口与 synchronized 关键字对比](https://www.cnblogs.com/noteless/p/10481286.html)
+- [Lock 类放在 try 块之内和之外有什么区别？](https://www.zhihu.com/question/54613772)
+- [ReentrantLock 可重入锁使用](https://zhuanlan.zhihu.com/p/88884729)
+- [ReentrantLock 公平锁讲解](https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html)
+- [四种自旋锁原理分析(SpinLock，TicketSpinLock，CLH，MCS)](https://stefan.blog.csdn.net/article/details/108750554)
+
+#### 3.8 <span id="3.8">CAS</span>
+- [CAS 与原子操作](http://concurrent.redspider.group/article/02/10.html)
+- [Java 魔法类： Usafe 应用解析](https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html)
+- [比 AtomicLong 更优秀的 LongAddr 原理分析](https://www.cnblogs.com/wang-meng/p/12892695.html)
+
+#### 3.9 <span id="3.9">AQS 讲解(AbstractQueuedSynchronizer)</span>
+- [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
+- [图解 AQS 原理](https://www.cnblogs.com/wang-meng/p/12816829.html)
+- [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
+- [从 ReentrantLock 的实现看 AQS 原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
+- [AQS 独占-共享模式](http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/)
+- [Condition 实现原理](https://cloud.tencent.com/developer/article/1638926)
+- [Condition 实现原理](http://www.tianxiaobo.com/2018/05/04/AbstractQueuedSynchronizer-原理分析-Condition-实现原理/)
+
+#### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
+- [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
+- [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/interview/2020/11/18/面经手册-第18篇-AQS-共享锁-Semaphore-CountDownLatch-听说数据库连接池可以用到.html)
+- [CountDownLatch 与 CyclicBarrier 原理分析](http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/)
+- Semaphore 应用场景：限流
+  - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)
+  - [高并发中常见的限流（二）](https://juejin.cn/post/6898897317806800904)
+
+#### 3.11 <span id="3.11">线程池</span>
+- [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
+- [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
+- [图解 ThreadPoolExecutor 线程池原理](https://www.cnblogs.com/wang-meng/p/12945703.html)
+- [什么是双端队列-延迟队列-阻塞队列](https://bugstack.cn/interview/2020/09/03/面经手册-第9篇-队列是什么-什么是双端队列-延迟对列-阻塞队列-全是知识盲区.html)
+- [Java 线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)
+
+<br/>
+
+----------- 第三章 完 ----------
+
+<br/>
+
 
 
 <!--
-
-
-### 2, 并发编程
-
-#### 2.1 ThreadLocal 
-    - 讲讲你对 ThreadLocal 的一些理解
-    - ThreadLocal 有哪些应用场景?  全链路监控, 或者日志框架 MDC
-    - 了解过 FastThreadLocal 么?
-    
-    - https://bugstack.cn/interview/2020/09/23/面经手册-第12篇-面试官-ThreadLocal-你要这么问-我就挂了.html
-    - https://www.cnblogs.com/wang-meng/p/12856648.html    
-    - ThreadLocal 为什么会内存泄漏： https://blog.csdn.net/thewindkee/article/details/89390145
-
-
-    Quartz 和 Mybatis 应用ThreadLocal：
-        https://blog.csdn.net/yasinshaw/article/details/106774620
-
-Netty FastThreadLocal 实现原理分析: https://blog.csdn.net/mycs2012/article/details/90898128
-
-TransmittableThreadLocal 分析: https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA
-
-
-#### 2.2 volatile
-    - volatile 的作用和使用场景
-    - volatile 如何保证指令重排
-    - 什么情况下会发生指令重排
-
-    高并发：
-        - 原子性
-        - 可见性
-        - 有序性
-
-Java 内存模型JMM: https://www.cnblogs.com/noteless/p/10401193.html
-    
-https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html
-
-重排序和happens-before: 
-    - http://concurrent.redspider.group/article/02/7.html
-volatile: http://concurrent.redspider.group/article/02/8.html
-final 关键字与安全发布: https://www.cnblogs.com/noteless/p/10416678.html
-
-
-#### 2.3 synchronized
-    - 一般用在什么场景
-    - 实现原理
-    - 锁升级过程(偏向锁, 轻量级锁, 重量级锁)
-    - 这是 JVM 层面锁
-    - 这是一种悲观锁,
-
-https://bugstack.cn/interview/2020/10/28/面经手册-第15篇-码农会锁-synchronized-解毒-剖析源码深度分析.html
-
-不可不说的Java"锁"事: https://tech.meituan.com/2018/11/15/java-lock.html
-
-Java 虚拟机的锁优化技术: <深入JVM 虚拟机>
-
-
-#### 2.4 Lock
-    -  JDK 层面锁
-    - 这是一种悲观锁
-    - 是可重入锁么?
-
-Lock接口与synchronized对比: https://www.cnblogs.com/noteless/p/10481286.html
-
-#### 2.5 ReentrantLock
-    - 与 synchronized 相比较有什么不同?
-    - ReentrantLock 与 Lock 的关系
-    - 锁过程是否可中断, 与之对应的 synchronized 可中断么?
-    - 公平锁实现：
-      - SpinLock
-      - CLH
-      - MCS
-      - Ticket
-
-https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html
-    - https://stefan.blog.csdn.net/article/details/108750554
-
-https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html
-
-ReentrantLock 可重入锁的使用: https://zhuanlan.zhihu.com/p/88884729
-
-Java中Lock类放在try块之内和之外有什么区别？: https://www.zhihu.com/question/54613772
-
-AQS 独占/共享模式
-    - http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/
-Condition 实现原理
-    - http://www.tianxiaobo.com/2018/05/04/AbstractQueuedSynchronizer-原理分析-Condition-实现原理/
-    - https://cloud.tencent.com/developer/article/1638926
-
-
-#### 2.6 CAS
-    - Unsafe 类的作用
-    - CAS 的理解(compareAndSet)
-    - 什么是 ABA 问题?  AtomicStampedReference
-    - CAS 的实现是什么? (AtomicInteger)
-    - 乐观锁实现方式
-
-
-Java魔法类: Unsafe应用解析: https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html
-比AtomicLong更优秀的LongAddr: https://www.cnblogs.com/wang-meng/p/12892695.html
-
-
-#### 2.7 AQS
-    - 实现类有哪些? RenentrantLock,  Semaphore, CountDownLatch, CyclicBarrier
-    - 实现了 AQS 的锁, 有哪些? 
-    
-    深入AQS原理： https://www.cnblogs.com/wang-meng/p/12816829.html
-
-从ReentrantLock的实现看AQS原理及应用: https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html
-
-https://bugstack.cn/interview/2020/11/18/面经手册-第18篇-AQS-共享锁-Semaphore-CountDownLatch-听说数据库连接池可以用到.html
-
-
-Semaphore 用作限流
-    - RateLimiter
-    - Seteniel
-    - Redis
-        - Redis 限流： http://dockone.io/article/10137
-
-    高并发常见的限流方式：
-        https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw
-        https://juejin.cn/post/6898897317806800904
-
-CountDownLatch 与 CyclicBarrier 原理：
-    - http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/
-
-
-### 3, 多线程
-
-- 线程池的种类
-- newCachedThreadPool
-- newFixedThreadPool
-- newScheduledThreadPool
-- newSingleThreadPool
-- 线程的生命周期
-- 新建、就绪、运行、阻塞(等待阻塞、同步阻塞、其他阻塞)、死亡
-
-https://bugstack.cn/interview/2020/11/25/面经手册-第19篇-Thread.start()-它是怎么让线程启动的呢.html
-https://bugstack.cn/interview/2020/12/02/面经手册-第20篇-Thread-线程-状态转换-方法使用-原理分析.html
-Java 中创建线程的方式: https://www.cnblogs.com/noteless/p/10354753.html
-线程的状态: https://www.cnblogs.com/noteless/p/10372674.html
-
-多线程协作wait 和 notify: https://www.cnblogs.com/noteless/p/10468834.html
-虚假唤醒: https://www.zhihu.com/question/50892224
-sleep, yield, 以及join方法: https://www.cnblogs.com/noteless/p/10443446.html
-
-线程等待和唤醒方法： https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg
-
-协作式中断：https://blog.csdn.net/yasinshaw/article/details/107328906
-
-#### 1.4 队列
-- 双端队列ArrayDeque
-- 双端队列LinkedList
-- 延时队列DelayQueue
-
-https://bugstack.cn/interview/2020/09/03/面经手册-第9篇-队列是什么-什么是双端队列-延迟对列-阻塞队列-全是知识盲区.html
-
-线程池
-
-https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html
-https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html
-
-学会线程池: https://www.cnblogs.com/wang-meng/p/12945703.html
-
-Java 线程池实现原理及美团实践: https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html
-
-
-
-
 
 
 
@@ -425,6 +366,8 @@ Redis：(CP)
 
     分布式锁用Redis还是Zookeeper：https://zhuanlan.zhihu.com/p/73807097
     Redis 锁与 Zookeeper 锁： https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ
+
+    Redis 思维导图： https://www.processon.com/view/link/6084234d7d9c08118405ab50#map
     
 
 MySQL
@@ -477,6 +420,8 @@ MySQL
     MyISAM
     InnoDB 和 MyISAM 存储引擎区别: 
     一棵 B+ 树中可以存多少数据
+
+    MySQL 思维导图： https://www.processon.com/view/link/6083e2860791293ce8133312
 
 
 4.3.1 Dubbo
