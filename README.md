@@ -1,6 +1,6 @@
 ### 1. 概述
 
-本项目是以[小傅哥的博客](https://bugstack.cn/itstack/interview.html)为蓝本整理出来的，自认为是面向伪高级程序员一份参考资料。
+本项目是以[小傅哥的博客](https://bugstack.cn/itstack/interview.html)为蓝本整理出来的，自认为是面向伪高级程序员的一份参考资料。
 
 阅读本文之前，请先阅读《[How To Ask Questions The Smart Way(中文版)](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)》。
 
@@ -28,6 +28,8 @@
 - [noteless](https://www.cnblogs.com/noteless/p/9400742.html)
 - [编了个程](https://yasinshaw.com/)
 - [田小波](http://www.tianxiaobo.com/)
+- [Javadoop](https://javadoop.com/)
+- [小林coding](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
 - [码哥字节](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3NDkwMjAyOQ==&action=getalbum&album_id=1708320618028318723&scene=173&from_msgid=2247485665&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 - [路人甲Java](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MTkxMDQ4MQ==&action=getalbum&album_id=1322186253722501121&scene=173&from_msgid=2648933422&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 - [美团技术团队](https://tech.meituan.com/tags/java.html)
@@ -206,222 +208,198 @@
 
 <br/>
 
+### 4. Spring
+1. [反射，动态代理](#4.1)
+2. [SpringBoot 相关](#4.2)
+3. [Spring IOC](#4.3)
+4. [Spring AOP](#4.4)
+5. [Spring MVC](#4.5)
+6. [MyBatis](#4.6)
+
+#### 4.1 <span id = "4.1">反射，动态代理</span>
+- [动态代理的五种方式总结](https://bugstack.cn/interview/2020/10/14/面经手册-第13篇-除了JDK-CGLIB-还有3种类代理方式-面试又卡住.html)
+- [JDK 和 Cglib 动态代理的实现和区别](https://juejin.cn/post/6857769271737614349)
+
+#### 4.2 <span id = "4.2">SpringBoot 相关</span>
+- [SpringBoot 自动装配原理](https://zhuanlan.zhihu.com/p/345895748)
+- [SpringBoot 的 SPI 机制（一）](https://blog.csdn.net/pycharm_u/article/details/108196307)
+- [SpringBoot SPI 扩展机制（二）](https://www.jianshu.com/p/6756d61b892f)
+  - [Java SPI机制](https://www.jianshu.com/p/e6f1f89a9e22)
+  - [Dubbo，JDK 和 Spring SPI 机制比较](https://juejin.cn/post/6950266942875779108)
+
+#### 4.3 <span id = "4.3">Spring IOC</span>
+- [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
+- [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
+- [Spring IOC 容器源码分析](http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/)
+  - IOC 导读：`AbstractApplicationContext#refresh()`
+  - 获取单例 Bean：`AbstractBeanFactory#getBean(String name)`
+  - 创建单例 Bean 的过程：`AbstractAutowireCapableBeanFactory#createBean()`
+  - 创建单例 Bean 对象：`AbstractAutowireCapableBeanFactory#createBeanInstance()`
+  - 循环依赖的解决办法
+  - 填充属性到 Bean 原始对象：`AbstractAutowireCapableBeanFactory#populateBean()`
+  - 余下的初始化工作
+- [Spring IOC 源码深度解析](https://juejin.cn/post/6844904014337802248)
+
+#### 4.4 <span id = "4.4">Spring AOP</span>
+- [Spring AOP 源码分析](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-源码分析系列文章导读/)
+  - AOP 系列文章导读：`AbstractAutoProxyCreator#postProcessAfterInitialization()`
+  - 筛选合适的通知器
+  - 创建代理对象
+  - 拦截器链的执行过程
+- [Spring AOP 源码深度解析](https://juejin.cn/post/6844904015843557389)
+- [超详细 Spring IOC，AOP，事务解析及其案例](https://juejin.cn/post/6844904030745919495)
+
+#### 4.5 <span id = "4.5">Spring MVC</span>
+- [Spring MVC 源码分析](http://www.tianxiaobo.com/2018/06/29/Spring-MVC-原理探秘-一个请求的旅行过程/)
+    - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
+    - 容器的创建过程
+- [Spring MVC 源码深度解析](https://juejin.cn/post/6844904017772937229)
+
+#### 4.6 <span id = "4.6">MyBatis</span>
+- [没有实现类，MyBatis 为什么可以进行数据的增删改查](https://bugstack.cn/itstack-demo-any/2019/12/25/源码分析-Mybatis接口没有实现类为什么可以执行增删改查.html)
+- [MyBatis 源码分析](http://www.tianxiaobo.com/2018/07/16/MyBatis-源码分析系列文章导读/)
+  - MyBatis 源码分析系列文章导读
+  - MyBatis 源码分析 - 配置文件解析过程
+  - MyBatis 源码分析 - 映射文件解析过程
+  - MyBatis 源码分析 - SQL 的执行过程
+  - MyBatis 源码分析 - 内置数据源
+  - MyBatis 源码分析 - 缓存原理
+  - MyBatis 源码分析 - 插件机制
+- [MyBatis 中的设计模式总结](http://www.crazyant.net/2022.html)
+
+<br/>
+
+----------- 第四章 完 ----------
+
+<br/>
+
+### 5. 网络编程
+
+#### 5.1 多路复用
+- [一举拿下 I/O 多路复用](https://mp.weixin.qq.com/s/Qpa0qXxuIM8jrBqDaXmVNA)
+- [Linux IO模式以及 select，poll，epoll 详解](https://zhuanlan.zhihu.com/p/148972109)
+- [一文读懂 Redis 中的多路复用模型](https://mp.weixin.qq.com/s/sSM16v_cUpRznf80myQozA)
+
+#### 5.2 TCP
+- [TCP 三次握手和四次挥手](https://mp.weixin.qq.com/s/tH8RFmjrveOmgLvk9hmrkw)
+
+<br/>
+
+----------- 第五章 完 ----------
+
+<br/>
+
+### 6. Netty
+- Netty 是一个异步的，基于事件驱动的网络应用框架。
+- [Netty 入门视频](https://www.bilibili.com/video/BV1DJ411m7NR)
+- [Java NIO：Buffer，Channel 和 Selector](https://javadoop.com/post/java-nio)
+- [Netty 原理架构解析](https://juejin.cn/post/6844903704668160008)
+- [Netty 源码解析系列](https://javadoop.com/post/netty-part-1)
+  - Netty 的 Channel
+  - Netty 的 Future 和 Promise
+  - Netty 的 ChannelPipeline
+  - Netty 的线程池分析
+  - Netty 的 register 操作
+  - NioEventLoop 工作流程
+  - 回到 Channel 的 register 操作
+  - connect 和 bind 过程分析
+
+<br/>
+
+----------- 第六章 完 ----------
+
+<br/>
+
+### 7. MySQL
+1. [MySQL 介绍](#7.1)
+2. [存储引擎：InnoDB 和 MyISAM](#7.2)
+3. [索引](#7.3)
+4. [事务](#7.4)
+5. [MVCC](#7.5)
+
+#### 7.1 <span id = "7.1">MySQL 介绍</span>
+- [MySQL 思维导图](https://www.processon.com/view/link/6083e2860791293ce8133312)
+- [MySQL 十连问](https://mp.weixin.qq.com/s/O_NHjv_YVUi4lSqXnhx5Mg)
+
+#### 7.2 <span id = "7.2">存储引擎：InnoDB 和 MyISAM</span>
+- [InnoDB 和 MyISAM 区别总结](https://www.jianshu.com/p/c5cc4b634807)
+
+#### 7.3 <span id = "7.3">索引</span>
+- [MySQL 索引原理详解](https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag)
+- [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
+
+#### 7.4 <span id = "7.4">事务</span>
+- [图解 MySQL 事务实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
+- [MySQL 事务实现原理（二）](https://cloud.tencent.com/developer/article/1693232)
+- [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
+- [MySQL 如何确保数据不丢失？](https://mp.weixin.qq.com/s/CU2G85qbIyBNfCnlkLGZfw)
+- [MySQL 的七种日志](https://mp.weixin.qq.com/s/-v6CHvvAwtuznG-bzZKQ0w)
+
+#### 7.5 <span id = "7.5">MVCC</span>
+- [图解 MVCC 多版本并发控制](https://www.jianshu.com/p/b7f5f18cac94)
+- [MySQL 各种锁机制的学习](https://www.jianshu.com/p/615f3c7fbe6f)
+
+<br/>
+
+----------- 第七章 完 ----------
+
+<br/>
+
+### 8. Redis
+1. [Redis 介绍](#8.1)
+2. [单机缓存](#8.2)
+3. [Redis 缓存常见问题](#8.3)
+4. [Redis 数据结构](#8.4)
+5. [Redis 集群](#8.5)
+6. [Redis 分布式锁](#8.6)
+
+#### 8.1 <span id = "8.1">Redis 介绍</span>
+- 满足CAP中的CP
+- [Redis 思维导图](https://www.processon.com/view/link/6084234d7d9c08118405ab50#map)
+
+#### 8.2 <span id = "8.2">单机缓存</span>
+- [缓存进化史](https://juejin.cn/post/6844903660653117447)
+- [Caffeine 缓存原理](https://blog.csdn.net/weixin_34026484/article/details/87942545)
+- [如何优雅的设计和使用缓存？](https://juejin.cn/post/6844903665845665805)
+
+#### 8.3 <span id = "8.3">Redis 缓存常见问题</span>
+- [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
+  - [布隆过滤器](https://www.cnblogs.com/lonely-wolf/p/14451302.html)
+- [内存耗尽后，Redis会发生什么（LRU，LFU算法）](https://www.cnblogs.com/lonely-wolf/p/14403264.html)
+
+#### 8.4 <span id = "8.4">Redis 数据结构</span>
+- [Redis 底层数据结构](https://mp.weixin.qq.com/s/8HN1PqqU57Kdz9ERwDY2cw)
+- [Redis 内部数据结构详解](https://mp.weixin.qq.com/s?__biz=MzA4NTg1MjM0Mg==&mid=509777776&idx=1&sn=e56f24bdf2de7e25515fe9f25ef57557&mpshare=1&scene=1&srcid=1010obMrtv58nLkdNhXXmSuL&key=c50f8b988e61749a258b35d3a186a3d12448d4e9d7ce7b09f4aa5881726ff3f2091ab64e975692dcbdae4f56d3fb1530&ascene=0&uin=MzM4Njg2NDU1)
+
+#### 8.5 <span id = "8.5">Redis 集群</span>
+- 集群的种类：
+  - Redis Sentinal 着眼于高可用，在 master 宕机时会自动将 slave 提升为master，继续提供服务。
+  - Redis Cluster 着眼于扩展性，在单个 redis 内存不足时，使用 Cluster 进行分片存储。
+- [Redis 日志：RDB 和 AOF](https://mp.weixin.qq.com/s/R-jZnjGNbOOL6zOtVd9omg)
+- [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/pWf72S9Pd6HRWg5MUlpr8Q)
+- [Sentinel 哨兵集群搭建](https://mp.weixin.qq.com/s/LZxKifLRFnqLiAeSSv7q9A)
+- [Redis Sentinel 哨兵集群原理](https://mp.weixin.qq.com/s/rtgh5c6p5zhcfgGeqX5mZA)
+- [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
+
+#### 8.6 <span id = "8.6">Redis 分布式锁</span>
+- [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
+- [基于 Redis 的分布式锁到底安全吗？](https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ)
+
+<br/>
+
+----------- 第八章 完 ----------
+
+<br/>
 
 
 <!--
 
 
-
-4.3.3 SpringBoot
-    SpringBoot 怎么开发一个自己的Stater
-        - SpringBoot 自动装配原理: https://zhuanlan.zhihu.com/p/345895748
-    
-    Java SPI 机制违反双亲委派原则: https://www.jianshu.com/p/e6f1f89a9e22
-    Springboot SPI机制: https://blog.csdn.net/pycharm_u/article/details/108196307
-    SpringBoot SPI机制: https://www.jianshu.com/p/6756d61b892f
-    dubbo，jdk，和 Spring 的 SPI 机制比较: https://juejin.cn/post/6950266942875779108
-
-
-### 5, 反射、代理
-- 怎么实现反射调用方法
-- 怎么代理一个类，有什么场景使用
-- 类代理的原理是什么
-- 有什么框架可以做类代理
-
-https://bugstack.cn/interview/2020/10/14/面经手册-第13篇-除了JDK-CGLIB-还有3种类代理方式-面试又卡住.html
-
-JDK 和 Cglib 动态代理的实现和区别: https://juejin.cn/post/6857769271737614349
-
-4.2.1 Spring
-    Bean的注册过程
-    Bean的定义都包括什么信息
-    Spring 事务中的隔离级别有哪几种
-    schedule 使用
-
-    Spring IOC 详解:
-        - https://juejin.cn/post/6844904014337802248
-        - http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/
-            - IOC 导读 AbstractApplicationContext#refresh()
-            - 获取单例 Bean  AbstractBeanFactory.getBean("");
-            - 创建单例 Bean 的过程  AbstarctAutowireCapableBeanFactory.createBean -- doCreateBean
-            - 创建原始 Bean 对象  AbstarctAutowireCapableBeanFactory.createBeanInstance 创建BeanWrapper
-            - 循环依赖的解决办法  
-            - 填充属性到 Bean 原始对象  AbstractAutowireCapableBeanFactory.populateBean()
-            - 余下的初始化工作
-
-
-    Spring AOP 设计基本原理: Aspect Oriented Programming（AOP）
-        https://juejin.cn/post/6844904015843557389
-        http://www.tianxiaobo.com/2018/06/17/Spring-AOP-源码分析系列文章导读/
-            - AOP 文章导读  AbstractAutoProxyCreator#postProcessAfterInitialization
-            - 筛选合适的通知器
-            - 创建代理对象
-            - 拦截器链的执行过程
-
-    SpringMVC 源码解读: 
-        - https://juejin.cn/post/6844904017772937229
-        - http://www.tianxiaobo.com/2018/06/29/Spring-MVC-原理探秘-一个请求的旅行过程/
-            - 一个请求的旅行过程  DispatcherServlet#doDispatch
-            - 容器的创建过程
-
-    超详细Spring IOC, AOP: https://juejin.cn/post/6844904030745919495（Spring Bean的生命周期）
-
-
-    https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html
-    https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html
-    
-    quartz 源码解析: 
+quartz 源码解析: 
         - Spring中@Scheduled的实现原理: https://www.cnblogs.com/throwable/p/12616945.html
         - https://bugstack.cn/itstack-demo-any/2020/01/01/源码解析-Spring定时任务Quartz执行全过程源码解读.html
         - 任务调度：时间轮算法经典案例解析及应用实现: https://mp.weixin.qq.com/s/CcChX0MvxkdlToaVQT1BOA
 
-
-    深入解密来自未来的缓存-Caffeine： https://blog.csdn.net/weixin_34026484/article/details/87942545
-        - 缓存进化史: https://juejin.cn/post/6844903660653117447
-        - 如何优雅的设计和使用缓存: https://juejin.cn/post/6844903665845665805
-
-// TODO: 
-
-4.2.2 Mybatis
-    mybatis在spring的使用中，只需要定义接口，就可以和xml中的配置的sql语句，进行关联，执行数据库增删改查操作。怎么实现的
-    session是怎么管理的
-
-    https://bugstack.cn/itstack-demo-any/2019/12/25/源码分析-Mybatis接口没有实现类为什么可以执行增删改查.html
-
-    源码解读: http://www.tianxiaobo.com/2018/07/16/MyBatis-源码分析系列文章导读/
-        - mybatis 文章导读
-        - 配置文件解析过程
-        - 映射文件解析过程
-        - SQL 的执行过程
-        - 内置数据源
-        - 缓存原理
-        - 插件机制
-
-    mybatis 设计模式: https://mp.weixin.qq.com/s/aH7gGmuXe50R9koYUZPM-g
-
-
-// TODO: 4.16 计划完成
-
-
-
-netty 
-    - Netty 是一个异步的, 基于事件驱动的网络应用框架, 用以快速开发高性能, 高可靠性的网络IO程序
-
-    入门视频：https://www.bilibili.com/video/BV1DJ411m7NR
-
-    多路复用： 
-      - 一举拿下 I/O 多路复用：https://mp.weixin.qq.com/s/Qpa0qXxuIM8jrBqDaXmVNA
-      - Linux IO模式及select，poll，epoll：https://zhuanlan.zhihu.com/p/148972109
-      - Redis 多路复用： https://mp.weixin.qq.com/s/sSM16v_cUpRznf80myQozA
-
-    Java NIO: Buffer, Channel 和 Selector: https://javadoop.com/post/java-nio
-
-    Netty 架构解析：https://juejin.cn/post/6844903704668160008
-    Netty 源码解析系列: https://javadoop.com/post/netty-part-1
-  
-    TCP 三次握手和四次挥手: https://mp.weixin.qq.com/s/tH8RFmjrveOmgLvk9hmrkw
-
-
-Redis：(CP)
-命令
-    计数命令
-    排序命令
-    加锁命令
-架构
-    常用的数据类型
-    数据淘汰策略
-    单线程的为什么那么快
-    RDB和AOF的优缺点
-    持久化策略选择
-应用
-    缓存雪崩、缓存穿透、缓存预热、缓存更新、缓存降级: 
-        - https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg
-
-    Pipeline有什么好处，为什么要用pipeline
-        pipeline管道批量执行指令，可以节省多次IO往返的时间，但是如果指令间有依赖建议分批发送
-
-    是否使用过Redis集群，集群的原理是什么
-        （1）Redis Sentinal 着眼于高可用，在 master 宕机时会自动将 slave 提升为master，继续提供服务。
-        （2）Redis Cluster 着眼于扩展性，在单个 redis 内存不足时，使用 Cluster 进行分片存储。
-    Redis的同步机制了解么
-        Redis 可以使用主从同步，从从同步。第一次同步时，主节点做一次 bgsave，并同时将后续修改操作记录到内存 buffer，待完成后将 rdb 文件全量同步到复制节点，复制节点接受完成后将 rdb 镜像加载到内存。加载完成后，再通知主节点将期间修改的操作记录同步到复制节点进行重放就完成了同步过程。
-
-
-    redis 核心篇：https://mp.weixin.qq.com/s/8HN1PqqU57Kdz9ERwDY2cw
-    redis 日志篇 RDB 和 AOF：https://mp.weixin.qq.com/s/R-jZnjGNbOOL6zOtVd9omg
-
-
-    主从架构: https://mp.weixin.qq.com/s/pWf72S9Pd6HRWg5MUlpr8Q
-
-    哨兵集群搭建: https://mp.weixin.qq.com/s/LZxKifLRFnqLiAeSSv7q9A
-    哨兵集群原理: https://mp.weixin.qq.com/s/rtgh5c6p5zhcfgGeqX5mZA
-
-    redis Cluster 原理: https://www.cnblogs.com/detectiveHLH/p/14154665.html
-
-    内存耗尽后，Redis会发生什么：https://www.cnblogs.com/lonely-wolf/p/14403264.html
-    布隆过滤器: https://www.cnblogs.com/lonely-wolf/p/14451302.html
-    
-
-    redis skiplist: https://zhuanlan.zhihu.com/p/23370124
-
-    分布式锁用Redis还是Zookeeper：https://zhuanlan.zhihu.com/p/73807097
-    Redis 锁与 Zookeeper 锁： https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ
-
-    Redis 思维导图： https://www.processon.com/view/link/6084234d7d9c08118405ab50#map
-    
-
-MySQL
-锁
-    全局锁
-    表锁
-    行锁
-    乐观锁、悲观锁
-    排他锁
-    锁优化
-事务
-    事物特征
-    脏读
-    幻读
-    不可重复读
-    事物隔离
-    并发事物
-    事务实现原理: https://cloud.tencent.com/developer/article/1431307
-日志
-    慢查询日志
-    错误日志
-    redo log(重做日志)
-    binlog(归档日志)
-    undo log(回滚日志)
-
-    Redo Log 和 Binlog 介绍： https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A
-    七种日志: https://mp.weixin.qq.com/s/-v6CHvvAwtuznG-bzZKQ0w
-    mysql 十连问： https://mp.weixin.qq.com/s/O_NHjv_YVUi4lSqXnhx5Mg
-
-索引: 
-    聚集索引 VS 非聚集索引: 
-    覆盖索引(多字段索引)优化
-    最左匹配原则: 
-    前缀索引
-
-    MyISAM 和 Innodb 区别: https://www.jianshu.com/p/c5cc4b634807
-    图解MVCC 多版本并发控制: 
-        - https://www.jianshu.com/p/b7f5f18cac94
-        - https://www.jianshu.com/p/615f3c7fbe6f
-        - https://cloud.tencent.com/developer/article/1693232
-
-
-    mysql 索引原理详解：https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag
-    如何正确的使用索引：https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ
-    mysql 如何确保数据不丢失, redo log: https://mp.weixin.qq.com/s/CU2G85qbIyBNfCnlkLGZfw
-
-
-引擎
-    InnoDB
-    MyISAM
-    InnoDB 和 MyISAM 存储引擎区别: 
-    一棵 B+ 树中可以存多少数据
-
-    MySQL 思维导图： https://www.processon.com/view/link/6083e2860791293ce8133312
 
 
 4.3.1 Dubbo
