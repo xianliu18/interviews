@@ -179,6 +179,10 @@
 - [比 AtomicLong 更优秀的 LongAddr 原理分析](https://www.cnblogs.com/wang-meng/p/12892695.html)
 
 #### 3.9 <span id="3.9">AQS 讲解(AbstractQueuedSynchronizer)</span>
+- `static final Node SHARED`
+- `static final Node EXCLUSIVE`
+- `volatile int waitStatus`: SIGNAL, CANCELLED, CONDITION, PROPAGATE, 0
+- `volatile Thread thread`
 - [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
 - [图解 AQS 原理](https://www.cnblogs.com/wang-meng/p/12816829.html)
 - [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
@@ -329,7 +333,7 @@
 - [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
 
 #### 7.4 <span id = "7.4">事务</span>
-- [图解 MySQL 事务实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
+- [图解 MySQL 事务隔离级别以及实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
 - [MySQL 事务实现原理（二）](https://cloud.tencent.com/developer/article/1693232)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
 - [MySQL 如何确保数据不丢失？](https://mp.weixin.qq.com/s/CU2G85qbIyBNfCnlkLGZfw)
