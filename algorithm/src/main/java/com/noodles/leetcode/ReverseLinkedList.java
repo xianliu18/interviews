@@ -28,8 +28,8 @@ public class ReverseLinkedList {
         }
     }
 
-    public static SinglyListNode reverseList(SinglyListNode head) {
-        return reverseListRec(head, null);
+    public static SinglyListNode reverseList(SinglyListNode root) {
+        return reverseListRec(root, null);
     }
 
     public static SinglyListNode reverseListRec(SinglyListNode head, SinglyListNode newHead) {
@@ -37,7 +37,7 @@ public class ReverseLinkedList {
             return newHead;
         }
         SinglyListNode next = head.next;
-        head.next = newHead;
+        newHead.next = head;
         return reverseListRec(next, head);
     }
 }

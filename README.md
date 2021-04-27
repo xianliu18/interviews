@@ -1,6 +1,6 @@
 ### 1. 概述
 
-本项目是以[小傅哥的博客](https://bugstack.cn/itstack/interview.html)为蓝本整理出来的，自认为是面向伪高级程序员的一份参考资料。
+本项目是以[小傅哥的博客](https://bugstack.cn/itstack/interview.html)为蓝本整理出来的，自认为是面向“伪”高级程序员的一份参考资料。
 
 阅读本文之前，请先阅读《[How To Ask Questions The Smart Way(中文版)](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)》。
 
