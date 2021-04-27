@@ -181,6 +181,7 @@
 #### 3.9 <span id="3.9">AQS 讲解(AbstractQueuedSynchronizer)</span>
 - `static final Node SHARED`
 - `static final Node EXCLUSIVE`
+- `private volatile int state`
 - `volatile int waitStatus`: SIGNAL, CANCELLED, CONDITION, PROPAGATE, 0
 - `volatile Thread thread`
 - [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
