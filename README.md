@@ -396,6 +396,31 @@
 
 <br/>
 
+### 9. 设计模式
+- 单例模式
+  - [双重检查锁定与延迟初始化](https://www.infoq.cn/article/double-checked-locking-with-delay-initialization)
+- [卫语句](https://www.jianshu.com/p/e1dc84e96c43)
+- [策略模式](https://my.oschina.net/u/4662964/blog/4723828)
+- [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
+- [代理模式](https://mp.weixin.qq.com/s/NNdzwK7fbPLtEQGH5q876A)
+- [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
+
+#### 9.1 设计模式的其他参考资料
+- [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
+
+### 10. 算法
+
+#### 10.1 算法可视化平台
+- [Visualgo](https://visualgo.net/en)
+- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
+#### 10.2 大厂常考题目
+- [codetop](https://codetop.cc/#/home)
+
+#### 10.3 自己面试中碰到的题目
+- [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+- [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+  - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
 
 <!--
 
@@ -445,7 +470,6 @@ MQ
     RabbitMQ: https://www.bilibili.com/video/BV1up4y1i7TN
     
 
-
 Java 面试： https://www.bilibili.com/video/BV1zb411M7NQ
 
 网络相关：
@@ -463,13 +487,13 @@ Java 面试： https://www.bilibili.com/video/BV1zb411M7NQ
     快排
     二叉树
     B 树
-    B+ 树: http://offer.liangsonghua.me/docs/basic/algo/tree/
+    B+ 树
     递归
     动态规划
     skipList
     
     树:
-      http://offer.liangsonghua.me/docs/basic/algo/tree/
+      B+ 树： http://offer.liangsonghua.me/docs/basic/algo/tree/
       堆的应用之ScheduledThreadPoolExecutor 中的 DelayedWorkQueue： https://mp.weixin.qq.com/s/CcChX0MvxkdlToaVQT1BOA
     
     Hash: http://offer.liangsonghua.me/docs/basic/algo/hash/
@@ -478,14 +502,6 @@ Java 面试： https://www.bilibili.com/video/BV1zb411M7NQ
 
     跳跃表: http://offer.liangsonghua.me/docs/basic/algo/skip_list/
 
-
-    算法可视化:
-        - https://visualgo.net/
-        - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
-
-    CodeTop:
-        - https://codetop.cc/#/home
-    
     - 剑指offer：
       - http://offer.liangsonghua.me/docs/offer/
 
@@ -513,20 +529,6 @@ Java 面试： https://www.bilibili.com/video/BV1zb411M7NQ
         - https://www.1point3acres.com/bbs/thread-746561-1-1.html
 
 
-设计模式：
-    单例模式：
-        懒汉式，饿汉式，存在问题及修复方案
-    双重检查锁定与延迟初始化: https://www.infoq.cn/article/double-checked-locking-with-delay-initialization
-
-    策略模式：
-        - 卫语句：https://www.jianshu.com/p/e1dc84e96c43
-        - 策略模式：https://my.oschina.net/u/4662964/blog/4723828
-        - 责任链模式（管道模式）：https://my.oschina.net/u/4662964/blog/4759287
-
-    模板模式:
-        https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg
-
-    https://javadoop.com/post/design-pattern
 
 WebSocket: https://blog.csdn.net/itguangit/article/details/103053642
 
@@ -554,12 +556,6 @@ WebSocket: https://blog.csdn.net/itguangit/article/details/103053642
 
 <br/>
 <br/>
-
-**参考资料：**
-- [小傅哥的面经手册](https://bugstack.cn/itstack/interview.html)
-- [美团技术博客](https://tech.meituan.com/tags/java.html)
-- [编了个程](https://yasinshaw.com/)
-- [Java8-tutorial](https://github.com/winterbe/java8-tutorial)
 
 
 **扩展阅读:**
