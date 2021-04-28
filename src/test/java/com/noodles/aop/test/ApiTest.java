@@ -153,6 +153,16 @@ public class ApiTest {
         System.out.println("数组长度：" + newArr.length);
     }
 
+    // i++ 测试
+    @Test
+    public void plus() {
+        int i = 0;
+        while (i++ < 5) {
+            System.out.println("cal");
+        }
+        System.out.println(i);
+    }
+
     @Test
     public void test_ArrayList_add() {
         List<String> list = new ArrayList<>(Collections.nCopies(9, "a"));
