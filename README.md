@@ -411,6 +411,7 @@
 ### 10. 算法
 
 #### 10.1 算法可视化平台
+- [Algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
 - [Visualgo](https://visualgo.net/en)
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
@@ -602,6 +603,7 @@ redis intset: https://mp.weixin.qq.com/s/Z6OZpDg1yQD5MaRmcLHcLw
 分布式事务：
     - https://jadyer.cn/2020/08/06/seata-intro/
     - Seata 原理: https://mp.weixin.qq.com/s/hiiVNElHucAr5SnAWG4BIw
+    - seata 是什么： https://zhuanlan.zhihu.com/p/343269551
 脑裂问题：https://mp.weixin.qq.com/s/Jg01zDCNVR5bw0WDbyMxWQ
 ConcurrentSkipListMap: https://blog.csdn.net/coslay/article/details/44819823
 synchronized锁和Lock锁: https://www.zhihu.com/question/332327455
