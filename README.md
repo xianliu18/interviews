@@ -33,6 +33,7 @@
 - [码哥字节](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3NDkwMjAyOQ==&action=getalbum&album_id=1708320618028318723&scene=173&from_msgid=2247485665&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 - [路人甲Java](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MTkxMDQ4MQ==&action=getalbum&album_id=1322186253722501121&scene=173&from_msgid=2648933422&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
 - [美团技术团队](https://tech.meituan.com/tags/java.html)
+- [AbeJeffrey](https://my.oschina.net/7001)
 
 <br/>
 
@@ -187,6 +188,7 @@
 - [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
 - [图解 AQS 原理](https://www.cnblogs.com/wang-meng/p/12816829.html)
 - [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
+- [多线程中断机制](https://blog.csdn.net/pangpang123654/article/details/77336383)
 - [从 ReentrantLock 的实现看 AQS 原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
 - [AQS 独占-共享模式](http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/)
 - [Condition 实现原理](https://cloud.tencent.com/developer/article/1638926)
@@ -233,6 +235,7 @@
   - [Dubbo，JDK 和 Spring SPI 机制比较](https://juejin.cn/post/6950266942875779108)
 
 #### 4.3 <span id = "4.3">Spring IOC</span>
+- [@Autowired 和 @Resource 的区别是什么](https://blog.csdn.net/qq_45590494/article/details/114444371)
 - [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
 - [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
 - [Spring IOC 容器源码分析](http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/)
@@ -328,12 +331,16 @@
 
 #### 7.2 <span id = "7.2">存储引擎：InnoDB 和 MyISAM</span>
 - [InnoDB 和 MyISAM 区别总结](https://www.jianshu.com/p/c5cc4b634807)
+- [MySQL 中 in 与 Exists 的区别](https://cloud.tencent.com/developer/article/1144244)
 
 #### 7.3 <span id = "7.3">索引</span>
 - [MySQL 索引原理详解](https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag)
 - [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
+  - 最佳左前缀原则失效的情况分析
 
 #### 7.4 <span id = "7.4">事务</span>
+- [MySQL Innodb 引擎什么时候表锁，什么时候行锁？](https://blog.csdn.net/Frankltf/article/details/82976493)
+  - [记录锁，间隙锁与临键锁](https://blog.csdn.net/weixin_34006468/article/details/88039873)
 - [图解 MySQL 事务隔离级别以及实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
 - [MySQL 事务实现原理（二）](https://cloud.tencent.com/developer/article/1693232)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
@@ -366,6 +373,7 @@
 - [缓存进化史](https://juejin.cn/post/6844903660653117447)
 - [Caffeine 缓存原理](https://blog.csdn.net/weixin_34026484/article/details/87942545)
 - [如何优雅的设计和使用缓存？](https://juejin.cn/post/6844903665845665805)
+- 选读：[Guava Cache 原理](https://crossoverjie.top/2018/06/13/guava/guava-cache/)
 
 #### 8.3 <span id = "8.3">Redis 缓存常见问题</span>
 - [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
@@ -389,6 +397,7 @@
 #### 8.6 <span id = "8.6">Redis 分布式锁</span>
 - [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
 - [基于 Redis 的分布式锁到底安全吗？](https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ)
+- [基于 Redis 实现延时队列](https://my.oschina.net/7001/blog/1600633)
 
 <br/>
 
@@ -408,20 +417,27 @@
 #### 9.1 设计模式的其他参考资料
 - [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
 
-### 10. 算法
+### 10. 微服务
 
-#### 10.1 算法可视化平台
+
+### 11. 算法
+
+#### 11.1 算法可视化平台
 - [Algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
 - [Visualgo](https://visualgo.net/en)
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
-#### 10.2 大厂常考题目
+#### 11.2 大厂常考题目
 - [codetop](https://codetop.cc/#/home)
 
-#### 10.3 自己面试中碰到的题目
+#### 11.3 自己面试中碰到的题目
 - [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
   - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
+- 多线程交替打印：
+  - [三个线程，一个线程负责打印1，4，7，……；第二个负责打印2，5，8，……，第三个负责打印3，6，9](https://zhuanlan.zhihu.com/p/110001146)
+  - [A B C A B C A B C 打印](https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847)
+  - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
 
 <!--
 
@@ -441,6 +457,8 @@ quartz 源码解析:
     Dubbo中怎么处理的超时断开
 
     RPC 调用和HTTP区别: https://mp.weixin.qq.com/s/mqKulTHTYNx_ks8-LVvJ5A
+    - 既然有 HTTP 请求， 为什么还要用 RPC 调用： https://www.zhihu.com/question/41609070
+    
 
     源码解析: http://www.tianxiaobo.com/2018/10/01/Dubbo-源码分析-SPI-机制/
         - SPI 机制
