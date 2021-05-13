@@ -344,6 +344,7 @@
 - [图解 MySQL 事务隔离级别以及实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
 - [MySQL 事务实现原理（二）](https://cloud.tencent.com/developer/article/1693232)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
+- [MySQL 中的二阶段提交](https://blog.csdn.net/weixin_39663729/article/details/110869452)
 - [MySQL 如何确保数据不丢失？](https://mp.weixin.qq.com/s/CU2G85qbIyBNfCnlkLGZfw)
 - [MySQL 的七种日志](https://mp.weixin.qq.com/s/-v6CHvvAwtuznG-bzZKQ0w)
 
@@ -392,6 +393,7 @@
 - [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/pWf72S9Pd6HRWg5MUlpr8Q)
 - [Sentinel 哨兵集群搭建](https://mp.weixin.qq.com/s/LZxKifLRFnqLiAeSSv7q9A)
 - [Redis Sentinel 哨兵集群原理](https://mp.weixin.qq.com/s/rtgh5c6p5zhcfgGeqX5mZA)
+    - [Redis 集群脑裂及解决方案](https://blog.csdn.net/LO_YUN/article/details/97131426)
 - [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
 
 #### 8.6 <span id = "8.6">Redis 分布式锁</span>

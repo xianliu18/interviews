@@ -165,7 +165,7 @@
         <netty-all.version>4.1.36.Final</netty-all.version>
         <protostuff.version>1.0.10</protostuff.version>
         <objenesis.version>2.4</objenesis.version>
-        <mybatis.version>3.4.6</mybatis.version>
+        <mybatis.version>3.5.3</mybatis.version>
         <protobuf-java.version>3.14.0</protobuf-java.version>
         <protostuff-core.version>1.7.2</protostuff-core.version>
         <mysql.version>5.1.20</mysql.version>
