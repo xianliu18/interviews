@@ -111,6 +111,7 @@
 - [HashMap 扰动函数，负载因子，链表扩容](https://bugstack.cn/interview/2020/08/07/面经手册-第3篇-HashMap核心知识-扰动函数-负载因子-扩容链表拆分-深度学习.html)
 - [HashMap 数据插入，查找，删除，遍历](https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html)
 - [HashMap 1.7 与 1.8 区别](https://blog.csdn.net/carson_ho/article/details/79373026)
+  - [HashMap 不安全](https://coolshell.cn/articles/9606.html)
 - [ConcurrentHashMap 源码解析](https://blog.csdn.net/weixin_36586120/article/details/114808650)
 - [Java 7/8 中的 HashMap 和 ConcurrentHashMap 全解析](https://javadoop.com/post/hashmap)
 
@@ -262,6 +263,7 @@
     - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
     - 容器的创建过程
 - [Spring MVC 源码深度解析](https://juejin.cn/post/6844904017772937229)
+- [拦截器和过滤器的区别](https://www.zhihu.com/question/30212464/answer/1786967139)
 
 #### 4.6 <span id = "4.6">MyBatis</span>
 - [没有实现类，MyBatis 为什么可以进行数据的增删改查](https://bugstack.cn/itstack-demo-any/2019/12/25/源码分析-Mybatis接口没有实现类为什么可以执行增删改查.html)
