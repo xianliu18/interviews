@@ -37,7 +37,7 @@ public class ReverseLinkedList {
             return newHead;
         }
         SinglyListNode next = head.next;
-        newHead.next = head;
+        head.next = newHead;
         return reverseListRec(next, head);
     }
 }
