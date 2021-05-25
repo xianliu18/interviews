@@ -111,7 +111,7 @@
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
 - [线上 OOM 问题排查](https://blog.csdn.net/qq_16681169/article/details/53296137)
     - `top` 命令, 查看机器CPU以及内存是否正常
-    - `jstat -gc pid 1000 100` 监控JVM内存运行状况和gc频率
+    - `jstat -gcutil pid 1000 100` 监控JVM内存运行状况和gc频率
     - `jmap -histo:live pid` 可用统计存活对象的分布情况，找到最耗内存的对象。
     - `jmap -dump:live,format=b,file=dump3.hprof pid` 使用 jmap dump 内存快照。
     - 使用`MAT`工具进行分析
