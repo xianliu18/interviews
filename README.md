@@ -525,6 +525,7 @@
   - [三个线程，一个线程负责打印1，4，7，……；第二个负责打印2，5，8，……，第三个负责打印3，6，9](https://zhuanlan.zhihu.com/p/110001146)
   - [A B C A B C A B C 打印](https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847)
   - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
+  - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
 
 <!--
 
