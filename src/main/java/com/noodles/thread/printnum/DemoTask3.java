@@ -3,6 +3,7 @@ package com.noodles.thread.printnum;
 /**
  * @Description:  A B C A B C A B C 打印
  *      参考链接: https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847
+ *       - https://blog.csdn.net/xiaokang123456kao/article/details/77331878
  * @Author: noodles
  * @create: 2021-05-09 17:42
  */

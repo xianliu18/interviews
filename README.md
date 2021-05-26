@@ -286,6 +286,7 @@
 - [Spring IOC 源码深度解析](https://juejin.cn/post/6844904014337802248)
   - [Spring IOC 核心流程介绍](https://zhuanlan.zhihu.com/p/104519509)
   - [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
+  - [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
   - [Spring 装配Bean过程以及Bean实例化过程](https://blog.csdn.net/mawming/article/details/52287786)
   - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
 - [Spring 解决循环依赖](https://mp.weixin.qq.com/s/VpCt49_Li35caK5IaQTuNg)
