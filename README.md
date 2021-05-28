@@ -476,6 +476,7 @@
 - [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
   - [责任链模式（一）](https://zhuanlan.zhihu.com/p/109228171)
   - [责任链模式（二）](https://zhuanlan.zhihu.com/p/24737592)
+- [责任链模式与策略模式区分](https://zhuanlan.zhihu.com/p/113398276)
 - [代理模式](https://mp.weixin.qq.com/s/NNdzwK7fbPLtEQGH5q876A)
 - [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
 - [适配器模式](https://zhuanlan.zhihu.com/p/44064957)
