@@ -414,9 +414,11 @@
 4. [Redis 数据结构](#8.4)
 5. [Redis 集群](#8.5)
 6. [Redis 分布式锁](#8.6)
+7. [分布式 ID 生成策略](#8.7)
 
 #### 8.1 <span id = "8.1">Redis 介绍</span>
 - 满足CAP中的CP
+- [CAP 的解释](https://www.zhihu.com/question/64778723)
 - [Redis 思维导图](https://www.processon.com/view/link/6084234d7d9c08118405ab50#map)
 
 #### 8.2 <span id = "8.2">单机缓存</span>
@@ -455,6 +457,10 @@
 - [基于 Redis 的分布式锁到底安全吗？](https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ)
 - [基于 Redis 实现延时队列](https://my.oschina.net/7001/blog/1600633)
 - [Seata 分布式事务](https://blog.csdn.net/qq_35067322/article/details/110914143)
+
+#### 8.7 分布式ID生成策略
+- [分布式全局唯一ID生成策略](https://yasinshaw.com/articles/67)
+- [九种分布式ID生成方式](https://zhuanlan.zhihu.com/p/152179727)
 
 <br/>
 
@@ -499,7 +505,6 @@
   - [消息队列的可靠性传输](https://blog.csdn.net/fan521dan/article/details/104832271)
 - [死信队列](https://zhuanlan.zhihu.com/p/171550167)
 - [MQ 常见问题](https://mp.weixin.qq.com/s/3zQJqA-vVABXkhEVMykAcg)
-- 
 
 <br/>
 
