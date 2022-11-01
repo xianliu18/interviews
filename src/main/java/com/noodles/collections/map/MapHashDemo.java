@@ -35,7 +35,7 @@ public class MapHashDemo {
         list.add("dd0p");
         for (String key : list) {
             int hash = key.hashCode() ^ (key.hashCode() >>> 16);
-            System.out.println("字符串: " + key + "\\tIdx(16)：" + ((16-1) & hash) + "\tBit值：" + Integer.toBinaryString(hash) + "-" + Integer.toBinaryString(hash & 16) + "\t\tIdx(32)：" + ((32 - 1) & hash));
+            System.out.println("字符串: " + key + "\t原始位置，Idx(16)：" + ((16-1) & hash) + "\tBit值：" + Integer.toBinaryString(hash) + "-" + Integer.toBinaryString(hash & 16) + "\t\tresize 之后，重新计算 hash Idx(32)：" + ((32 - 1) & hash));
             System.out.println(Integer.toBinaryString(key.hashCode()) + " " + Integer.toBinaryString(hash) + " " + Integer.toBinaryString((32 - 1) & hash));
         }
     }
