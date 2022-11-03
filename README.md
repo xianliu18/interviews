@@ -118,9 +118,6 @@
     - 使用`MAT`工具进行分析
 - [聊聊 JStack 工作原理](https://www.cnblogs.com/qingquanzi/p/8974850.html)
 
-#### 1.6 <span id="1.6">Java 8 新特性总结</span>
-- [JDK 1.8 新特性实战篇](http://bugstack.cn/itstack-demo-any/2019/12/10/有点干货-Jdk1.8新特性实战篇(41个案例).html)
-
 <br/>
 
 ----------- 第一章 完 ----------
