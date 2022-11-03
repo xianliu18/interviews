@@ -115,7 +115,9 @@
     - `jmap -histo:live pid` 可用统计存活对象的分布情况，找到最耗内存的对象。
     - `jmap -dump:live,format=b,file=dump3.hprof pid` 使用 jmap dump 内存快照。
     - 使用`VisualVM`工具进行分析
+<!--
 - [聊聊 JStack 工作原理](https://www.cnblogs.com/qingquanzi/p/8974850.html)
+-->
 
 <br/>
 
