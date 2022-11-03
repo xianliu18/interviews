@@ -76,8 +76,8 @@
 
 ### 1. JVM 相关内容
 1. [JDK，JRE，JVM 关系](#1.1)
-2. [JVM 内存模型](#1.2)
-3. [JVM 类加载机制](#1.3)
+2. [JVM 类加载机制](#1.2)
+3. [JVM 内存模型](#1.3)
 4. [垃圾收集算法及对应实现](#1.4)
 5. [JVM 故障处理](#1.5)
 6. [Java 8 新特性总结](#1.6)
@@ -87,14 +87,14 @@
 #### 1.1 <span id="1.1">JDK，JRE，JVM关系</span>
 - [JDK-JRE-JVM 是什么关系](https://bugstack.cn/interview/2020/12/23/面经手册-第23篇-JDK-JRE-JVM-是什么关系.html)
 
-#### 1.2 <span id="1.2">JVM 内存模型</span>
-- [图解 JVM 内存布局](https://segmentfault.com/a/1190000021424972)
-- [Java 版虚拟机](https://bugstack.cn/interview/2021/01/06/面经手册-第25篇-JVM内存模型总结-有各版本JDK对比-有元空间OOM监控案例-有Java版虚拟机-综合学习更容易.html)
-
-#### 1.3 <span id="1.3">JVM 类加载机制</span>
+#### 1.2 <span id="1.2">JVM 类加载机制</span>
 - [new 一个对象，背后发生了什么](https://zhuanlan.zhihu.com/p/257863129)
 - [JVM 加载机制：双亲委派模型](https://segmentfault.com/a/1190000021448897)
 - [被破坏的双亲委派模型之服务商供应接口Java SPI](https://www.jianshu.com/p/e6f1f89a9e22)
+
+#### 1.3 <span id="1.3">JVM 内存模型</span>
+- [图解 JVM 内存布局](https://segmentfault.com/a/1190000021424972)
+- [Java 版虚拟机](https://bugstack.cn/interview/2021/01/06/面经手册-第25篇-JVM内存模型总结-有各版本JDK对比-有元空间OOM监控案例-有Java版虚拟机-综合学习更容易.html)
 
 #### 1.4 <span id="1.4">垃圾收集算法及对应实现（垃圾收集器）</span>
 - [一次性把Java的四种引用说清楚](https://blog.csdn.net/yasinshaw/article/details/106205353)
