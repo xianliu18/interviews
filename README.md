@@ -95,15 +95,16 @@
 - [new 一个对象，背后发生了什么](https://zhuanlan.zhihu.com/p/257863129)
 - [JVM 加载机制：双亲委派模型](https://segmentfault.com/a/1190000021448897)
 - [被破坏的双亲委派模型之服务商供应接口Java SPI](https://www.jianshu.com/p/e6f1f89a9e22)
-- [Java 即时编译器原理解析及实践（逃逸分析）](https://tech.meituan.com/2020/10/22/java-jit-practice-in-meituan.html)
 
 #### 1.4 <span id="1.4">垃圾收集算法及对应实现（垃圾收集器）</span>
 - [一次性把Java的四种引用说清楚](https://blog.csdn.net/yasinshaw/article/details/106205353)
 - [如何判断对象已死](https://bugstack.cn/interview/2021/01/20/面经手册-第27篇-JVM-判断对象已死-实践验证GC回收.html)
 - [经典垃圾收集器](https://zhuanlan.zhihu.com/p/259740590)
 - [JVM 垃圾回收](https://segmentfault.com/a/1190000021516052)
+<!--
 - [理解JVM安全点](https://zhuanlan.zhihu.com/p/286110609)
 - [JVM 安全点引起的问题](https://mp.weixin.qq.com/s/KDUccdLALWdjNBrFjVR74Q)
+-->
 
 #### 1.5 <span id="1.5">JVM 故障处理</span>
 - [JVM 故障处理工具使用总结](https://bugstack.cn/interview/2021/01/13/面经手册-第26篇-JVM故障处理工具-使用总结.html)
@@ -145,9 +146,7 @@
 - [HashMap 数据插入，查找，删除，遍历](https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html)
 - [HashMap 1.7 与 1.8 区别](https://blog.csdn.net/carson_ho/article/details/79373026)
   - [HashMap 不安全](https://coolshell.cn/articles/9606.html)
-- [ConcurrentHashMap 源码解析](https://blog.csdn.net/weixin_36586120/article/details/114808650)
 - [Java 7/8 中的 HashMap 和 ConcurrentHashMap 全解析](https://javadoop.com/post/hashmap)
-- [TreeMap 使用场景简析](https://www.jianshu.com/p/dd746074f390)
 
 <br/>
 
