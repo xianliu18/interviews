@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

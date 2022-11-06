@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.threadcreate;
 
 /**
  * @Description: 使用Runnable实例对象构造

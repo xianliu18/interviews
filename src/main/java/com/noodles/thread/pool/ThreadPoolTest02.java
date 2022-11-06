@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.pool;
 
 import io.netty.util.concurrent.DefaultThreadFactory;
 import org.slf4j.Logger;

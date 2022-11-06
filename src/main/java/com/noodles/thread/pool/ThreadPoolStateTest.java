@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.pool;
 
 /**
  * @ClassName ThreadPoolStateTest

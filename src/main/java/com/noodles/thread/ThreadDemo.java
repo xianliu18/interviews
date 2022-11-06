@@ -24,7 +24,7 @@ public class ThreadDemo {
         System.out.println("startTime: " + System.currentTimeMillis());
         Thread.sleep(1000);
         System.out.println("endTime: " + System.currentTimeMillis());
-        System.out.println("test");
+        System.out.println("result: " + num.get());
     }
 
     static class ThreadTest implements Runnable {
