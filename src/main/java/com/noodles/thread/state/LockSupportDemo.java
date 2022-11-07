@@ -1,4 +1,4 @@
-package com.noodles.thread.lock;
+package com.noodles.thread.state;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;

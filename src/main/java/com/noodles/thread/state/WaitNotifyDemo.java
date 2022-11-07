@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.state;
 
 
 import java.util.LinkedList;
@@ -81,7 +81,7 @@ class MessageQueue {
             // 每一次的消息生产,都会通知消费者
             System.out.println(Thread.currentThread().getName() + " : add a message");
             messageQueue.addLast(message);
-            lock.notify();
+            lock.notifyAll();
         }
     }
 
@@ -101,7 +101,7 @@ class MessageQueue {
             // 每一次的消息读取,都会通知生产者
             System.out.println(Thread.currentThread().getName() + " : get a message");
             messageQueue.removeFirst();
-            lock.notify();
+            lock.notifyAll();
         }
     }
 }

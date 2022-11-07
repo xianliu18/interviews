@@ -1,4 +1,4 @@
-package com.noodles.thread;
+package com.noodles.thread.create;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

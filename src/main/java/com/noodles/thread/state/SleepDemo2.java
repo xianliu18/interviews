@@ -6,7 +6,7 @@ package com.noodles.thread.state;
  * @Author: noodles
  * @create: 2021-02-03 08:24
  */
-public class ThreadYield {
+public class SleepDemo2 {
     public static void main(String[] args) {
         // 模拟执行任务的第一阶段
         Thread stepOne = new Thread(() -> {
