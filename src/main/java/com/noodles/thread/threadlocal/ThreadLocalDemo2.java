@@ -36,6 +36,7 @@ public class ThreadLocalDemo2 {
 
         System.out.println("main类线程变量： " + holder.get().messages);
         ThreadLocalDemo2.clear();
+        System.out.println("清理之后，变量值：" + holder.get().messages);
     }
 
 }

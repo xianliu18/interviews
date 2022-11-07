@@ -167,7 +167,6 @@
 
 #### 3.1 <span id="3.1">并发编程基础</span>
 - [Java 内存模型JMM，原子性，可见性，有序性简介](https://www.cnblogs.com/noteless/p/10401193.html)
-- [重排序与happens-before](http://concurrent.redspider.group/article/02/7.html)
 
 #### 3.2 <span id="3.2">Thread 介绍</span>
 - [Java 中创建线程的方式](https://www.cnblogs.com/noteless/p/10354753.html)
@@ -182,11 +181,13 @@
 
 #### 3.4 <span id="3.4">ThreadLocal 介绍</span>
 - [ThreadLocal 源码分析](https://bugstack.cn/interview/2020/09/23/面经手册-第12篇-面试官-ThreadLocal-你要这么问-我就挂了.html)
-- [图文深度解析 ThreadLocal](https://www.cnblogs.com/wang-meng/p/12856648.html)
+- [图文深度解析 ThreadLocal](https://juejin.cn/post/6844904151567040519)
 - [ThreadLocal 为什么会内存泄漏](https://blog.csdn.net/thewindkee/article/details/89390145)
 - [ThreadLocal 在 Quartz 和 MyBatis 中的应用](https://blog.csdn.net/yasinshaw/article/details/106774620)
+<!--
 - [TransmittableThreadLocal 原理分析](https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA)
 - [Netty FastThreadLocal 原理分析](https://blog.csdn.net/mycs2012/article/details/90898128)
+-->
 
 #### 3.5 <span id="3.5">volatile 关键字</span>
 - [volatile 实现内存可见性原理](https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html)
