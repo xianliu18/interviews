@@ -48,6 +48,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
@@ -160,7 +161,7 @@
         <!-- 使用UTF-8编码 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <lombok.version>1.16.18</lombok.version>
+        <lombok.version>1.18.14</lombok.version>
         <guava.version>29.0-jre</guava.version>
         <netty-all.version>4.1.36.Final</netty-all.version>
         <protostuff.version>1.0.10</protostuff.version>

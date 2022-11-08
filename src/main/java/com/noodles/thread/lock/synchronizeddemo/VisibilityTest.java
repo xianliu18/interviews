@@ -20,7 +20,8 @@ public class VisibilityTest {
             while (!sign) {
                 i++;
                 add(i);
-                System.out.println(Thread.currentThread().getName() + i);
+                log.info(Thread.currentThread().getName() + "\t" + i);
+//                System.out.println(Thread.currentThread().getName() + "\t" + i);
             }
         }, "thread01");
 
@@ -31,7 +32,8 @@ public class VisibilityTest {
                 e.printStackTrace();
             }
             sign = true;
-            System.out.println(Thread.currentThread().getName() + " vt.sign = true while (!sign)");
+            log.info("vt.sign = true while (!sign)");
+//            System.out.println(Thread.currentThread().getName() + " vt.sign = true while (!sign)");
         }, "thread02");
 
         thread01.start();
