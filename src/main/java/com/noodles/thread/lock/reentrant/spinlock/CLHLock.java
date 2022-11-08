@@ -1,17 +1,22 @@
 package com.noodles.thread.lock.reentrant.spinlock;
 
+import com.google.common.cache.CacheLoader;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
 /**
  * @ClassName CLHLock
  * @Description CLH 锁实现
  *      参考链接:  https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html
+ *               https://www.cnblogs.com/scholar-hwg/p/12172154.html
  * @Author noodles
  * @Date 2021/1/19 17:57
  */
+@Slf4j
 public class CLHLock implements Lock {
 
     private final ThreadLocal<CLHLock.Node> prev;
@@ -29,6 +34,7 @@ public class CLHLock implements Lock {
 
     @Override
     public void lock() {
+        log.info("当前线程：" + Thread.currentThread().getName());
         final Node node = this.node.get();
         node.locked = true;
         Node pred_node = this.tail.getAndSet(node);
@@ -63,4 +69,5 @@ public class CLHLock implements Lock {
     public Condition newCondition() {
         return null;
     }
+
 }

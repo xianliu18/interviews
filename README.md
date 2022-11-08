@@ -205,12 +205,15 @@
 - [Lock 类放在 try 块之内和之外有什么区别？](https://www.zhihu.com/question/54613772)
 - [ReentrantLock 可重入锁使用](https://zhuanlan.zhihu.com/p/88884729)
 - [ReentrantLock 公平锁讲解](https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html)
+- [Java 自旋锁的几种实现](https://www.cnblogs.com/scholar-hwg/p/12172154.html)
 - [四种自旋锁原理分析(SpinLock，TicketSpinLock，CLH，MCS)](https://stefan.blog.csdn.net/article/details/108750554)
 
 #### 3.8 <span id="3.8">CAS</span>
 - [CAS 与原子操作](http://concurrent.redspider.group/article/02/10.html)
+<!--
 - [Java 魔法类： Usafe 应用解析](https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html)
 - [比 AtomicLong 更优秀的 LongAddr 原理分析](https://www.cnblogs.com/wang-meng/p/12892695.html)
+-->
 
 #### 3.9 <span id="3.9">AQS 讲解(AbstractQueuedSynchronizer)</span>
 - `static final Node SHARED`

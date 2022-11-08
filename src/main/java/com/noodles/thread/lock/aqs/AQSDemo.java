@@ -1,4 +1,4 @@
-package com.noodles.thread.lock;
+package com.noodles.thread.lock.aqs;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;

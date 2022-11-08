@@ -1,5 +1,6 @@
-package com.noodles.thread.lock.reentrant;
+package com.noodles.thread.lock.aqs;
 
+import com.noodles.thread.lock.aqs.SyncLock;
 import org.junit.Test;
 
 /**
@@ -31,8 +32,8 @@ public class SyncLockTest {
 
         @Override
         public void run() {
+            lock.lock();
             try {
-                lock.lock();
                 Thread.sleep(1000);
                 System.out.println(String.format("Thread %s Completed", Thread.currentThread().getName()));
             } catch (InterruptedException e) {
