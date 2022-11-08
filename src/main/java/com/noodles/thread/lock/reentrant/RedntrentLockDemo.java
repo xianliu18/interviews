@@ -13,9 +13,6 @@ public class RedntrentLockDemo {
 
     static Lock lock = new ReentrantLock();
 
-
-
-
     public static void main(String[] args) {
         new Thread(() -> {
             lock.lock();
