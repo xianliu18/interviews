@@ -223,12 +223,15 @@
 - `volatile Thread thread`
 - [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
 - [图解 AQS 原理](https://www.cnblogs.com/wang-meng/p/12816829.html)
-- [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
-- [多线程中断机制](https://blog.csdn.net/pangpang123654/article/details/77336383)
 - [从 ReentrantLock 的实现看 AQS 原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
-- [AQS 独占-共享模式](http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/)
+
+<!--
 - [Condition 实现原理](https://cloud.tencent.com/developer/article/1638926)
 - [Condition 实现原理](http://www.tianxiaobo.com/2018/05/04/AbstractQueuedSynchronizer-原理分析-Condition-实现原理/)
+- [AQS 独占-共享模式](http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/)
+- [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
+- [多线程中断机制](https://blog.csdn.net/pangpang123654/article/details/77336383)
+-->
 
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
 - [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)

@@ -1,7 +1,9 @@
 package com.noodles.thread.lock;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Description: Condition 示例
@@ -9,6 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Author: noodles
  * @create: 2021-02-07 23:02
  */
+@Slf4j
 public class ConditionTest2 {
 
     static ReentrantLock lock = new ReentrantLock();
@@ -19,27 +22,32 @@ public class ConditionTest2 {
         new Thread(() -> {
             lock.lock();
             try {
-                System.out.println("线程一加锁成功");
-                System.out.println("线程一执行await被挂起");
+                log.info("{} 加锁成功，准备执行任务~", Thread.currentThread().getName());
+                TimeUnit.MILLISECONDS.sleep(1000);
+                log.info("{} 执行await即将被挂起....", Thread.currentThread().getName());
                 condition.await();
-                System.out.println("线程一被唤醒成功");
+                log.info("{} 被唤醒成功!", Thread.currentThread().getName());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
+                log.info("{} 准备释放锁！", Thread.currentThread().getName());
                 lock.unlock();
-                System.out.println("线程一释放锁成功");
             }
         }).start();
 
         new Thread(() -> {
             lock.lock();
             try {
-                System.out.println("线程二加锁成功");
+                log.info("{} 加锁成功, 准备执行任务", Thread.currentThread().getName());
+                TimeUnit.MILLISECONDS.sleep(1000);
+                log.info("{} 准备唤醒其他线程", Thread.currentThread().getName());
                 condition.signal();
-                System.out.println("线程二唤醒线程一");
+                log.info("{} 继续执行剩下的任务", Thread.currentThread().getName());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             } finally {
+                log.info("{} 准备释放锁！", Thread.currentThread().getName());
                 lock.unlock();
-                System.out.println("线程二释放锁成功");
             }
         }).start();
     }
