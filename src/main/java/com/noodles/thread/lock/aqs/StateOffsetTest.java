@@ -1,4 +1,4 @@
-package com.noodles.thread.lock.reentrant;
+package com.noodles.thread.lock.aqs;
 
 import org.junit.Test;
 import sun.misc.Unsafe;

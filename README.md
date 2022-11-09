@@ -233,6 +233,7 @@
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
 - [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
 - [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/interview/2020/11/18/面经手册-第18篇-AQS-共享锁-Semaphore-CountDownLatch-听说数据库连接池可以用到.html)
+- [CountdownLatch和CyclicBarrier的区别使用场景与具体实现](https://zhuanlan.zhihu.com/p/139020914#:~:text=1%2CCountdownLatch适用于所有线程通过某一点后通知方法%2C而CyclicBarrier则适合让所有线程在同一点同时执行,2%2CCountdownLatch利用继承AQS的共享锁来进行线程的通知%2C利用CAS来进行--%2C而CyclicBarrier则利用ReentrantLock的Condition来阻塞和通知线程)
 - [CountDownLatch 与 CyclicBarrier 原理分析](http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/)
 - Semaphore 应用场景：限流
   - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)

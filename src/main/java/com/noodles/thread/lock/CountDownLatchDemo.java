@@ -26,7 +26,7 @@ public class CountDownLatchDemo {
         public void run() {
             try {
                 Random random = new Random();
-                Thread.sleep(random.nextInt(100));
+                Thread.sleep(random.nextInt(1000));
                 System.out.println(task + " - 任务完成");
                 countDownLatch.countDown();
             } catch (InterruptedException e) {
