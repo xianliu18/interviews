@@ -232,6 +232,9 @@
 - [协作式中断 Java 线程](https://blog.csdn.net/yasinshaw/article/details/107328906)
 - [多线程中断机制](https://blog.csdn.net/pangpang123654/article/details/77336383)
 - [高并发中常见的限流（二）](https://juejin.cn/post/6898897317806800904)
+- [图解 ThreadPoolExecutor 线程池原理](https://www.cnblogs.com/wang-meng/p/12945703.html)
+- [什么是双端队列-延迟队列-阻塞队列](https://bugstack.cn/interview/2020/09/03/面经手册-第9篇-队列是什么-什么是双端队列-延迟对列-阻塞队列-全是知识盲区.html)
+- [Java 线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)
 -->
 
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
@@ -245,9 +248,6 @@
 #### 3.11 <span id="3.11">线程池</span>
 - [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
 - [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
-- [图解 ThreadPoolExecutor 线程池原理](https://www.cnblogs.com/wang-meng/p/12945703.html)
-- [什么是双端队列-延迟队列-阻塞队列](https://bugstack.cn/interview/2020/09/03/面经手册-第9篇-队列是什么-什么是双端队列-延迟对列-阻塞队列-全是知识盲区.html)
-- [Java 线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)
 
 <br/>
 
