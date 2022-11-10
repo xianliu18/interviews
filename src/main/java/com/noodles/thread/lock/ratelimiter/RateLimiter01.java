@@ -1,4 +1,4 @@
-package com.noodles.ratelimiter;
+package com.noodles.thread.lock.ratelimiter;
 
 import com.google.common.util.concurrent.RateLimiter;
 

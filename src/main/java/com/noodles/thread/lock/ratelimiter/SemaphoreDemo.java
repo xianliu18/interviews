@@ -1,6 +1,4 @@
-package com.noodles.ratelimiter;
-
-import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
+package com.noodles.thread.lock.ratelimiter;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
