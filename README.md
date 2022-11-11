@@ -266,11 +266,12 @@
 #### 4.1 <span id = "4.1">反射，动态代理</span>
 - [动态代理的五种方式总结](https://bugstack.cn/interview/2020/10/14/面经手册-第13篇-除了JDK-CGLIB-还有3种类代理方式-面试又卡住.html)
 - [JDK 和 Cglib 动态代理的实现和区别](https://juejin.cn/post/6857769271737614349)
+- [深入梳理 Java 代理机制](https://www.cnblogs.com/cswiki/p/14461856.html)
 
 #### 4.2 <span id = "4.2">SpringBoot 相关</span>
 - [SpringBoot 自动装配原理](https://zhuanlan.zhihu.com/p/345895748)
   - [SpringBoot 自动配置原理（一）](https://zhuanlan.zhihu.com/p/55637237)
-  - [SpringBoot 自动配置原理（二）](https://zhuanlan.zhihu.com/p/338768892)
+  - [SpringBoot 自动配置原理（二）](https://www.cnblogs.com/jimoer/p/14131406.html)
 - [SpringBoot 的 SPI 机制（一）](https://blog.csdn.net/pycharm_u/article/details/108196307)
 - [SpringBoot SPI 扩展机制（二）](https://www.jianshu.com/p/6756d61b892f)
   - [Java SPI机制](https://www.jianshu.com/p/e6f1f89a9e22)
@@ -279,7 +280,9 @@
 #### 4.3 <span id = "4.3">Spring IOC</span>
 - [@Autowired 和 @Resource 的区别是什么](https://blog.csdn.net/qq_45590494/article/details/114444371)
 - [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
+<!--
 - [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
+-->
 - [Spring IOC 容器源码分析](http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/)
   - IOC 导读：`AbstractApplicationContext#refresh()`
   - 获取单例 Bean：`AbstractBeanFactory#getBean(String name)`
@@ -296,6 +299,7 @@
   - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
 - [Spring 解决循环依赖](https://mp.weixin.qq.com/s/VpCt49_Li35caK5IaQTuNg)
   - [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
+  - [Spring 是如何解决循环依赖的](https://www.cnblogs.com/jimoer/p/13562707.html)
 
 #### 4.4 <span id = "4.4">Spring AOP</span>
 - [Spring AOP 源码分析](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-源码分析系列文章导读/)
