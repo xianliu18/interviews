@@ -31,6 +31,7 @@
         <module>rabbitmq-consumer</module>
         <module>rabbitmq-boot-producer</module>
         <module>rabbitmq-boot-consumer</module>
+      <module>spring_small</module>
     </modules>
     <dependencies>
         <dependency>

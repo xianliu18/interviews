@@ -316,7 +316,7 @@
     - 容器的创建过程
 - [Spring MVC 源码深度解析](https://juejin.cn/post/6844904017772937229)
 - [拦截器和过滤器的区别](https://www.zhihu.com/question/30212464/answer/1786967139)
-
+<!--
 #### 4.6 <span id = "4.6">MyBatis</span>
 - [没有实现类，MyBatis 为什么可以进行数据的增删改查](https://bugstack.cn/itstack-demo-any/2019/12/25/源码分析-Mybatis接口没有实现类为什么可以执行增删改查.html)
 - [MyBatis 源码分析](http://www.tianxiaobo.com/2018/07/16/MyBatis-源码分析系列文章导读/)
@@ -329,6 +329,7 @@
   - MyBatis 源码分析 - 插件机制
 - [MyBatis 中的设计模式总结](http://www.crazyant.net/2022.html)
 - [MyBatis 一级缓存和二级缓存](https://zhuanlan.zhihu.com/p/80305146)
+-->
 
 <br/>
 
