@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-  <bean id="userDao" class="com.noodles.springframework.test.bean.UserDao"/>
+  <bean id="userDao" class="com.noodles.springframework.test.bean.UserDao" init-method="initDataMethod" destroy-method="destroyDataMethod"/>
 
   <bean id="userService" class="com.noodles.springframework.test.bean.UserService">
     <property name="id" value="10002"/>
@@ -10,6 +10,6 @@
     <property name="userDao" ref="userDao"/>
   </bean>
 
-  <bean class="com.noodles.springframework.test.common.MyBeanPostProcessor"/>
-  <bean class="com.noodles.springframework.test.common.MyBeanFactoryPostProcessor"/>
+<!--  <bean class="com.noodles.springframework.test.common.MyBeanPostProcessor"/>-->
+<!--  <bean class="com.noodles.springframework.test.common.MyBeanFactoryPostProcessor"/>-->
 </beans>

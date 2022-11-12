@@ -1,7 +1,6 @@
 package com.noodles.springframework.beans.factory.support;
 
 import com.noodles.springframework.beans.BeansException;
-import com.noodles.springframework.beans.factory.BeanFactory;
 import com.noodles.springframework.beans.factory.config.BeanDefinition;
 import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.ConfigurableBeanFactory;
