@@ -3,6 +3,10 @@ package com.noodles.springframework.beans.factory.support;
 import com.noodles.springframework.beans.BeansException;
 import com.noodles.springframework.beans.PropertyValue;
 import com.noodles.springframework.beans.PropertyValues;
+import com.noodles.springframework.beans.factory.Aware;
+import com.noodles.springframework.beans.factory.BeanClassLoaderAware;
+import com.noodles.springframework.beans.factory.BeanFactoryAware;
+import com.noodles.springframework.beans.factory.BeanNameAware;
 import com.noodles.springframework.beans.factory.DisposableBean;
 import com.noodles.springframework.beans.factory.InitializingBean;
 import com.noodles.springframework.beans.factory.config.AutowireCapableBeanFactory;
@@ -91,6 +95,20 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     }
 
     private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
+
+        // invokeAwareMethods
+        if (bean instanceof Aware) {
+            if (bean instanceof BeanFactoryAware) {
+                ((BeanFactoryAware)bean).setBeanFactory(this);
+            }
+            if (bean instanceof BeanClassLoaderAware) {
+                ((BeanClassLoaderAware)bean).setBeanClassLoader(getBeanClassLoader());
+            }
+            if (bean instanceof BeanNameAware) {
+                ((BeanNameAware)bean).setBeanName(beanName);
+            }
+        }
+
         // 1，执行 BeanPostProcessor before 处理
         Object wrappedBean = applyBeanPostProcessorBeforeInitialization(bean, beanName);
 
