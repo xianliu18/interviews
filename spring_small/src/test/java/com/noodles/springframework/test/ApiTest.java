@@ -4,12 +4,14 @@ import com.noodles.springframework.aop.AdvisedSupport;
 import com.noodles.springframework.aop.MethodMatcher;
 import com.noodles.springframework.aop.TargetSource;
 import com.noodles.springframework.aop.aspectj.AspectJExpressionPointcut;
-import com.noodles.springframework.aop.frwmework.Cglib2AopProxy;
-import com.noodles.springframework.aop.frwmework.JdkDynamicAopProxy;
-import com.noodles.springframework.aop.frwmework.ReflectiveMethodInvocation;
+import com.noodles.springframework.aop.framework.Cglib2AopProxy;
+import com.noodles.springframework.aop.framework.JdkDynamicAopProxy;
+import com.noodles.springframework.aop.framework.ReflectiveMethodInvocation;
+import com.noodles.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import com.noodles.springframework.beans.PropertyValue;
 import com.noodles.springframework.beans.PropertyValues;
 import com.noodles.springframework.beans.factory.config.BeanDefinition;
+import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.noodles.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -194,6 +196,13 @@ public class ApiTest {
         System.out.println("与 CustomerService 比较：" + pointcut.matches(custclazz));
         System.out.println("UserService 方法比较：" + pointcut.matches(uMethod, uclazz));
         System.out.println("CustomerService 方法比较：" + pointcut.matches(cMethod, custclazz));
+    }
+
+    @Test
+    public void test_aop02() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        ICustomerService customerService = applicationContext.getBean("customerService", ICustomerService.class);
+        System.out.println("测试结果：" + customerService.queryUserInfo());
     }
 
     @Test

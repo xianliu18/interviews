@@ -1,4 +1,4 @@
-package com.noodles.springframework.aop.frwmework;
+package com.noodles.springframework.aop.framework;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.noodles.springframework.aop.frwmework;
+package com.noodles.springframework.aop.framework;
 
 /**
  * @description: AOP 代理的抽象

@@ -1,4 +1,4 @@
-package com.noodles.springframework.aop.frwmework;
+package com.noodles.springframework.aop.framework;
 
 import com.noodles.springframework.aop.AdvisedSupport;
 import java.lang.reflect.InvocationHandler;
