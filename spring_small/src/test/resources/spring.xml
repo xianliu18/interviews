@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-  <bean id="userDao" class="com.noodles.springframework.test.bean.UserDao"/>
+  <bean class="com.noodles.springframework.test.event.ContextRefreshedEventListener"/>
 
-  <bean id="userService" class="com.noodles.springframework.test.bean.UserService">
-    <property name="id" value="10002"/>
-    <property name="company" value="测试 spring"/>
-    <property name="location" value="十八弯"/>
-    <property name="userDao" ref="userDao"/>
-  </bean>
+  <bean class="com.noodles.springframework.test.event.CustomEventListener"/>
+
+  <bean class="com.noodles.springframework.test.event.ContextClosedEventListener"/>
+
 </beans>

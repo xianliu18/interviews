@@ -19,4 +19,15 @@ public class ClassUtils {
         }
         return cl;
     }
+
+    /**
+     * 判断是否为 CGLIB 代理的类
+     */
+    public static boolean isCglibProxyClass(Class<?> clazz) {
+        return (clazz != null && isCglibProxyClassName(clazz.getName()));
+    }
+
+    public static boolean isCglibProxyClassName(String className) {
+        return (className != null && className.contains("$$"));
+    }
 }

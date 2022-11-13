@@ -7,11 +7,12 @@ import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.noodles.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import com.noodles.springframework.context.support.ClassPathXmlApplicationContext;
-import com.noodles.springframework.test.bean.UserDao;
 import com.noodles.springframework.test.bean.UserService;
 import com.noodles.springframework.test.common.MyBeanFactoryPostProcessor;
 import com.noodles.springframework.test.common.MyBeanPostProcessor;
+import com.noodles.springframework.test.event.CustomEvent;
 import org.junit.Test;
+import org.openjdk.jol.info.ClassLayout;
 
 /**
  * @description: 测试类
@@ -26,7 +27,7 @@ public class ApiTest {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         // 2. UserDao 注册
-        beanFactory.registerBeanDefinition("userDao", new BeanDefinition(UserDao.class));
+//        beanFactory.registerBeanDefinition("userDao", new BeanDefinition(UserDao.class));
 
         // 3, UserService 设置属性
         PropertyValues propertyValues = new PropertyValues();
@@ -91,6 +92,58 @@ public class ApiTest {
         UserService userService = applicationContext.getBean("userService", UserService.class);
         String result = userService.queryUserInfo();
         System.out.println("withAppContext 测试结果：" + result);
+    }
+
+    @Test
+    public void test_aware() {
+        // 1, 初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:springPostProcessor.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2, 获取 Bean 对象调用方法
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        String result = userService.queryUserInfo();
+        System.out.println("aware 测试结果：" + result);
+//        System.out.println("ApplicationContextAware: " + userService.getApplicationContext());
+//        System.out.println("BeanFactoryAware：" + userService.getBeanFactory());
+    }
+
+    @Test
+    public void test_prototype() {
+        // 1, 初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:springPostProcessor.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2, 获取 Bean 对象调用方法
+        UserService service01 = applicationContext.getBean("userService", UserService.class);
+        UserService service02 = applicationContext.getBean("userService", UserService.class);
+
+        // 3, 验证 scope
+        System.out.println(service01);
+        System.out.println(service02);
+
+        System.out.println(service01 + " 十六进制哈希：" + Integer.toHexString(service01.hashCode()));
+        System.out.println(ClassLayout.parseInstance(service01).toPrintable());
+    }
+
+    @Test
+    public void test_factory_bean() {
+        // 1, 初始化 Beanfactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:springPostProcessor.xml");
+        applicationContext.registerShutdownHook();
+
+        // 2, 调用代理方法
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
+
+    @Test
+    public void test_event() {
+        // 1， 初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        applicationContext.publishEvent(new CustomEvent(applicationContext, 1019129009086763L, "成功了"));
+
+        applicationContext.registerShutdownHook();
     }
 
 }

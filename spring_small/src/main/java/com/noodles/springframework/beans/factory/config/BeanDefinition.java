@@ -3,12 +3,16 @@ package com.noodles.springframework.beans.factory.config;
 import com.noodles.springframework.beans.PropertyValues;
 
 /**
- * @description: TODO
+ * @description: BeanDefinition
  * @author: liuxian
  * @date: 2022-11-11 15:43
  */
 @SuppressWarnings({"rawtypes"})
 public class BeanDefinition {
+
+    String SCOPE_SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON;
+
+    String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
     private Class beanClass;
 
@@ -17,6 +21,12 @@ public class BeanDefinition {
     private String initMethodName;
 
     private String destroyMethodName;
+
+    private String scope = SCOPE_SINGLETON;
+
+    private boolean singleton = true;
+
+    private boolean prototype = false;
 
     public BeanDefinition(Class beanClass) {
         this.beanClass = beanClass;
@@ -58,5 +68,19 @@ public class BeanDefinition {
 
     public void setDestroyMethodName(String destroyMethodName) {
         this.destroyMethodName = destroyMethodName;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+        this.singleton = SCOPE_SINGLETON.equals(scope);
+        this.prototype = SCOPE_PROTOTYPE.equals(scope);
+    }
+
+    public boolean isSingleton() {
+        return singleton;
+    }
+
+    public boolean isPrototype() {
+        return prototype;
     }
 }

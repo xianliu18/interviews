@@ -1,7 +1,12 @@
 package com.noodles.springframework.test.bean;
 
-import com.noodles.springframework.beans.factory.DisposableBean;
-import com.noodles.springframework.beans.factory.InitializingBean;
+import com.noodles.springframework.beans.BeansException;
+import com.noodles.springframework.beans.factory.BeanClassLoaderAware;
+import com.noodles.springframework.beans.factory.BeanFactory;
+import com.noodles.springframework.beans.factory.BeanFactoryAware;
+import com.noodles.springframework.beans.factory.BeanNameAware;
+import com.noodles.springframework.context.ApplicationContext;
+import com.noodles.springframework.context.ApplicationContextAware;
 
 /**
  * @description: UserService 类
@@ -9,44 +14,26 @@ import com.noodles.springframework.beans.factory.InitializingBean;
  * @date: 2022-11-11 15:20
  */
 
-public class UserService implements InitializingBean, DisposableBean {
+public class UserService {
 
-    private String id;
+    private String uId;
 
     private String company;
 
     private String location;
 
-    private UserDao userDao;
+    private IUserDao userDao;
 
     public String queryUserInfo() {
-        return userDao.queryUserName(id) + ", 公司：" + company + ", 地点：" + location;
+        return userDao.queryUserName(uId) + ", 公司：" + company + ", 地点：" + location;
     }
 
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("执行：UserService.destroy");
+    public String getuId() {
+        return uId;
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("执行：UserService.afterPropertiesSet");
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public UserDao getUserDao() {
-        return userDao;
-    }
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
+    public void setuId(String uId) {
+        this.uId = uId;
     }
 
     public String getCompany() {
@@ -65,4 +52,11 @@ public class UserService implements InitializingBean, DisposableBean {
         this.location = location;
     }
 
+    public IUserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(IUserDao userDao) {
+        this.userDao = userDao;
+    }
 }
