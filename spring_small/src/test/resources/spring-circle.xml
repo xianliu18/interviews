@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+		        http://www.springframework.org/schema/context">
+
+  <bean id="husband" class="com.noodles.springframework.test.circle.Husband">
+    <property name="wife" ref="wife"/>
+  </bean>
+
+  <bean id="wife" class="com.noodles.springframework.test.circle.Wife">
+    <property name="husband" ref="husband"/>
+    <property name="mother" ref="husbandMother"/>
+  </bean>
+
+  <bean id="husbandMother" class="com.noodles.springframework.test.circle.HusbandMother"/>
+
+  <!-- AOP 配置，验证三级缓存 -->
+  <bean class="com.noodles.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+  <bean id="beforeAdvice" class="com.noodles.springframework.test.circle.SpouseAdvice"/>
+
+  <bean id="methodInterceptor" class="com.noodles.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor">
+    <property name="advice" ref="beforeAdvice"/>
+  </bean>
+
+  <bean id="pointcutAdvisor" class="com.noodles.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+    <property name="expression" value="execution(* com.noodles.springframework.test.circle.Wife.*(..))"/>
+    <property name="advice" ref="methodInterceptor"/>
+  </bean>
+
+</beans>

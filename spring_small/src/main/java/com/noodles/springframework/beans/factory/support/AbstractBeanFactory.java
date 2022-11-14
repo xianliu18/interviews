@@ -45,7 +45,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
         }
 
         BeanDefinition beanDefinition = getBeanDefinition(name);
-        Object bean = (T)createBean(name, beanDefinition, args);
+        Object bean = createBean(name, beanDefinition, args);
         return (T)getObjectForBeanInstance(bean, name);
     }
 

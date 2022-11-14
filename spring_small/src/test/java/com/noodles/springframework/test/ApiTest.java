@@ -19,6 +19,8 @@ import com.noodles.springframework.test.bean.CustomerServiceInterceptor;
 import com.noodles.springframework.test.bean.ICustomerService;
 import com.noodles.springframework.test.bean.autowired.IUserService;
 import com.noodles.springframework.test.bean.autowired.UserService;
+import com.noodles.springframework.test.circle.Husband;
+import com.noodles.springframework.test.circle.Wife;
 import com.noodles.springframework.test.common.MyBeanFactoryPostProcessor;
 import com.noodles.springframework.test.common.MyBeanPostProcessor;
 import com.noodles.springframework.test.event.CustomEvent;
@@ -260,4 +262,19 @@ public class ApiTest {
         System.out.println("测试结果：" + userService.queryUserInfo());
     }
 
+    @Test
+    public void test_autoProxy() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-prop.xml");
+        IUserService userService = applicationContext.getBean("userService", IUserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
+
+    @Test
+    public void test_circular() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-circle.xml");
+        Husband husband = applicationContext.getBean("husband", Husband.class);
+        Wife wife = applicationContext.getBean("wife", Wife.class);
+        System.out.println("老公的媳妇：" + husband.queryWife());
+        System.out.println("媳妇的老公：" + wife.queryHusband());
+    }
 }

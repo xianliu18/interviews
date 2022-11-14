@@ -1,7 +1,7 @@
 package com.noodles.springframework.beans.factory.config;
 
 /**
- * @description: TODO
+ * @description: BeanReference
  * @author: liuxian
  * @date: 2022-11-11 17:27
  */
