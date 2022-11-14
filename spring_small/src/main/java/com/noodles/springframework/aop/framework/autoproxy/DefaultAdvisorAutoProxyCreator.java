@@ -8,6 +8,7 @@ import com.noodles.springframework.aop.TargetSource;
 import com.noodles.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor;
 import com.noodles.springframework.aop.framework.ProxyFactory;
 import com.noodles.springframework.beans.BeansException;
+import com.noodles.springframework.beans.PropertyValues;
 import com.noodles.springframework.beans.factory.BeanFactory;
 import com.noodles.springframework.beans.factory.BeanFactoryAware;
 import com.noodles.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
@@ -75,4 +76,8 @@ public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPos
         return bean;
     }
 
+    @Override
+    public PropertyValues postProcessPropertyValues(PropertyValues pvs, Object bean, String beanName) throws BeansException {
+        return pvs;
+    }
 }

@@ -5,7 +5,7 @@
   <bean id="userDao" class="com.noodles.springframework.test.bean.UserDao" init-method="initDataMethod" destroy-method="destroyDataMethod"/>
   -->
 
-  <bean id="userService" class="com.noodles.springframework.test.bean.UserService" scope="prototype">
+  <bean id="userService" class="com.noodles.springframework.test.bean.autowired.UserService" scope="prototype">
     <property name="uId" value="10002"/>
     <property name="company" value="测试 spring"/>
     <property name="location" value="十八弯"/>

@@ -2,7 +2,7 @@ package com.noodles.springframework.test.common;
 
 import com.noodles.springframework.beans.BeansException;
 import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
-import com.noodles.springframework.test.bean.UserService;
+import com.noodles.springframework.test.bean.autowired.UserService;
 
 /**
  * @description: 自定义 BeanPostProcesser
@@ -15,7 +15,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if ("userService".equals(beanName)) {
             UserService userService = (UserService)bean;
-            userService.setLocation("北京");
+//            userService.setLocation("北京");
         }
         return bean;
     }

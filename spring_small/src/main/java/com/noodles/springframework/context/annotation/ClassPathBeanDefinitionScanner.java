@@ -1,6 +1,7 @@
 package com.noodles.springframework.context.annotation;
 
 import cn.hutool.core.util.StrUtil;
+import com.noodles.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.BeanDefinition;
 import com.noodles.springframework.beans.factory.support.BeanDefinitionRegistry;
 import com.noodles.springframework.stereotype.Component;
@@ -31,6 +32,9 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
                 registry.registerBeanDefinition(determineBeanName(beanDefinition), beanDefinition);
             }
         }
+
+        // 注册处理注解的 BeanPostProcessor(@Autowired, @Value)
+        registry.registerBeanDefinition("com.noodles.springframework.context.annotation.internalAutowiredAnnotationProcessor", new BeanDefinition((AutowiredAnnotationBeanPostProcessor.class)));
     }
 
     private String resolveBeanScope(BeanDefinition beanDefinition) {

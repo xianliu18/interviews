@@ -7,11 +7,9 @@ import com.noodles.springframework.aop.aspectj.AspectJExpressionPointcut;
 import com.noodles.springframework.aop.framework.Cglib2AopProxy;
 import com.noodles.springframework.aop.framework.JdkDynamicAopProxy;
 import com.noodles.springframework.aop.framework.ReflectiveMethodInvocation;
-import com.noodles.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import com.noodles.springframework.beans.PropertyValue;
 import com.noodles.springframework.beans.PropertyValues;
 import com.noodles.springframework.beans.factory.config.BeanDefinition;
-import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.noodles.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -19,7 +17,8 @@ import com.noodles.springframework.context.support.ClassPathXmlApplicationContex
 import com.noodles.springframework.test.bean.CustomerService;
 import com.noodles.springframework.test.bean.CustomerServiceInterceptor;
 import com.noodles.springframework.test.bean.ICustomerService;
-import com.noodles.springframework.test.bean.UserService;
+import com.noodles.springframework.test.bean.autowired.IUserService;
+import com.noodles.springframework.test.bean.autowired.UserService;
 import com.noodles.springframework.test.common.MyBeanFactoryPostProcessor;
 import com.noodles.springframework.test.common.MyBeanPostProcessor;
 import com.noodles.springframework.test.event.CustomEvent;
@@ -29,7 +28,6 @@ import java.lang.reflect.Proxy;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
-import sun.text.normalizer.ICUBinary;
 
 /**
  * @description: 测试类
@@ -253,7 +251,13 @@ public class ApiTest {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:scan/spring-scan.xml");
         ICustomerService customerService = applicationContext.getBean("employeeService", ICustomerService.class);
         System.out.println("测试结果：" + customerService.queryUserInfo());
+    }
 
+    @Test
+    public void test_autowire() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:scan/spring.xml");
+        IUserService userService = applicationContext.getBean("userService", IUserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
     }
 
 }
