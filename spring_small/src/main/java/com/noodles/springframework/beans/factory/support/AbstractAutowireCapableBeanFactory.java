@@ -1,6 +1,7 @@
 package com.noodles.springframework.beans.factory.support;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.TypeUtil;
 import com.noodles.springframework.beans.BeansException;
 import com.noodles.springframework.beans.PropertyValue;
 import com.noodles.springframework.beans.PropertyValues;
@@ -15,6 +16,7 @@ import com.noodles.springframework.beans.factory.config.BeanDefinition;
 import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
+import com.noodles.springframework.core.convert.ConversionService;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import org.apache.commons.lang3.StringUtils;
@@ -171,6 +173,16 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                     // A 依赖 B，获取 B 的实例化
                     BeanReference beanReference = (BeanReference)value;
                     value = getBean(beanReference.getBeanName());
+                } else {
+                    // 类型转换
+                    Class<?> sourceType = value.getClass();
+                    Class<?> targetType = (Class<?>) TypeUtil.getFieldType(bean.getClass(), name);
+                    ConversionService conversionService = getConversionService();
+                    if (conversionService != null) {
+                        if (conversionService.canConvert(sourceType, targetType)) {
+                            value = conversionService.convert(value, targetType);
+                        }
+                    }
                 }
                 // 属性填充
                 BeanUtil.setFieldValue(bean, name, value);

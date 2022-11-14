@@ -14,6 +14,8 @@ import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.support.DefaultListableBeanFactory;
 import com.noodles.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import com.noodles.springframework.context.support.ClassPathXmlApplicationContext;
+import com.noodles.springframework.core.convert.converter.Converter;
+import com.noodles.springframework.core.convert.support.StringToNumberConverterFactory;
 import com.noodles.springframework.test.bean.CustomerService;
 import com.noodles.springframework.test.bean.CustomerServiceInterceptor;
 import com.noodles.springframework.test.bean.ICustomerService;
@@ -23,6 +25,8 @@ import com.noodles.springframework.test.circle.Husband;
 import com.noodles.springframework.test.circle.Wife;
 import com.noodles.springframework.test.common.MyBeanFactoryPostProcessor;
 import com.noodles.springframework.test.common.MyBeanPostProcessor;
+import com.noodles.springframework.test.converter.HusbandCon;
+import com.noodles.springframework.test.converter.StringToIntegerConverter;
 import com.noodles.springframework.test.event.CustomEvent;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -276,5 +280,30 @@ public class ApiTest {
         Wife wife = applicationContext.getBean("wife", Wife.class);
         System.out.println("老公的媳妇：" + husband.queryWife());
         System.out.println("媳妇的老公：" + wife.queryHusband());
+    }
+
+    @Test
+    public void test_convert() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-converter.xml");
+        HusbandCon husband = applicationContext.getBean("husband", HusbandCon.class);
+        System.out.println("测试结果：" + husband);
+    }
+
+    @Test
+    public void test_StringToIntegerConverter() {
+        StringToIntegerConverter converter = new StringToIntegerConverter();
+        Integer num = converter.convert("1234");
+        System.out.println(num);
+    }
+
+    @Test
+    public void test_StringToNumberConverterFactory() {
+        StringToNumberConverterFactory converterFactory = new StringToNumberConverterFactory();
+
+        Converter<String, Integer> stringIntegerConverter = converterFactory.getConverter(Integer.class);
+        System.out.println(stringIntegerConverter.convert("2323"));
+
+        Converter<String, Long> stringToLongConverter = converterFactory.getConverter(Long.class);
+        System.out.println(stringToLongConverter.convert("1991919999"));
     }
 }

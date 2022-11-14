@@ -5,6 +5,7 @@ import com.noodles.springframework.beans.factory.FactoryBean;
 import com.noodles.springframework.beans.factory.config.BeanDefinition;
 import com.noodles.springframework.beans.factory.config.BeanPostProcessor;
 import com.noodles.springframework.beans.factory.config.ConfigurableBeanFactory;
+import com.noodles.springframework.core.convert.ConversionService;
 import com.noodles.springframework.utils.ClassUtils;
 import com.noodles.springframework.utils.StringValueResolver;
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
 
     private final List<StringValueResolver> embeddedValueResolvers = new ArrayList<>();
+
+    private ConversionService conversionService;
 
     @Override
     public Object getBean(String name) throws BeansException {
@@ -93,5 +96,14 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 
     public ClassLoader getBeanClassLoader() {
         return this.beanClassLoader;
+    }
+
+    public ConversionService getConversionService() {
+        return conversionService;
+    }
+
+    public void setConversionService(
+            ConversionService conversionService) {
+        this.conversionService = conversionService;
     }
 }
