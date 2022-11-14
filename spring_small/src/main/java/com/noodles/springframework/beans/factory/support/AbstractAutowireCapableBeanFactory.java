@@ -1,5 +1,6 @@
 package com.noodles.springframework.beans.factory.support;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.noodles.springframework.beans.BeansException;
 import com.noodles.springframework.beans.PropertyValue;
 import com.noodles.springframework.beans.PropertyValues;
@@ -16,7 +17,6 @@ import com.noodles.springframework.beans.factory.config.BeanReference;
 import com.noodles.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -110,7 +110,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                     value = getBean(beanReference.getBeanName());
                 }
                 // 属性填充
-                BeanUtils.setProperty(bean, name, value);
+                BeanUtil.setFieldValue(bean, name, value);
             }
         } catch (Exception e) {
            throw new BeansException("Error setting property values: " + beanName);

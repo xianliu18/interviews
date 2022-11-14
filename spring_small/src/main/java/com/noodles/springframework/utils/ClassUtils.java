@@ -30,4 +30,5 @@ public class ClassUtils {
     public static boolean isCglibProxyClassName(String className) {
         return (className != null && className.contains("$$"));
     }
+
 }

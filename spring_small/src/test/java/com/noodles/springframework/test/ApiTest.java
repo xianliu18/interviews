@@ -29,6 +29,7 @@ import java.lang.reflect.Proxy;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
+import sun.text.normalizer.ICUBinary;
 
 /**
  * @description: 测试类
@@ -238,6 +239,21 @@ public class ApiTest {
 
         String result = proxy.queryUserInfo();
         System.out.println("测试结果：" + result);
+    }
+
+    @Test
+    public void test_property() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:scan/spring-property.xml");
+        ICustomerService customerService = applicationContext.getBean("employeeService", ICustomerService.class);
+        System.out.println("测试结果：" + customerService);
+    }
+
+    @Test
+    public void test_scan() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:scan/spring-scan.xml");
+        ICustomerService customerService = applicationContext.getBean("employeeService", ICustomerService.class);
+        System.out.println("测试结果：" + customerService.queryUserInfo());
+
     }
 
 }

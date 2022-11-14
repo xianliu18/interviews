@@ -17,15 +17,15 @@ public class DefaultResourceLoader implements ResourceLoader {
             throw new NullPointerException("Location must not be null");
         }
         if (location.startsWith(CLASSPATH_URL_PREFIX)) {
-            System.out.println("从 ClassPath 处加载资源！");
+            System.out.println("从 ClassPath 处加载资源: " + location);
             return new ClassPathResource(location.substring(CLASSPATH_URL_PREFIX.length()));
         } else {
             try {
-                System.out.println("从 URL 处加载资源！");
+                System.out.println("从 URL 处加载资源：" + location);
                 URL url = new URL(location);
                 return new UrlResource(url);
             } catch (MalformedURLException e) {
-                System.out.println("从系统文件处加载资源！");
+                System.out.println("从系统文件处加载资源：" + location);
                 return new FileSystemResource(location);
             }
         }
