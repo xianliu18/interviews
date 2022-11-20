@@ -282,7 +282,7 @@
 - [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
 <!--
 - [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
--->
+
 - [Spring IOC 容器源码分析](http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/)
   - IOC 导读：`AbstractApplicationContext#refresh()`
   - 获取单例 Bean：`AbstractBeanFactory#getBean(String name)`
@@ -291,8 +291,14 @@
   - 循环依赖的解决办法
   - 填充属性到 Bean 原始对象：`AbstractAutowireCapableBeanFactory#populateBean()`
   - 余下的初始化工作
+- [Spring MVC 源码分析](http://www.tianxiaobo.com/2018/06/29/Spring-MVC-原理探秘-一个请求的旅行过程/)
+    - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
+    - 容器的创建过程
+-->
 - [Spring IOC 源码深度解析](https://juejin.cn/post/6844904014337802248)
   - [Spring IOC 核心流程介绍](https://zhuanlan.zhihu.com/p/104519509)
+    - [BeanFactoryPostProcessor 和 BeanPostProcessor 区别](https://blog.csdn.net/caihaijiang/article/details/35552859)
+    - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
   - [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
   - [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
   - [Spring 装配Bean过程以及Bean实例化过程](https://blog.csdn.net/mawming/article/details/52287786)
@@ -308,12 +314,8 @@
   - 创建代理对象
   - 拦截器链的执行过程
 - [Spring AOP 源码深度解析](https://juejin.cn/post/6844904015843557389)
-- [超详细 Spring IOC，AOP，事务解析及其案例](https://juejin.cn/post/6844904030745919495)
 
 #### 4.5 <span id = "4.5">Spring MVC</span>
-- [Spring MVC 源码分析](http://www.tianxiaobo.com/2018/06/29/Spring-MVC-原理探秘-一个请求的旅行过程/)
-    - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
-    - 容器的创建过程
 - [Spring MVC 源码深度解析](https://juejin.cn/post/6844904017772937229)
 - [拦截器和过滤器的区别](https://www.zhihu.com/question/30212464/answer/1786967139)
 <!--
