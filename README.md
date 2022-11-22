@@ -347,30 +347,35 @@
 5. [MVCC](#5.5)
 
 #### 5.1 <span id = "5.1">MySQL 介绍</span>
-- [MySQL 思维导图](https://www.processon.com/view/link/6083e2860791293ce8133312)
 - [MySQL 十连问](https://mp.weixin.qq.com/s/O_NHjv_YVUi4lSqXnhx5Mg)
+- [MySQL 45 讲](https://time.geekbang.org/column/article/67888)
+
+<!--
+- [Mysql 专栏](https://juejin.cn/column/6969728433911758862)
+- [MySQL 45 讲](https://funnylog.gitee.io/mysql45/)
+-->
 
 #### 5.2 <span id = "5.2">存储引擎：InnoDB 和 MyISAM</span>
-- [InnoDB 和 MyISAM 区别总结](https://www.jianshu.com/p/c5cc4b634807)
-- [MySQL 中 in 与 Exists 的区别](https://cloud.tencent.com/developer/article/1144244)
+- [InnoDB 和 MyISAM 区别总结](https://blog.csdn.net/qq_35642036/article/details/82820178)
+- [MySQL 中 in 与 Exists 的区别](https://blog.csdn.net/jinjiniao1/article/details/92666614)
 
 #### 5.3 <span id = "5.3">索引</span>
+- [聚簇索引，二级索引](https://dev.mysql.com/doc/refman/5.7/en/innodb-index-types.html)
+- [组合索引，官方文档](https://dev.mysql.com/doc/refman/5.7/en/multiple-column-indexes.html)
 - [MySQL 索引原理详解](https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag)
 - [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
   - 最佳左前缀原则失效的情况分析
 
 #### 5.4 <span id = "5.4">事务</span>
+- [官方文档 InnoDB Locking: 各种类型的锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html)
+- [通过各种简单案例，让你彻底搞懂 MySQL 中的锁](https://tonydong.blog.csdn.net/article/details/103324323)
+- [MySQL 加锁规则](https://funnylog.gitee.io/mysql45/21讲为什么我只改一行的语句，锁这么多.html)
+- [InnoDB 到底怎么加锁的](https://juejin.cn/post/7028435335382040589)
 - [MySQL Innodb 引擎什么时候表锁，什么时候行锁？](https://blog.csdn.net/Frankltf/article/details/82976493)
-  - [记录锁，间隙锁与临键锁](https://blog.csdn.net/weixin_34006468/article/details/88039873)
   - [Innodb 解决幻读方案 -- LBCC & MVCC](https://zhuanlan.zhihu.com/p/364331468)
-- [图解 MySQL 事务隔离级别以及实现原理（一）](https://cloud.tencent.com/developer/article/1431307)
-- [MySQL 事务实现原理（二）](https://cloud.tencent.com/developer/article/1693232)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
 - [MySQL 中的二阶段提交](https://blog.csdn.net/weixin_39663729/article/details/110869452)
-- [MySQL 如何确保数据不丢失？](https://mp.weixin.qq.com/s/CU2G85qbIyBNfCnlkLGZfw)
-- [MySQL 的七种日志](https://mp.weixin.qq.com/s/-v6CHvvAwtuznG-bzZKQ0w)
-- [for update 的作用和用法](https://segmentfault.com/a/1190000023045909)
-- [100万数据，如何查询优化](https://www.cnblogs.com/llzhang123/p/9239682.html)
+- [for update 没有命中索引会锁表么？](https://blog.csdn.net/hardplay123/article/details/88774240)
 
 #### 5.5 <span id = "5.5">MVCC</span>
 - [图解 MVCC 多版本并发控制](https://www.jianshu.com/p/b7f5f18cac94)
