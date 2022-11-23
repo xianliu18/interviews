@@ -389,58 +389,65 @@
 
 ### 6. Redis
 1. [Redis 介绍](#6.1)
-2. [单机缓存](#6.2)
-3. [Redis 缓存常见问题](#6.3)
-4. [Redis 数据结构](#6.4)
-5. [Redis 集群](#6.5)
-6. [Redis 分布式锁](#6.6)
-7. [分布式 ID 生成策略](#6.7)
+2. [Redis 数据结构](#6.2)
+3. [Redis 集群](#6.3)
+4. [Redis 分布式锁](#6.4)
+5. [Redis 缓存常见问题](#6.5)
+6. [分布式 ID 生成策略](#6.6)
 
 #### 6.1 <span id = "6.1">Redis 介绍</span>
 - 满足CAP中的CP
 - [CAP 的解释](https://www.zhihu.com/question/64778723)
 - [Redis 思维导图](https://www.processon.com/view/link/6084234d7d9c08118405ab50#map)
 
+#### 6.2 <span id = "6.2">Redis 数据结构</span>
+- [Redis 底层数据结构](https://mp.weixin.qq.com/s/U87wrGsx0Eop3CbF9mlTwQ)
+- [Redis 为什么用跳表](https://mp.weixin.qq.com/s/rXIVIW7RM56xwMaQtKnmqA)
+- [Redis 3 种特殊类型详解](https://java.isture.com/db/redis/db-redis-data-type-special.html)
+- [Redis 应用场景](https://java.isture.com/db/redis/db-redis-introduce.html#_3-redis的使用场景)
+- [如何使用 Redis 实现页面 UV 统计](https://juejin.cn/post/6885125984547241991)
+
+#### 6.3 <span id = "6.3">Redis 集群</span>
+- 集群的种类：
+  - Redis Sentinal 着眼于高可用，在 master 宕机时会自动将 slave 提升为master，继续提供服务。
+  - Redis Cluster 着眼于扩展性，在单个 redis 内存不足时，使用 Cluster 进行分片存储。
+- [Redis 日志：RDB 和 AOF](https://mp.weixin.qq.com/s/vpuMsen_s5Ye3Giz-59C3w)
+- [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/j81A849iCe7B4FgT-TVeOA)
+- [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
+  - [Cluster 集群能支撑的数据有多大](https://mp.weixin.qq.com/s/qOF9hT_gDvkMH6HbaIvBwg)
+  - [搭建集群需要的服务器个数](https://blog.csdn.net/m0_37688634/article/details/79799892)
+
+#### 6.4 <span id = "6.4">Redis 分布式锁</span>
+- [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
+  - [Redis 分布式锁方案演进](https://mp.weixin.qq.com/s/l9lcFqfXVI30qJi1r2A5-A)
+
+#### 6.5 <span id = "6.5">Redis 缓存常见问题</span>
+- [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
+  - [布隆过滤器](https://www.cnblogs.com/lonely-wolf/p/14451302.html)
+- [内存耗尽后，Redis会发生什么（LRU，LFU算法）](https://www.cnblogs.com/lonely-wolf/p/14403264.html)
+- [如何保持 mysql 和 redis 中数据的一致性](https://www.zhihu.com/question/319817091)
+- [数据库缓存一致性](https://mp.weixin.qq.com/s/U87wrGsx0Eop3CbF9mlTwQ)
+
+#### 6.6 <span id = "6.6">分布式ID生成策略</span>
+- [分布式全局唯一ID生成策略](https://yasinshaw.com/articles/67)
+- [九种分布式ID生成方式](https://zhuanlan.zhihu.com/p/152179727)
+
+<!--
 #### 6.2 <span id = "6.2">单机缓存</span>
 - [缓存进化史](https://juejin.cn/post/6844903660653117447)
 - [Caffeine 缓存原理](https://blog.csdn.net/weixin_34026484/article/details/87942545)
 - [如何优雅的设计和使用缓存？](https://juejin.cn/post/6844903665845665805)
 - 选读：[Guava Cache 原理](https://crossoverjie.top/2018/06/13/guava/guava-cache/)
 
-#### 6.3 <span id = "6.3">Redis 缓存常见问题</span>
-- [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
-  - [布隆过滤器](https://www.cnblogs.com/lonely-wolf/p/14451302.html)
-- [内存耗尽后，Redis会发生什么（LRU，LFU算法）](https://www.cnblogs.com/lonely-wolf/p/14403264.html)
+- [Seata 分布式事务](https://blog.csdn.net/qq_35067322/article/details/110914143)
 
-#### 6.4 <span id = "6.4">Redis 数据结构</span>
-- [Redis 底层数据结构](https://mp.weixin.qq.com/s/8HN1PqqU57Kdz9ERwDY2cw)
-- [Redis 内部数据结构详解](https://mp.weixin.qq.com/s?__biz=MzA4NTg1MjM0Mg==&mid=509777776&idx=1&sn=e56f24bdf2de7e25515fe9f25ef57557&mpshare=1&scene=1&srcid=1010obMrtv58nLkdNhXXmSuL&key=c50f8b988e61749a258b35d3a186a3d12448d4e9d7ce7b09f4aa5881726ff3f2091ab64e975692dcbdae4f56d3fb1530&ascene=0&uin=MzM4Njg2NDU1)
-- [set 应用场景](https://java.isture.com/redis/scene/共同好友列表.html#_1-set-的特性)
-- [zset 应用场景](https://java.isture.com/redis/scene/Redis排行榜场景.html)
-
-#### 6.5 <span id = "6.5">Redis 集群</span>
-- 集群的种类：
-  - Redis Sentinal 着眼于高可用，在 master 宕机时会自动将 slave 提升为master，继续提供服务。
-  - Redis Cluster 着眼于扩展性，在单个 redis 内存不足时，使用 Cluster 进行分片存储。
-- [Redis 日志：RDB 和 AOF](https://mp.weixin.qq.com/s/R-jZnjGNbOOL6zOtVd9omg)
-- [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/pWf72S9Pd6HRWg5MUlpr8Q)
 - [Sentinel 哨兵集群搭建](https://mp.weixin.qq.com/s/LZxKifLRFnqLiAeSSv7q9A)
 - [Redis Sentinel 哨兵集群原理](https://mp.weixin.qq.com/s/rtgh5c6p5zhcfgGeqX5mZA)
     - [Redis 集群脑裂及解决方案](https://blog.csdn.net/LO_YUN/article/details/97131426)
-- [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
-  - [Cluster 集群能支撑的数据有多大](https://mp.weixin.qq.com/s/p9WoNI9o-UcD19QkJEnyWQ)
-  - [搭建集群需要的服务器个数](https://blog.csdn.net/m0_37688634/article/details/79799892)
-
-#### 6.6 <span id = "6.6">Redis 分布式锁</span>
-- [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
-  - [Redis 分布式锁方案演进](https://mp.weixin.qq.com/s/l9lcFqfXVI30qJi1r2A5-A)
 - [基于 Redis 的分布式锁到底安全吗？](https://mp.weixin.qq.com/s/4CUe7OpM6y1kQRK8TOC_qQ)
 - [基于 Redis 实现延时队列](https://my.oschina.net/7001/blog/1600633)
-- [Seata 分布式事务](https://blog.csdn.net/qq_35067322/article/details/110914143)
-
-#### 6.7 分布式ID生成策略
-- [分布式全局唯一ID生成策略](https://yasinshaw.com/articles/67)
-- [九种分布式ID生成方式](https://zhuanlan.zhihu.com/p/152179727)
+- [Zookeeper 的功能和原理](https://zhuanlan.zhihu.com/p/78106824)
+-->
 
 <br/>
 
@@ -455,7 +462,6 @@
   - [既然有 HTTP 请求，为什么还要用 RPC 调用](https://www.zhihu.com/question/41609070)
 - [Dubbo 介绍](https://www.bilibili.com/video/BV1VE411q7dX)
 - [Dubbo 超时重试和异常处理](https://www.cnblogs.com/xuwc/p/8974709.html)
-- [Zookeeper 的功能和原理](https://zhuanlan.zhihu.com/p/78106824)
 - [Dubbo 和 SpringCloud 比较](https://zhuanlan.zhihu.com/p/135412402)
 - [SpringCloud Alibaba](https://www.bilibili.com/video/BV18E411x7eT)
 
@@ -488,7 +494,7 @@
 <br/>
 
 ----------- 第八章 完 ----------
-
+<!--
 <br/>
 
 ### 9. Netty
@@ -509,10 +515,11 @@
 <br/>
 
 ----------- 第九章 完 ----------
+-->
 
 <br/>
 
-### 10. 设计模式
+### 9. 设计模式
 - 单例模式
   - [双重检查锁定与延迟初始化](https://www.infoq.cn/article/double-checked-locking-with-delay-initialization)
 - [卫语句](https://www.jianshu.com/p/e1dc84e96c43)
@@ -525,24 +532,24 @@
 - [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
 - [适配器模式](https://zhuanlan.zhihu.com/p/44064957)
 
-#### 10.1 设计模式的其他参考资料
+#### 9.1 设计模式的其他参考资料
 - [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
 
 <br/>
 
------------ 第十章 完 ----------
+----------- 第九章 完 ----------
 
-### 11. 算法
+### 10. 算法
 
-#### 11.1 算法可视化平台
+#### 10.1 算法可视化平台
 - [Algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
 - [Visualgo](https://visualgo.net/en)
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
-#### 11.2 大厂常考题目
+#### 10.2 大厂常考题目
 - [codetop](https://codetop.cc/#/home)
 
-#### 11.3 自己面试中碰到的题目
+#### 10.3 自己面试中碰到的题目
 - [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
@@ -580,22 +587,6 @@ quartz 源码解析:
         - 集群容错之Cluster
         - 集群容错之LoadBalance
     
-
-Zookeeper(CP)
-
-    - CAP：https://www.ruanyifeng.com/blog/2018/07/cap.html
-    - BASE: https://blog.csdn.net/ThreeAspects/article/details/104280517
-      - Basically Available(基本可用)
-      - Soft state(软状态)
-      - Eventualy consisten(最终一致性)
-    - 分布式事务，两阶段提交，三阶段提交
-
-
-MQ
-    ActiveMQ: https://www.bilibili.com/video/BV164411G7aB
-        - Topic 和 Queue 对比: https://www.bilibili.com/video/BV164411G7aB?p=18
-
-
 
 Java 面试： https://www.bilibili.com/video/BV1zb411M7NQ
 
