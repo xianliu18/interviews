@@ -1,6 +1,8 @@
 package com.noodles.leetcode;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -12,33 +14,27 @@ import java.util.Set;
  */
 public class LongestRepeatingSubstring {
     public static void main(String[] args) {
-
+        String s = "abcabcdmmmmmvumowbb";
+        int m = lengthOfLongestSubString(s);
+        System.out.println(m);
     }
 
-    public static int longestRepeatingSubstring(String s) {
-        int l = 0;
-        int r = s.length() - 1;
-        while (l < r) {
-            int mid = l + (r - l + 1)/2;
-            if (f(s, mid)) {
-                l = mid;
-            } else {
-                r = mid - 1;
-            }
+    public static int lengthOfLongestSubString(String s) {
+        if (s.length() == 0) {
+            return 0;
         }
-        return l;
-    }
 
-    public static boolean f(String s, int length) {
-        Set<String> seen = new HashSet<>();
-        for (int i = 0; i <= s.length() - length; i++) {
-            int j = i + length - 1;
-            String sub = s.substring(i, j + 1);
-            if (seen.contains(sub)) {
-                return true;
+        Map<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        for (int i = 0, j = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                j = Math.max(j, map.get(s.charAt(i)) +  1);
             }
-            seen.add(sub);
+            map.put(s.charAt(i), i);
+            System.out.println("i: " + i + "\tj: " + j);
+            max = Math.max(max, i - j + 1);
         }
-        return false;
+
+        return max;
     }
 }

@@ -40,4 +40,16 @@ public class ReverseLinkedList {
         head.next = newHead;
         return reverseListRec(next, head);
     }
+
+    public static SinglyListNode reverseList2(SinglyListNode head) {
+        SinglyListNode newHead = null;
+        while (head != null) {
+            SinglyListNode temp = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = temp;
+        }
+        return newHead;
+    }
+
 }

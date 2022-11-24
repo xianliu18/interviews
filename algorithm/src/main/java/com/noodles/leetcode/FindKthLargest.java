@@ -1,5 +1,7 @@
 package com.noodles.leetcode;
 
+import com.alibaba.fastjson.JSON;
+
 /**
  * @ClassName FindKthLargest
  * @Description Kth Largest Element in an Array
@@ -32,9 +34,11 @@ public class FindKthLargest {
         // put nums that are <= pivot to the left
         // put nums that are > pivot to the right
         for (int j = low; j < high; j++) {
+            System.out.println("j: " + j + " pivot: " + pivot);
             if (nums[j] <= nums[high]) {
                 swap(nums, pivot++, j);
             }
+            System.out.println(JSON.toJSONString(nums));
         }
         swap(nums, pivot, high);
 
