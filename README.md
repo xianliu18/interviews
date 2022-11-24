@@ -370,6 +370,7 @@
 - [官方文档 InnoDB Locking: 各种类型的锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html)
 - [通过各种简单案例，让你彻底搞懂 MySQL 中的锁](https://tonydong.blog.csdn.net/article/details/103324323)
 - [MySQL 加锁规则](https://funnylog.gitee.io/mysql45/21讲为什么我只改一行的语句，锁这么多.html)
+- [MySQL 中的事务和锁](https://juejin.cn/post/6855129007336521741)
 - [InnoDB 到底怎么加锁的](https://juejin.cn/post/7028435335382040589)
 - [MySQL Innodb 引擎什么时候表锁，什么时候行锁？](https://blog.csdn.net/Frankltf/article/details/82976493)
   - [Innodb 解决幻读方案 -- LBCC & MVCC](https://zhuanlan.zhihu.com/p/364331468)
@@ -460,24 +461,74 @@
 #### 7.1 Dubbo
 - [RPC 调用和 HTTP 调用的区别](https://mp.weixin.qq.com/s/mqKulTHTYNx_ks8-LVvJ5A)
   - [既然有 HTTP 请求，为什么还要用 RPC 调用](https://www.zhihu.com/question/41609070)
-- [Dubbo 介绍](https://www.bilibili.com/video/BV1VE411q7dX)
 - [Dubbo 超时重试和异常处理](https://www.cnblogs.com/xuwc/p/8974709.html)
 - [Dubbo 和 SpringCloud 比较](https://zhuanlan.zhihu.com/p/135412402)
-- [SpringCloud Alibaba](https://www.bilibili.com/video/BV18E411x7eT)
 
 #### 7.2 RabbitMQ
 - [为什么使用消息队列](https://zhuanlan.zhihu.com/p/372485966)
-  - [RabbitMQ 介绍（一）](https://www.bilibili.com/video/BV15k4y1k7Ep)
-  - [RabbitMQ 介绍（二）](https://www.bilibili.com/video/BV1dX4y1V73G)
-- [消息的可靠投递和成功消费](https://www.sunyuchao.com/article/78)
-  - [rabbitMQ 如何保证消息不丢失](https://zhuanlan.zhihu.com/p/372552207)
-  - [消息队列的可靠性传输](https://blog.csdn.net/fan521dan/article/details/104832271)
-- [死信队列](https://zhuanlan.zhihu.com/p/171550167)
-- [MQ 常见问题](https://mp.weixin.qq.com/s/3zQJqA-vVABXkhEVMykAcg)
+- [Kafka 实践指南](https://juejin.cn/post/6999504790715629576)
+- [Kafka 为什么快](https://riemann.blog.csdn.net/article/details/119515188)
+- [Kafka 常见问题](https://zhuanlan.zhihu.com/p/344277683)
+- [MQ 常见问题](https://mp.weixin.qq.com/s/j5Jedf7OSPkyNs11610v8Q)
+- [Kafka 踩过的坑](https://mp.weixin.qq.com/s/YPkE3Tsu3RVbhfVZCBt1pQ)
+- [Kafka 消息丢失](https://juejin.cn/post/7135101805179961352)
+- [kafka 如何保证不重复消费又不丢失数据](https://www.zhihu.com/question/483747691/answer/2392949203)
+
+### 7.3 秒杀系统设计
+- [秒杀商品](https://mp.weixin.qq.com/s/l05_28xe6O4vZUQEmnu2Ug)
+- [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
+- [设计一个电商平台积分兑换系统](https://zhuanlan.zhihu.com/p/92848230)
 
 <br/>
 
 ----------- 第七章 完 ----------
+
+<br/>
+
+### 8. 设计模式
+- [单例模式](https://www.infoq.cn/article/double-checked-locking-with-delay-initialization)
+- [策略模式](https://my.oschina.net/u/4662964/blog/4723828)
+    - [策略模式 2](https://bugstack.cn/md/develop/design-pattern/2020-07-05-重学%20Java%20设计模式《实战策略模式》.html)
+- [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
+  - [责任链模式（一）](https://zhuanlan.zhihu.com/p/109228171)
+  - [责任链模式（二）](https://zhuanlan.zhihu.com/p/24737592)
+- [责任链模式与策略模式区分](https://zhuanlan.zhihu.com/p/113398276)
+- [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
+- [状态模式](https://bugstack.cn/md/develop/design-pattern/2020-07-02-重学%20Java%20设计模式《实战状态模式》.html)
+- [适配器模式](https://zhuanlan.zhihu.com/p/44064957)
+
+#### 8.1 设计模式的其他参考资料
+- [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
+- [设计模式之美](https://time.geekbang.org/column/intro/100039001)
+    - 单例模式，工厂模式，代理模式，装饰器模式，适配器模式，观察者模式，模板模式，策略模式，职责链模式，状态模式
+
+<br/>
+
+----------- 第九章 完 ----------
+
+### 9. 算法
+
+#### 9.1 算法可视化平台
+- [Algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
+- [Visualgo](https://visualgo.net/en)
+- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
+#### 9.2 大厂常考题目
+- [codetop](https://codetop.cc/#/home)
+
+#### 9.3 自己面试中碰到的题目
+- [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+- [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+- [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+  - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
+- 多线程交替打印：
+  - [三个线程，一个线程负责打印1，4，7，……；第二个负责打印2，5，8，……，第三个负责打印3，6，9](https://zhuanlan.zhihu.com/p/110001146)
+  - [A B C A B C A B C 打印](https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847)
+  - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
+  - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
+
+<!--
+
 
 <br/>
 
@@ -494,8 +545,12 @@
 <br/>
 
 ----------- 第八章 完 ----------
-<!--
+
 <br/>
+
+- [SpringCloud Alibaba](https://www.bilibili.com/video/BV18E411x7eT)
+
+- [Dubbo 介绍](https://www.bilibili.com/video/BV1VE411q7dX)
 
 ### 9. Netty
 - Netty 是一个异步的，基于事件驱动的网络应用框架。
@@ -515,52 +570,6 @@
 <br/>
 
 ----------- 第九章 完 ----------
--->
-
-<br/>
-
-### 9. 设计模式
-- 单例模式
-  - [双重检查锁定与延迟初始化](https://www.infoq.cn/article/double-checked-locking-with-delay-initialization)
-- [卫语句](https://www.jianshu.com/p/e1dc84e96c43)
-- [策略模式](https://my.oschina.net/u/4662964/blog/4723828)
-- [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
-  - [责任链模式（一）](https://zhuanlan.zhihu.com/p/109228171)
-  - [责任链模式（二）](https://zhuanlan.zhihu.com/p/24737592)
-- [责任链模式与策略模式区分](https://zhuanlan.zhihu.com/p/113398276)
-- [代理模式](https://mp.weixin.qq.com/s/NNdzwK7fbPLtEQGH5q876A)
-- [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
-- [适配器模式](https://zhuanlan.zhihu.com/p/44064957)
-
-#### 9.1 设计模式的其他参考资料
-- [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
-
-<br/>
-
------------ 第九章 完 ----------
-
-### 10. 算法
-
-#### 10.1 算法可视化平台
-- [Algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)
-- [Visualgo](https://visualgo.net/en)
-- [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-
-#### 10.2 大厂常考题目
-- [codetop](https://codetop.cc/#/home)
-
-#### 10.3 自己面试中碰到的题目
-- [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
-- [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-  - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
-- 多线程交替打印：
-  - [三个线程，一个线程负责打印1，4，7，……；第二个负责打印2，5，8，……，第三个负责打印3，6，9](https://zhuanlan.zhihu.com/p/110001146)
-  - [A B C A B C A B C 打印](https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847)
-  - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
-  - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
-
-<!--
 
 
 quartz 源码解析: 
