@@ -456,7 +456,7 @@
 
 ### 7. 分布式相关
 1. [Dubbo](#7.1)
-2. [RabbitMQ](#7.2)
+2. [Kafka](#7.2)
 
 #### 7.1 Dubbo
 - [RPC 调用和 HTTP 调用的区别](https://mp.weixin.qq.com/s/mqKulTHTYNx_ks8-LVvJ5A)
@@ -464,7 +464,7 @@
 - [Dubbo 超时重试和异常处理](https://www.cnblogs.com/xuwc/p/8974709.html)
 - [Dubbo 和 SpringCloud 比较](https://zhuanlan.zhihu.com/p/135412402)
 
-#### 7.2 RabbitMQ
+#### 7.2 Kafka
 - [为什么使用消息队列](https://zhuanlan.zhihu.com/p/372485966)
 - [Kafka 实践指南](https://juejin.cn/post/6999504790715629576)
 - [Kafka 为什么快](https://riemann.blog.csdn.net/article/details/119515188)
