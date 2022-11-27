@@ -18,23 +18,6 @@
 
 由于本人的写作水平和能力有限，文中难免存在不妥之处，欢迎大家通过邮箱与我联系，邮箱地址：isliuxian@163.com
 
-- [Java 基础面试题总结](https://mp.weixin.qq.com/s/pTQ2hGYZwTDZocvwSCQHRg)
-- [各公司面经参考](https://www.nowcoder.com/discuss/432605)
-
-
-优秀博客推荐：
-- [小傅哥的 butstack 虫洞栈](https://bugstack.cn/)
-- [WangMeng](https://www.cnblogs.com/wang-meng/)
-- [noteless](https://www.cnblogs.com/noteless/p/9400742.html)
-- [编了个程](https://yasinshaw.com/)
-- [田小波](http://www.tianxiaobo.com/)
-- [Javadoop](https://javadoop.com/)
-- [小林coding](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
-- [码哥字节](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3NDkwMjAyOQ==&action=getalbum&album_id=1708320618028318723&scene=173&from_msgid=2247485665&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
-- [路人甲Java](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MTkxMDQ4MQ==&action=getalbum&album_id=1322186253722501121&scene=173&from_msgid=2648933422&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
-- [美团技术团队](https://tech.meituan.com/tags/java.html)
-- [AbeJeffrey](https://my.oschina.net/7001)
-
 <br/>
 
 ----------- 概述 完 ----------
@@ -55,6 +38,7 @@
   - `long`: -2^63 ~ 2^63 - 1
   - `float`
   - `double`
+  - `boolean`
   - `char`
 
 #### 0.2 <span id="0.2">三大特性：封装，继承，多态</span>
@@ -504,7 +488,7 @@
 
 <br/>
 
------------ 第九章 完 ----------
+----------- 第八章 完 ----------
 
 ### 9. 算法
 
@@ -526,6 +510,22 @@
   - [A B C A B C A B C 打印](https://stackoverflow.com/questions/43176198/multithreading-in-java-to-print-abc-using-3-threads/51240847)
   - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
   - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
+
+----------- 鸣谢 ----------
+
+- [Java 基础面试题总结](https://mp.weixin.qq.com/s/pTQ2hGYZwTDZocvwSCQHRg)
+- [各公司面经参考](https://www.nowcoder.com/discuss/432605)
+- [小傅哥的 butstack 虫洞栈](https://bugstack.cn/)
+- [WangMeng](https://www.cnblogs.com/wang-meng/)
+- [noteless](https://www.cnblogs.com/noteless/p/9400742.html)
+- [编了个程](https://yasinshaw.com/)
+- [田小波](http://www.tianxiaobo.com/)
+- [Javadoop](https://javadoop.com/)
+- [小林coding](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
+- [码哥字节](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3NDkwMjAyOQ==&action=getalbum&album_id=1708320618028318723&scene=173&from_msgid=2247485665&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+- [路人甲Java](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA5MTkxMDQ4MQ==&action=getalbum&album_id=1322186253722501121&scene=173&from_msgid=2648933422&from_itemidx=1&count=3&nolastread=1#wechat_redirect)
+- [美团技术团队](https://tech.meituan.com/tags/java.html)
+- [AbeJeffrey](https://my.oschina.net/7001)
 
 <!--
 
