@@ -50,7 +50,8 @@
 - [深入理解 Java 的接口和抽象类](https://www.cnblogs.com/dolphin0520/p/3811437.html)
 
 #### 0.4 <span id="0.4">Java 异常分类</span>
-- [Java 异常分类](https://blog.csdn.net/woshixuye/article/details/8230407)
+- [Java 异常分类](https://www.cnblogs.com/niceyoo/p/10585459.html)
+- [常见异常类](https://blog.csdn.net/qq_36756682/article/details/102955916)
 
 <br/>
 
@@ -92,6 +93,9 @@
 #### 1.5 <span id="1.5">JVM 故障处理</span>
 - [JVM 故障处理工具使用总结](https://bugstack.cn/interview/2021/01/13/面经手册-第26篇-JVM故障处理工具-使用总结.html)
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
+- [JVM 调优](https://www.zhihu.com/question/427461208/answer/2560449750)
+- [一次 JVM 内存泄漏问题](https://blog.csdn.net/wenyiCodeDog/article/details/119722179)
+- [CPU 突然飙升且 GC 频繁就](https://mp.weixin.qq.com/s/g8KJhOtiBHWb6wNFrCcLVg)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
 - [线上 OOM 问题排查](https://blog.csdn.net/qq_16681169/article/details/53296137)
     - `top` 命令, 查看机器CPU以及内存是否正常
@@ -125,6 +129,7 @@
 
 #### 2.3 <span id="2.3">HashMap</span>
 - [HashMap 扰动函数，负载因子，链表扩容](https://bugstack.cn/interview/2020/08/07/面经手册-第3篇-HashMap核心知识-扰动函数-负载因子-扩容链表拆分-深度学习.html)
+    - `resize()中 (e.hash & oldCap) == 0`：是 oldCap，不是 （oldCap - 1）
 - [HashMap 数据插入，查找，删除，遍历](https://bugstack.cn/interview/2020/08/13/面经手册-第4篇-HashMap数据插入-查找-删除-遍历-源码分析.html)
 - [HashMap 1.7 与 1.8 区别](https://blog.csdn.net/carson_ho/article/details/79373026)
   - [HashMap 不安全](https://coolshell.cn/articles/9606.html)
@@ -162,14 +167,18 @@
 - [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
 - [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
 - [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
+- [Java 锁与监视器](https://www.cnblogs.com/noteless/p/10394054.html)
+- [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
 
 #### 3.4 <span id="3.4">ThreadLocal 介绍</span>
 - [ThreadLocal 源码分析](https://bugstack.cn/interview/2020/09/23/面经手册-第12篇-面试官-ThreadLocal-你要这么问-我就挂了.html)
 - [图文深度解析 ThreadLocal](https://juejin.cn/post/6844904151567040519)
 - [ThreadLocal 为什么会内存泄漏](https://blog.csdn.net/thewindkee/article/details/89390145)
 - [ThreadLocal 在 Quartz 和 MyBatis 中的应用](https://blog.csdn.net/yasinshaw/article/details/106774620)
+- [深入理解 ThreadLocal](https://www.cnblogs.com/noteless/p/10373044.html)
+    - [父子线程共享变量：InheritableThreadLocal](https://www.cnblogs.com/noteless/p/10448283.html)
+    - [线程池共享变量：TransmittableThreadLocal 原理分析](https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA)
 <!--
-- [TransmittableThreadLocal 原理分析](https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA)
 - [Netty FastThreadLocal 原理分析](https://blog.csdn.net/mycs2012/article/details/90898128)
 -->
 
