@@ -27,22 +27,22 @@ public class ThreadLocalTest01 {
     public static void main(String[] args) throws InterruptedException {
         final ThreadLocalTest01 test = new ThreadLocalTest01();
 
-//        test.set();
+        test.set();
         System.out.println("====== main ======");
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
+        System.out.println(test.getLong() + "\t" + Thread.currentThread().getName());
+        System.out.println(test.getString() + "\t" + Thread.currentThread().getName());
 
         Thread thread1 = new Thread(() -> {
             test.set();
             System.out.println("====== thread1 ======");
-            System.out.println(test.getLong());
-            System.out.println(test.getString());
+            System.out.println(test.getLong() + "\t" + Thread.currentThread().getName());
+            System.out.println(test.getString() + "\t" + Thread.currentThread().getName());
         });
         thread1.start();
         thread1.join();
 
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
+        System.out.println("End: " + test.getLong() + "\t" + Thread.currentThread().getName());
+        System.out.println("End: " + test.getString() + "\t" + Thread.currentThread().getName());
     }
 
 }

@@ -26,6 +26,7 @@ public class ThreadLocalDemo1 {
     private static SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     private static ThreadLocal<SimpleDateFormat> threadLocal = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+    private static ThreadLocal<String> tLocal2 = new ThreadLocal<>();
 
     @Test
     public void testNotSafe() {

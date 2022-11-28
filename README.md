@@ -142,10 +142,10 @@
 <br/>
 
 ### 3. 并发编程
-1. [并发编程基础](#3.1)
-2. [Thread 介绍](#3.2)
-3. [多线程协作 wait，notify，notifyAll](#3.3)
-4. [ThreadLocal 介绍](#3.4)
+1. [Thread 介绍](#3.1)
+2. [ThreadLocal 介绍](#3.2)
+3. [并发编程基础](#3.3)
+4. [多线程协作 wait，notify，notifyAll](#3.4)
 5. [volatile 关键字](#3.5)
 6. [synchronized 关键字](#3.6)
 7. [ReentrantLock](#3.7)
@@ -154,26 +154,18 @@
 10. [Semaphore，CountDownLatch，CyclicBarrier](#3.10)
 11. [线程池](#3.11)
 
-#### 3.1 <span id="3.1">并发编程基础</span>
-- [Java 内存模型JMM，原子性，可见性，有序性简介](https://www.cnblogs.com/noteless/p/10401193.html)
-
-#### 3.2 <span id="3.2">Thread 介绍</span>
+#### 3.1 <span id="3.1">Thread 介绍</span>
 - [Java 中创建线程的方式](https://www.cnblogs.com/noteless/p/10354753.html)
 - [Thread.start() 方法调用过程分析](https://bugstack.cn/interview/2020/11/25/面经手册-第19篇-Thread.start()-它是怎么让线程启动的呢.html)
 - [Thread 的状态分析](https://www.cnblogs.com/noteless/p/10372674.html)
 - [通过代码分析 Thread 的状态](https://bugstack.cn/interview/2020/12/02/面经手册-第20篇-Thread-线程-状态转换-方法使用-原理分析.html)
 
-#### 3.3 <span id="3.3">多线程协作 wait，notify，nofityAll</span>
-- [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
-- [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
-- [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
-- [Java 锁与监视器](https://www.cnblogs.com/noteless/p/10394054.html)
-- [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
-
-#### 3.4 <span id="3.4">ThreadLocal 介绍</span>
+#### 3.2 <span id="3.2">ThreadLocal 介绍</span>
 - [ThreadLocal 源码分析](https://bugstack.cn/interview/2020/09/23/面经手册-第12篇-面试官-ThreadLocal-你要这么问-我就挂了.html)
+    - `ThreadLocalDemo6.java`
 - [图文深度解析 ThreadLocal](https://juejin.cn/post/6844904151567040519)
 - [ThreadLocal 为什么会内存泄漏](https://blog.csdn.net/thewindkee/article/details/89390145)
+    - 由于ThreadLocalMap的生命周期跟Thread一样长，当一个ThreadLocal所有强引用都移除且绑定了对应信息的线程还存在时，GC被触发的时候对应Entry里的key被回收后值置为null，value还存在。
 - [ThreadLocal 在 Quartz 和 MyBatis 中的应用](https://blog.csdn.net/yasinshaw/article/details/106774620)
 - [深入理解 ThreadLocal](https://www.cnblogs.com/noteless/p/10373044.html)
     - [父子线程共享变量：InheritableThreadLocal](https://www.cnblogs.com/noteless/p/10448283.html)
@@ -181,6 +173,15 @@
 <!--
 - [Netty FastThreadLocal 原理分析](https://blog.csdn.net/mycs2012/article/details/90898128)
 -->
+
+#### 3.3 <span id="3.3">并发编程基础</span>
+- [Java 内存模型JMM，原子性，可见性，有序性简介](https://www.cnblogs.com/noteless/p/10401193.html)
+
+#### 3.4 <span id="3.4">多线程协作 wait，notify，nofityAll</span>
+- [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
+- [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
+- [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
+- [Java 锁与监视器](https://www.cnblogs.com/noteless/p/10394054.html)
 
 #### 3.5 <span id="3.5">volatile 关键字</span>
 - [volatile 实现内存可见性原理](https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html)
@@ -239,6 +240,7 @@
   - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)
 
 #### 3.11 <span id="3.11">线程池</span>
+- [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
 - [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
 - [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
 
