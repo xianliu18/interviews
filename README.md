@@ -290,30 +290,29 @@
     - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
     - 容器的创建过程
 -->
-- [Spring IOC 源码深度解析](https://juejin.cn/post/6844904014337802248)
-  - [Spring IOC 核心流程介绍](https://zhuanlan.zhihu.com/p/104519509)
-    - [BeanFactoryPostProcessor 和 BeanPostProcessor 区别](https://blog.csdn.net/caihaijiang/article/details/35552859)
-    - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
-  - [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
-  - [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
-  - [Spring 装配Bean过程以及Bean实例化过程](https://blog.csdn.net/mawming/article/details/52287786)
+- [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
+  - [BeanFactoryPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10297202.html)
+  - [BeanPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10249232.html)
+  - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
+- [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
   - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
-- [Spring 解决循环依赖](https://mp.weixin.qq.com/s/VpCt49_Li35caK5IaQTuNg)
-  - [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
+- [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
   - [Spring 是如何解决循环依赖的](https://www.cnblogs.com/jimoer/p/13562707.html)
+  - `AbstractAutowireCapableBeanFactory` 中 `doCreateBean` 方法中的 `addSingletonFactory`, `getEarlyBeanReference()` 
 
 #### 4.4 <span id = "4.4">Spring AOP</span>
-- [Spring AOP 源码分析](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-源码分析系列文章导读/)
-  - AOP 系列文章导读：`AbstractAutoProxyCreator#postProcessAfterInitialization()`
-  - 筛选合适的通知器
-  - 创建代理对象
-  - 拦截器链的执行过程
 - [Spring AOP 源码深度解析](https://juejin.cn/post/6844904015843557389)
 
 #### 4.5 <span id = "4.5">Spring MVC</span>
 - [Spring MVC 源码深度解析](https://juejin.cn/post/6844904017772937229)
 - [拦截器和过滤器的区别](https://www.zhihu.com/question/30212464/answer/1786967139)
 <!--
+- [Spring AOP 源码分析](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-源码分析系列文章导读/)
+  - AOP 系列文章导读：`AbstractAutoProxyCreator#postProcessAfterInitialization()`
+  - 筛选合适的通知器
+  - 创建代理对象
+  - 拦截器链的执行过程
+
 #### 4.6 <span id = "4.6">MyBatis</span>
 - [没有实现类，MyBatis 为什么可以进行数据的增删改查](https://bugstack.cn/itstack-demo-any/2019/12/25/源码分析-Mybatis接口没有实现类为什么可以执行增删改查.html)
 - [MyBatis 源码分析](http://www.tianxiaobo.com/2018/07/16/MyBatis-源码分析系列文章导读/)
