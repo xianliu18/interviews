@@ -120,6 +120,7 @@
 
 #### 2.1 <span id="2.1">String 相关</span>
 - [String，StringBuilder，StringBuffer 分析](https://bugstack.cn/interview/2020/09/17/面经手册-第11篇-StringBuilder-比-String-快-空嘴白牙的-证据呢.html)
+    - [String 不可改变原因分析](https://www.cnblogs.com/cswiki/p/14628286.html)
 
 #### 2.2 <span id="2.2">ArrayList 和 LinkedList</span>
 - [ArrayList 源码分析](https://bugstack.cn/interview/2020/08/27/面经手册-第7篇-ArrayList也这么多知识-一个指定位置插入就把谢飞机面晕了.html)
@@ -343,7 +344,11 @@
 #### 5.1 <span id = "5.1">MySQL 介绍</span>
 - [MySQL 十连问](https://mp.weixin.qq.com/s/O_NHjv_YVUi4lSqXnhx5Mg)
 - [MySQL 45 讲](https://time.geekbang.org/column/article/67888)
-
+    - 快照读原理：事务到底是隔离的还是不隔离的
+    - 当前读原理：幻读是什么，幻读有什么问题
+    - 加锁原则：为什么我只改一行的语句，锁这么多
+    - 普通索引和唯一索引，应该怎样选择（change buffer 和 redo log）
+    
 <!--
 - [Mysql 专栏](https://juejin.cn/column/6969728433911758862)
 - [MySQL 45 讲](https://funnylog.gitee.io/mysql45/)
@@ -415,6 +420,7 @@
 #### 6.4 <span id = "6.4">Redis 分布式锁</span>
 - [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
   - [Redis 分布式锁方案演进](https://mp.weixin.qq.com/s/l9lcFqfXVI30qJi1r2A5-A)
+  - [分布式锁实现业务幂等](https://www.cnblogs.com/whgk/p/14389642.html)
 
 #### 6.5 <span id = "6.5">Redis 缓存常见问题</span>
 - [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
@@ -492,10 +498,13 @@
 - [适配器模式](https://zhuanlan.zhihu.com/p/44064957)
 
 #### 8.1 设计模式的其他参考资料
-- [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
 - [设计模式之美](https://time.geekbang.org/column/intro/100039001)
     - 单例模式，工厂模式，代理模式，装饰器模式，适配器模式，观察者模式，模板模式，策略模式，职责链模式，状态模式
+<!--
+- [设计模式也可以这么简单](https://javadoop.com/post/design-pattern)
+设计模式之美：https://github.com/jianglinyang8/beauty-of-design-pattern
 
+-->
 <br/>
 
 ----------- 第八章 完 ----------
