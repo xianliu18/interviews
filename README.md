@@ -235,7 +235,7 @@
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
 - [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
 - [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/md/java/interview/2020-11-18-面经手册%20·%20第18篇《AQS%20共享锁，Semaphore、CountDownLatch，听说数据库连接池可以用到！》.html)
-- [CountdownLatch和CyclicBarrier的区别使用场景与具体实现](https://zhuanlan.zhihu.com/p/139020914#:~:text=1%2CCountdownLatch适用于所有线程通过某一点后通知方法%2C而CyclicBarrier则适合让所有线程在同一点同时执行,2%2CCountdownLatch利用继承AQS的共享锁来进行线程的通知%2C利用CAS来进行--%2C而CyclicBarrier则利用ReentrantLock的Condition来阻塞和通知线程)
+- [CountdownLatch和CyclicBarrier的区别使用场景与具体实现](https://zhuanlan.zhihu.com/p/139020914)
 - [CountDownLatch 与 CyclicBarrier 原理分析](http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/)
 - Semaphore 应用场景：限流
   - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)
@@ -368,8 +368,7 @@
 #### 5.4 <span id = "5.4">事务</span>
 - [官方文档 InnoDB Locking: 各种类型的锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html)
 - [通过各种简单案例，让你彻底搞懂 MySQL 中的锁](https://tonydong.blog.csdn.net/article/details/103324323)
-- [MySQL 加锁规则](https://funnylog.gitee.io/mysql45/21讲为什么我只改一行的语句，锁这么多.html)
-- [MySQL 中的事务和锁](https://juejin.cn/post/6855129007336521741)
+- [MySQL 中的事务和锁：ReadView 图例](https://juejin.cn/post/6855129007336521741)
 - [InnoDB 到底怎么加锁的](https://juejin.cn/post/7028435335382040589)
 - [MySQL Innodb 引擎什么时候表锁，什么时候行锁？](https://blog.csdn.net/Frankltf/article/details/82976493)
   - [Innodb 解决幻读方案 -- LBCC & MVCC](https://zhuanlan.zhihu.com/p/364331468)
@@ -401,11 +400,11 @@
 - [Redis 思维导图](https://www.processon.com/view/link/6084234d7d9c08118405ab50#map)
 
 #### 6.2 <span id = "6.2">Redis 数据结构</span>
-- [Redis 底层数据结构](https://mp.weixin.qq.com/s/U87wrGsx0Eop3CbF9mlTwQ)
+- [Redis 底层数据结构](https://mp.weixin.qq.com/s/z4VjDaDDbspFz1rIBwazIA)
 - [Redis 为什么用跳表](https://mp.weixin.qq.com/s/rXIVIW7RM56xwMaQtKnmqA)
 - [Redis 3 种特殊类型详解](https://java.isture.com/db/redis/db-redis-data-type-special.html)
 - [Redis 应用场景](https://java.isture.com/db/redis/db-redis-introduce.html#_3-redis的使用场景)
-- [如何使用 Redis 实现页面 UV 统计](https://juejin.cn/post/6885125984547241991)
+- [如何使用 Redis 实现页面 UV 统计](https://juejin.cn/post/6844903785744056333)
 
 #### 6.3 <span id = "6.3">Redis 集群</span>
 - 集群的种类：
@@ -415,23 +414,23 @@
 - [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/j81A849iCe7B4FgT-TVeOA)
 - [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
   - [Cluster 集群能支撑的数据有多大](https://mp.weixin.qq.com/s/qOF9hT_gDvkMH6HbaIvBwg)
-  - [搭建集群需要的服务器个数](https://blog.csdn.net/m0_37688634/article/details/79799892)
+  - [搭建集群需要的服务器个数: 三主三从](https://blog.csdn.net/m0_37688634/article/details/79799892)
 
 #### 6.4 <span id = "6.4">Redis 分布式锁</span>
 - [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
   - [Redis 分布式锁方案演进](https://mp.weixin.qq.com/s/l9lcFqfXVI30qJi1r2A5-A)
-  - [分布式锁实现业务幂等](https://www.cnblogs.com/whgk/p/14389642.html)
 
 #### 6.5 <span id = "6.5">Redis 缓存常见问题</span>
 - [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
   - [布隆过滤器](https://www.cnblogs.com/lonely-wolf/p/14451302.html)
 - [内存耗尽后，Redis会发生什么（LRU，LFU算法）](https://www.cnblogs.com/lonely-wolf/p/14403264.html)
-- [如何保持 mysql 和 redis 中数据的一致性](https://www.zhihu.com/question/319817091)
 - [数据库缓存一致性](https://mp.weixin.qq.com/s/U87wrGsx0Eop3CbF9mlTwQ)
+- [如何保持 mysql 和 redis 中数据的一致性](https://www.zhihu.com/question/319817091)
 
 #### 6.6 <span id = "6.6">分布式ID生成策略</span>
 - [分布式全局唯一ID生成策略](https://yasinshaw.com/articles/67)
 - [九种分布式ID生成方式](https://zhuanlan.zhihu.com/p/152179727)
+- [雪花算法](https://developer.aliyun.com/article/772913)
 
 <!--
 #### 6.2 <span id = "6.2">单机缓存</span>
@@ -473,11 +472,13 @@
 - [Kafka 踩过的坑](https://mp.weixin.qq.com/s/YPkE3Tsu3RVbhfVZCBt1pQ)
 - [Kafka 消息丢失](https://juejin.cn/post/7135101805179961352)
 - [kafka 如何保证不重复消费又不丢失数据](https://www.zhihu.com/question/483747691/answer/2392949203)
+- [接口幂等性](https://mp.weixin.qq.com/s/7P2KbWjjX5YPZCInoox-xQ)
 
 ### 7.3 秒杀系统设计
 - [秒杀商品](https://mp.weixin.qq.com/s/l05_28xe6O4vZUQEmnu2Ug)
-- [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
 - [设计一个电商平台积分兑换系统](https://zhuanlan.zhihu.com/p/92848230)
+- [redis 延时队列（订单超时未支付）](https://developer.aliyun.com/article/784457)
+- [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
 
 <br/>
 
@@ -530,6 +531,9 @@
   - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
   - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
 
+
+<br/>
+<br/>
 ----------- 鸣谢 ----------
 
 - [Java 基础面试题总结](https://mp.weixin.qq.com/s/pTQ2hGYZwTDZocvwSCQHRg)
