@@ -522,7 +522,7 @@
 
 #### 9.3 自己面试中碰到的题目
 - [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+- [912. 快速排序(QuickSort)](https://leetcode.com/problems/sort-an-array/)
 - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
   - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
 - 多线程交替打印：
