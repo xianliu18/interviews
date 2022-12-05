@@ -146,9 +146,9 @@
 1. [Thread 介绍](#3.1)
 2. [ThreadLocal 介绍](#3.2)
 3. [并发编程基础](#3.3)
-4. [多线程协作 wait，notify，notifyAll](#3.4)
-5. [volatile 关键字](#3.5)
-6. [synchronized 关键字](#3.6)
+4. [volatile 关键字](#3.4)
+5. [synchronized 关键字](#3.5)
+6. [多线程协作 wait，notify，notifyAll](#3.6)
 7. [ReentrantLock](#3.7)
 8. [CAS](#3.8)
 9. [AQS 讲解(AbstractQueuedSynchronizer)](#3.9)
@@ -178,21 +178,21 @@
 #### 3.3 <span id="3.3">并发编程基础</span>
 - [Java 内存模型JMM，原子性，可见性，有序性简介](https://www.cnblogs.com/noteless/p/10401193.html)
 
-#### 3.4 <span id="3.4">多线程协作 wait，notify，nofityAll</span>
-- [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
-- [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
-- [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
-- [Java 锁与监视器](https://www.cnblogs.com/noteless/p/10394054.html)
-
-#### 3.5 <span id="3.5">volatile 关键字</span>
+#### 3.4 <span id="3.4">volatile 关键字</span>
 - [volatile 实现内存可见性原理](https://bugstack.cn/interview/2020/10/21/面经手册-第14篇-volatile-怎么实现的内存可见-没有-volatile-一定不可见吗.html)
 - [图解 volatile 内存屏障](http://concurrent.redspider.group/article/02/8.html)
 - [final 关键字与安全发布](https://www.cnblogs.com/noteless/p/10416678.html)
 
-#### 3.6 <span id="3.6">synchronized 关键字</span>
+#### 3.5 <span id="3.5">synchronized 关键字</span>
 - 基于 JVM 层面的悲观锁
 - [synchronized 锁升级过程分析](https://bugstack.cn/interview/2020/10/28/面经手册-第15篇-码农会锁-synchronized-解毒-剖析源码深度分析.html)
 - [通过反编译 synchronized 代码，查看其原理](https://www.cnblogs.com/paddix/p/5367116.html)
+
+#### 3.6 <span id="3.6">多线程协作 wait，notify，nofityAll</span>
+- [多线程协作 wait，nofity，notifyAll 方法简介](https://www.cnblogs.com/noteless/p/10468834.html)
+- [三种让线程等待和唤醒的方法](https://mp.weixin.qq.com/s/I81Ldqr9COA6MyOlRsJARg)
+- [sleep，yield 以及 join 方法](https://www.cnblogs.com/noteless/p/10443446.html)
+- [Java 锁与监视器](https://www.cnblogs.com/noteless/p/10394054.html)
 
 #### 3.7 <span id="3.7">ReentrantLock</span>
 - JDK 层面的悲观锁
