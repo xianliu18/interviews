@@ -244,6 +244,8 @@
 - [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
 - [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
 - [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
+    - [Worker 为什么要继承 AQS](https://blog.csdn.net/Prior_SX/article/details/124726716)
+    - [继承 AQS(二)](https://www.zhihu.com/question/54680390)
 
 <br/>
 
