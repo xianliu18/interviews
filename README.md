@@ -364,6 +364,9 @@
 - [MySQL 索引原理详解](https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag)
 - [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
   - 最佳左前缀原则失效的情况分析
+- [Mysql 中 explain 关键字](https://blog.csdn.net/u011391839/article/details/108233098)
+    - [Using where; using index 和 using index condition](https://www.zhihu.com/question/444890024)
+    - [explain 解读](https://blog.csdn.net/weixin_39805087/article/details/110648927)
 
 #### 5.4 <span id = "5.4">事务</span>
 - [官方文档 InnoDB Locking: 各种类型的锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html)
@@ -468,6 +471,8 @@
 - [Kafka 实践指南](https://juejin.cn/post/6999504790715629576)
 - [Kafka 为什么快](https://riemann.blog.csdn.net/article/details/119515188)
 - [Kafka 常见问题](https://zhuanlan.zhihu.com/p/344277683)
+    - [Kafka 如何保证高可用](https://zhuanlan.zhihu.com/p/363082581)
+    - [Kafka 可用性二](https://zhuanlan.zhihu.com/p/521775752)
 - [MQ 常见问题](https://mp.weixin.qq.com/s/j5Jedf7OSPkyNs11610v8Q)
 - [Kafka 踩过的坑](https://mp.weixin.qq.com/s/YPkE3Tsu3RVbhfVZCBt1pQ)
 - [Kafka 消息丢失](https://juejin.cn/post/7135101805179961352)
@@ -493,6 +498,7 @@
 - [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
   - [责任链模式（一）](https://zhuanlan.zhihu.com/p/109228171)
   - [责任链模式（二）](https://zhuanlan.zhihu.com/p/24737592)
+  - [责任链模式(三)](https://mp.weixin.qq.com/s/eIxFizo6dokG5kcTslZhmQ)
 - [责任链模式与策略模式区分](https://zhuanlan.zhihu.com/p/113398276)
 - [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
 - [状态模式](https://bugstack.cn/md/develop/design-pattern/2020-07-02-重学%20Java%20设计模式《实战状态模式》.html)
