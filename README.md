@@ -230,6 +230,15 @@
 - [图解 ThreadPoolExecutor 线程池原理](https://www.cnblogs.com/wang-meng/p/12945703.html)
 - [什么是双端队列-延迟队列-阻塞队列](https://bugstack.cn/interview/2020/09/03/面经手册-第9篇-队列是什么-什么是双端队列-延迟对列-阻塞队列-全是知识盲区.html)
 - [Java 线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)
+- [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
+- [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
+    - [Worker 为什么要继承 AQS](https://blog.csdn.net/Prior_SX/article/details/124726716)
+    - [继承 AQS(二)](https://www.zhihu.com/question/54680390)
+- 线程池工作中的配置：
+    - spring 的 ThreadPoolTaskExecutor
+    - `corePoolSize`, `maxPoolSize`, `keepAliveSeconds`, `queueCapacity(队列长度）`, `异常处理 Handler`
+    - `CallerRunsPolicy`：主线程直接执行该任务，执行任务完成之后，尝试添加下一个任务到线程池中，可以有效降低向线程池内添加任务的速度。
+    - [CallerRunsPolicy 问题](https://blog.csdn.net/lavorange/article/details/118076656)
 -->
 
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
@@ -242,10 +251,7 @@
 
 #### 3.11 <span id="3.11">线程池</span>
 - [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
-- [创建线程池的四种方式](https://bugstack.cn/interview/2020/12/16/面经手册-第22篇-线程池的介绍和使用-以及基于jvmti设计非入侵监控.html)
-- [ThreadPoolExecutor 线程池实现原理](https://bugstack.cn/interview/2020/12/09/面经手册-第21篇-手写线程池-对照学习ThreadPoolExecutor线程池实现原理.html)
-    - [Worker 为什么要继承 AQS](https://blog.csdn.net/Prior_SX/article/details/124726716)
-    - [继承 AQS(二)](https://www.zhihu.com/question/54680390)
+- [ThreadPoolExecutor深度解读](https://github.com/xianliu18/ARTS/blob/master/jvm/threadpool/02ThreadPoolExecutor深度解读.md)
 
 <br/>
 
@@ -500,7 +506,6 @@
 - [管道模式(责任链模式)](https://my.oschina.net/u/4662964/blog/4759287)
   - [责任链模式（一）](https://zhuanlan.zhihu.com/p/109228171)
   - [责任链模式（二）](https://zhuanlan.zhihu.com/p/24737592)
-  - [责任链模式(三)](https://mp.weixin.qq.com/s/eIxFizo6dokG5kcTslZhmQ)
 - [责任链模式与策略模式区分](https://zhuanlan.zhihu.com/p/113398276)
 - [模板模式](https://mp.weixin.qq.com/s/QBmDiyfST13nQJUcPLLXOg)
 - [状态模式](https://bugstack.cn/md/develop/design-pattern/2020-07-02-重学%20Java%20设计模式《实战状态模式》.html)

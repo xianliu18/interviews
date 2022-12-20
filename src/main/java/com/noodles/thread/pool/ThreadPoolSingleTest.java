@@ -17,14 +17,12 @@ public class ThreadPoolSingleTest {
         for (int i = 1; i < 5; i++) {
             int groupId = i;
             executorService.execute(() -> {
-                for (int j = 1; j < 5; j++) {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    log.info("线程名称：{} -----> 第 {} 组任务, 第 {} 次执行完成", Thread.currentThread().getName(), groupId, j);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                log.info("线程名称：{} -----> 第 {} 组任务, 第 {} 次执行完成", Thread.currentThread().getName(), groupId);
             });
         }
         executorService.shutdown();
