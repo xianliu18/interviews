@@ -375,6 +375,9 @@
 - [Mysql 中 explain 关键字](https://blog.csdn.net/u011391839/article/details/108233098)
     - [Using where; using index 和 using index condition](https://www.zhihu.com/question/444890024)
     - [explain 解读](https://blog.csdn.net/weixin_39805087/article/details/110648927)
+- 1000万条数据分页查询，查询 10,000,000 至 10,000,100 条数据，采用**子查询方式**
+    - `select * from user_operation_log where id >= (select id from user_operation_log limit 10000000, 1) limit 10`;
+    - [一千万数据，怎么快速查询](https://cloud.tencent.com/developer/article/1943956)
 
 #### 5.4 <span id = "5.4">事务</span>
 - [官方文档 InnoDB Locking: 各种类型的锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-locking.html)
@@ -430,6 +433,10 @@
 #### 6.4 <span id = "6.4">Redis 分布式锁</span>
 - [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
   - [Redis 分布式锁方案演进](https://mp.weixin.qq.com/s/l9lcFqfXVI30qJi1r2A5-A)
+  - `setnx` 占锁成功，业务代码出现异常或者服务器宕机，没有执行删除锁的逻辑，会造成死锁；
+  - `set <key> <value> PX <多少毫秒> NX`: 获取锁时，也需要设置锁的过期时间，这是一个原子操作；
+  - 释放锁需要使用 lua 脚本，保证获取锁，比较锁的值，并删除锁的原子性。
+  - 阻塞获取锁，即获取不到锁的时候，等待一段时间：`tryLock(long timeout, TimeUnit unit)`。
 
 #### 6.5 <span id = "6.5">Redis 缓存常见问题</span>
 - [缓存雪崩，击穿，穿透](https://mp.weixin.qq.com/s/_StOUX9Nu-Bo8UpX7ThZmg)
