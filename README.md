@@ -95,7 +95,7 @@
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
 - [JVM 调优](https://www.zhihu.com/question/427461208/answer/2560449750)
 - [一次 JVM 内存泄漏问题](https://blog.csdn.net/wenyiCodeDog/article/details/119722179)
-- [CPU 突然飙升且 GC 频繁就](https://mp.weixin.qq.com/s/g8KJhOtiBHWb6wNFrCcLVg)
+- [系统运行缓慢，CPU 100%，以及 Full GC 次数过多问题的排查思路](https://my.oschina.net/zhangxufeng/blog/3017521)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
 - [线上 OOM 问题排查](https://blog.csdn.net/qq_16681169/article/details/53296137)
     - `top` 命令, 查看机器CPU以及内存是否正常
@@ -198,14 +198,14 @@
 - JDK 层面的悲观锁
 - [Lock 接口与 synchronized 关键字对比](https://www.cnblogs.com/noteless/p/10481286.html)
 - [Lock 类放在 try 块之内和之外有什么区别？](https://www.zhihu.com/question/54613772)
-- [ReentrantLock 可重入锁使用](https://zhuanlan.zhihu.com/p/88884729)
-- [ReentrantLock 公平锁讲解](https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html)
-- [Java 自旋锁的几种实现](https://www.cnblogs.com/scholar-hwg/p/12172154.html)
 - [四种自旋锁原理分析(SpinLock，TicketSpinLock，CLH，MCS)](https://stefan.blog.csdn.net/article/details/108750554)
 
 #### 3.8 <span id="3.8">CAS</span>
 - [CAS 与原子操作](http://concurrent.redspider.group/article/02/10.html)
 <!--
+- [Java 自旋锁的几种实现](https://www.cnblogs.com/scholar-hwg/p/12172154.html)
+- [ReentrantLock 可重入锁使用](https://zhuanlan.zhihu.com/p/88884729)
+- [ReentrantLock 公平锁讲解](https://bugstack.cn/interview/2020/11/04/面经手册-第16篇-码农会锁-ReentrantLock之公平锁讲解和实现.html)
 - [Java 魔法类： Usafe 应用解析](https://tech.meituan.com/2019/02/14/talk-about-java-magic-class-unsafe.html)
 - [比 AtomicLong 更优秀的 LongAddr 原理分析](https://www.cnblogs.com/wang-meng/p/12892695.html)
 -->
@@ -216,11 +216,11 @@
 - `private volatile int state`
 - `volatile int waitStatus`: SIGNAL, CANCELLED, CONDITION, PROPAGATE, 0
 - `volatile Thread thread`
-- [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
 - [图解 AQS 原理](https://www.cnblogs.com/wang-meng/p/12816829.html)
 - [从 ReentrantLock 的实现看 AQS 原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
 
 <!--
+- [AQS 原理分析和实践使用](https://bugstack.cn/interview/2020/11/11/面经手册-第17篇-码农会锁-ReentrantLock之AQS原理分析和实践使用.html)
 - [Condition 实现原理](https://cloud.tencent.com/developer/article/1638926)
 - [Condition 实现原理](http://www.tianxiaobo.com/2018/05/04/AbstractQueuedSynchronizer-原理分析-Condition-实现原理/)
 - [AQS 独占-共享模式](http://www.tianxiaobo.com/2018/05/01/AbstractQueuedSynchronizer-原理分析-独占-共享模式/)
@@ -239,11 +239,11 @@
     - `corePoolSize`, `maxPoolSize`, `keepAliveSeconds`, `queueCapacity(队列长度）`, `异常处理 Handler`
     - `CallerRunsPolicy`：主线程直接执行该任务，执行任务完成之后，尝试添加下一个任务到线程池中，可以有效降低向线程池内添加任务的速度。
     - [CallerRunsPolicy 问题](https://blog.csdn.net/lavorange/article/details/118076656)
+- [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/md/java/interview/2020-11-18-面经手册%20·%20第18篇《AQS%20共享锁，Semaphore、CountDownLatch，听说数据库连接池可以用到！》.html)
 -->
 
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
 - [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
-- [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/md/java/interview/2020-11-18-面经手册%20·%20第18篇《AQS%20共享锁，Semaphore、CountDownLatch，听说数据库连接池可以用到！》.html)
 - [CountdownLatch和CyclicBarrier的区别使用场景与具体实现](https://zhuanlan.zhihu.com/p/139020914)
 - [CountDownLatch 与 CyclicBarrier 原理分析](http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/)
 - Semaphore 应用场景：限流
