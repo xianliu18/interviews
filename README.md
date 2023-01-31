@@ -282,8 +282,18 @@
 
 #### 4.3 <span id = "4.3">Spring IOC</span>
 - [@Autowired 和 @Resource 的区别是什么](https://blog.csdn.net/qq_45590494/article/details/114444371)
-- [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
+- [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
+  - [BeanFactoryPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10297202.html)
+  - [BeanPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10249232.html)
+  - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
+- [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
+  - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
+- [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
+  - [Spring 是如何解决循环依赖的](https://www.cnblogs.com/jimoer/p/13562707.html)
+  - `AbstractAutowireCapableBeanFactory` 中 `doCreateBean` 方法中的 `addSingletonFactory`, `getEarlyBeanReference()`
+
 <!--
+- [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
 - [SpringBoot SPI 扩展机制（二）](https://www.jianshu.com/p/6756d61b892f)
 - [SpringBoot 的 SPI 机制（一）](https://blog.csdn.net/pycharm_u/article/details/108196307)
 - [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
@@ -300,15 +310,6 @@
     - 一个请求的旅行过程：`DispatcherServlet#doDispatch(request, response)`
     - 容器的创建过程
 -->
-- [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
-  - [BeanFactoryPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10297202.html)
-  - [BeanPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10249232.html)
-  - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
-- [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
-  - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
-- [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
-  - [Spring 是如何解决循环依赖的](https://www.cnblogs.com/jimoer/p/13562707.html)
-  - `AbstractAutowireCapableBeanFactory` 中 `doCreateBean` 方法中的 `addSingletonFactory`, `getEarlyBeanReference()` 
 
 #### 4.4 <span id = "4.4">Spring AOP</span>
 - [Spring AOP 源码深度解析](https://juejin.cn/post/6844904015843557389)
@@ -373,6 +374,7 @@
 - [MySQL 索引原理详解](https://mp.weixin.qq.com/s/wiqfcVrsLgLvLbsTU-qSag)
 - [如何正确的使用索引？](https://mp.weixin.qq.com/s/Ruz3kFg00R9f935x_yuskQ)
   - 最佳左前缀原则失效的情况分析
+  - [or 索引失效](https://blog.csdn.net/chenpengjia006/article/details/101228943)
 - [Mysql 中 explain 关键字](https://blog.csdn.net/u011391839/article/details/108233098)
     - [Using where; using index 和 using index condition](https://www.zhihu.com/question/444890024)
     - [explain 解读](https://blog.csdn.net/weixin_39805087/article/details/110648927)
@@ -389,6 +391,7 @@
   - [Innodb 解决幻读方案 -- LBCC & MVCC](https://zhuanlan.zhihu.com/p/364331468)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
 - [MySQL 中的二阶段提交](https://blog.csdn.net/weixin_39663729/article/details/110869452)
+  - [两阶段提交](https://juejin.cn/post/7080366887695024141)
 - [for update 没有命中索引会锁表么？](https://blog.csdn.net/hardplay123/article/details/88774240)
 
 #### 5.5 <span id = "5.5">MVCC</span>
