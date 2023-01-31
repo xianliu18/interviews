@@ -251,6 +251,7 @@
 
 #### 3.11 <span id="3.11">线程池</span>
 - [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
+- [线程池创建方式](https://github.com/xianliu18/ARTS/blob/master/jvm/threadpool/01线程池之Executors创建线程池.md)
 - [ThreadPoolExecutor深度解读](https://github.com/xianliu18/ARTS/blob/master/jvm/threadpool/02ThreadPoolExecutor深度解读.md)
 
 <br/>
@@ -276,8 +277,6 @@
 - [SpringBoot 自动装配原理](https://zhuanlan.zhihu.com/p/345895748)
   - [SpringBoot 自动配置原理（一）](https://zhuanlan.zhihu.com/p/55637237)
   - [SpringBoot 自动配置原理（二）](https://www.cnblogs.com/jimoer/p/14131406.html)
-- [SpringBoot 的 SPI 机制（一）](https://blog.csdn.net/pycharm_u/article/details/108196307)
-- [SpringBoot SPI 扩展机制（二）](https://www.jianshu.com/p/6756d61b892f)
   - [Java SPI机制](https://www.jianshu.com/p/e6f1f89a9e22)
   - [Dubbo，JDK 和 Spring SPI 机制比较](https://juejin.cn/post/6950266942875779108)
 
@@ -285,6 +284,8 @@
 - [@Autowired 和 @Resource 的区别是什么](https://blog.csdn.net/qq_45590494/article/details/114444371)
 - [Spring 初始化 XML 并注册 Bean 流程分析](https://bugstack.cn/itstack-demo-any/2020/01/08/源码分析-像盗墓一样分析Spring是怎么初始化xml并注册bean的.html)
 <!--
+- [SpringBoot SPI 扩展机制（二）](https://www.jianshu.com/p/6756d61b892f)
+- [SpringBoot 的 SPI 机制（一）](https://blog.csdn.net/pycharm_u/article/details/108196307)
 - [手写 mybatis-spring 核心功能](https://bugstack.cn/itstack-demo-any/2020/01/20/源码分析-手写mybait-spring核心功能(干货好文一次学会工厂bean-类代理-bean注册的使用).html)
 
 - [Spring IOC 容器源码分析](http://www.tianxiaobo.com/2018/05/30/Spring-IOC-容器源码分析系列文章导读/)
