@@ -423,6 +423,7 @@
 - [Redis 3 种特殊类型详解](https://java.isture.com/db/redis/db-redis-data-type-special.html)
 - [Redis 应用场景](https://java.isture.com/db/redis/db-redis-introduce.html#_3-redis的使用场景)
 - [如何使用 Redis 实现页面 UV 统计](https://juejin.cn/post/6844903785744056333)
+  - [HyperLogLog](https://blog.yanxiaolong.cn/article/34)
 
 #### 6.3 <span id = "6.3">Redis 集群</span>
 - 集群的种类：
@@ -572,6 +573,8 @@
   - 公司哪些方面能够让您稳定的在此工作呢？
   - 公司的发展方向是什么？主营业务有哪些？
 - HR 面试
+  - 需要提前了解公司的业务情况，使用一下公司 app 或小程序；
+  - 需要计算自己的薪资，尽量悲观考虑，即虽然公司提供 14 薪，但是自己需要按 12 薪的最差情况去考虑，多争取一下自己的利益；
   - 您如何评价这家公司，对于这家公司的感觉？
   - 这个岗位的晋升路径是什么样子的？
 
