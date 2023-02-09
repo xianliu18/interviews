@@ -499,12 +499,6 @@
 - [kafka 如何保证不重复消费又不丢失数据](https://www.zhihu.com/question/483747691/answer/2392949203)
 - [接口幂等性](https://mp.weixin.qq.com/s/7P2KbWjjX5YPZCInoox-xQ)
 
-### 7.3 秒杀系统设计
-- [秒杀商品](https://mp.weixin.qq.com/s/l05_28xe6O4vZUQEmnu2Ug)
-- [设计一个电商平台积分兑换系统](https://zhuanlan.zhihu.com/p/92848230)
-- [redis 延时队列（订单超时未支付）](https://developer.aliyun.com/article/784457)
-- [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
-
 <br/>
 
 ----------- 第七章 完 ----------
@@ -556,25 +550,40 @@
   - [AAA BBB CCC打印](https://github.com/Noodlescn/netty/blob/master/src/main/java/com/noodles/thread/printnum/DemoTask4.java)
   - [手动实现一个 LRU Cache](https://www.cnblogs.com/crossoverJie/p/9352353.html)
 
-#### 9.4 面试软实力
+----------- 第九章 完 ----------
+
+### 10. 系统设计
+- [github 系统设计](https://github.com/donnemartin/system-design-primer)
+
+### 10.1 秒杀系统设计
+- [秒杀商品](https://mp.weixin.qq.com/s/l05_28xe6O4vZUQEmnu2Ug)
+  - [秒杀架构设计](https://www.cnblogs.com/xuwc/p/13858045.html)
+- [设计一个电商平台积分兑换系统](https://zhuanlan.zhihu.com/p/92848230)
+- [redis 延时队列（订单超时未支付）](https://developer.aliyun.com/article/784457)
+- [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
+
+----------- 第十章 完 ----------
+
+### 11. 面试软实力
 - 招聘简介真面目
   - 简介中的薪资介绍
   - 简介中的加分项要求
 - “你有什么问题要问我？”它的潜台词是，“你还想了解一些什么？帮助你更好地留在这里？”换句话说，“你有多想留在这里？”
-- 一面反问面试官：
+- **一面**反问面试官：
   - 工作中使用到的技术框架有哪些？
   - 这个岗位是新开设的还是原岗位上的人离职了？
   - 技术团队的架构和人员组成，自己加入团队后，会负责哪方面的工作？
   - 团队氛围是怎么样的？需求的开发流程是怎么样的？
-- 二面反问面试官：
+- **二面**反问面试官：
   - 晋升路径是怎么样的？在什么条件下，可以获得晋升机会？
   - 您对开发人员的职业规划有什么建议，以及从哪方面得到更好的发展？
   - 公司的团队结构是怎么样的？自己加入团队后，会负责哪方面的工作？
   - 公司哪些方面能够让您稳定的在此工作呢？
   - 公司的发展方向是什么？主营业务有哪些？
-- HR 面试
+- **HR** 面试
   - 需要提前了解公司的业务情况，使用一下公司 app 或小程序；
-  - 需要计算自己的薪资，尽量悲观考虑，即虽然公司提供 14 薪，但是自己需要按 12 薪的最差情况去考虑，多争取一下自己的利益；
+  - 如何计算自己的薪资，职位介绍中虽然是 0~N，求职者应该悲观去考虑为 0 的情况，N 大多数情况是公司的"大饼"；
+    - 即虽然公司提供 14 薪，但是自己需要按 12 薪的最差情况去考虑，多争取一下自己的利益；
   - 您如何评价这家公司，对于这家公司的感觉？
   - 这个岗位的晋升路径是什么样子的？
 
