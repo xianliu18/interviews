@@ -50,7 +50,10 @@
 - [深入理解 Java 的接口和抽象类](https://www.cnblogs.com/dolphin0520/p/3811437.html)
 
 #### 0.4 <span id="0.4">Java 异常分类</span>
-- [Java 异常分类](https://www.cnblogs.com/niceyoo/p/10585459.html)
+- [RuntimeException 和 CheckedException](https://www.cnblogs.com/gaochsh/p/4260694.html)
+  - `checked exception` 是从`java.lang.Exception`类衍生出来的;
+  - `runtime exception` 则是从`java.lang.RuntimeException`或`java.lang.Error`类衍生出来的。
+- [Java 异常分类](https://blog.csdn.net/single_0910/article/details/114258581)
 - [常见异常类](https://blog.csdn.net/qq_36756682/article/details/102955916)
 
 <br/>
@@ -95,8 +98,9 @@
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
 - [JVM 调优](https://www.zhihu.com/question/427461208/answer/2560449750)
 - [一次 JVM 内存泄漏问题](https://blog.csdn.net/wenyiCodeDog/article/details/119722179)
-- [系统运行缓慢，CPU 100%，以及 Full GC 次数过多问题的排查思路](https://my.oschina.net/zhangxufeng/blog/3017521)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
+- [系统运行缓慢，CPU 100%，以及 Full GC 次数过多问题的排查思路](https://my.oschina.net/zhangxufeng/blog/3017521)
+  - `-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${目录}`
 - [线上 OOM 问题排查](https://blog.csdn.net/qq_16681169/article/details/53296137)
     - `top` 命令, 查看机器CPU以及内存是否正常
     - `jstat -gcutil pid 1000 100` 监控JVM内存运行状况和gc频率
@@ -542,6 +546,8 @@
 #### 9.3 自己面试中碰到的题目
 - [232. Implements Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [912. 快速排序(QuickSort)](https://leetcode.com/problems/sort-an-array/)
+  - [快排时间复杂度](https://www.cnblogs.com/HDK2016/p/6876313.html#a31)
+  - [二分查找时间复杂度](https://www.cnblogs.com/yueansixing/articles/9232772.html)
 - [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
   - [在 100G 文件中找出出现次数最多的 100 个IP](https://blog.csdn.net/fycy2010/article/details/46945641)
 - 多线程交替打印：
