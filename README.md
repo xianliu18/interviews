@@ -97,10 +97,13 @@
 - [JVM 故障处理工具使用总结](https://bugstack.cn/interview/2021/01/13/面经手册-第26篇-JVM故障处理工具-使用总结.html)
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
 - [JVM 调优](https://www.zhihu.com/question/427461208/answer/2560449750)
+  - [JVM 调优总结](https://zhuanlan.zhihu.com/p/363961261)
 - [一次 JVM 内存泄漏问题](https://blog.csdn.net/wenyiCodeDog/article/details/119722179)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
 - [系统运行缓慢，CPU 100%，以及 Full GC 次数过多问题的排查思路](https://my.oschina.net/zhangxufeng/blog/3017521)
+  - [CPU 占用高，排查顺序](https://www.zhihu.com/question/427461208/answer/2432524653)
   - `-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${目录}`
+- [微服务耗时毛刺](https://heapdump.cn/article/663009)
 - [线上 OOM 问题排查](https://blog.csdn.net/qq_16681169/article/details/53296137)
     - `top` 命令, 查看机器CPU以及内存是否正常
     - `jstat -gcutil pid 1000 100` 监控JVM内存运行状况和gc频率
