@@ -174,11 +174,11 @@
 - [图文深度解析 ThreadLocal](https://juejin.cn/post/6844904151567040519)
 - [ThreadLocal 为什么会内存泄漏](https://blog.csdn.net/thewindkee/article/details/89390145)
     - 由于ThreadLocalMap的生命周期跟Thread一样长，当一个ThreadLocal所有强引用都移除且绑定了对应信息的线程还存在时，GC被触发的时候对应Entry里的key被回收后值置为null，value还存在。
+<!--
 - [ThreadLocal 在 Quartz 和 MyBatis 中的应用](https://blog.csdn.net/yasinshaw/article/details/106774620)
 - [深入理解 ThreadLocal](https://www.cnblogs.com/noteless/p/10373044.html)
     - [父子线程共享变量：InheritableThreadLocal](https://www.cnblogs.com/noteless/p/10448283.html)
     - [线程池共享变量：TransmittableThreadLocal 原理分析](https://mp.weixin.qq.com/s/1VVu25bzea1jzAWz7fKEUA)
-<!--
 - [Netty FastThreadLocal 原理分析](https://blog.csdn.net/mycs2012/article/details/90898128)
 -->
 
@@ -247,19 +247,19 @@
     - `CallerRunsPolicy`：主线程直接执行该任务，执行任务完成之后，尝试添加下一个任务到线程池中，可以有效降低向线程池内添加任务的速度。
     - [CallerRunsPolicy 问题](https://blog.csdn.net/lavorange/article/details/118076656)
 - [AQS 共享锁，Semaphore，CountDownLatch](https://bugstack.cn/md/java/interview/2020-11-18-面经手册%20·%20第18篇《AQS%20共享锁，Semaphore、CountDownLatch，听说数据库连接池可以用到！》.html)
+- Semaphore 应用场景：限流
+  - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)
 -->
 
 #### 3.10 <span id="3.10">Semaphore，CountDownLatch，CyclicBarrier</span>
 - [不可不说的 Java “锁”事](https://tech.meituan.com/2018/11/15/java-lock.html)
 - [CountdownLatch和CyclicBarrier的区别使用场景与具体实现](https://zhuanlan.zhihu.com/p/139020914)
 - [CountDownLatch 与 CyclicBarrier 原理分析](http://www.tianxiaobo.com/2018/05/10/Java-线程同步组件-CountDownLatch-与-CyclicBarrier-原理分析/)
-- Semaphore 应用场景：限流
-  - [高并发中常见的限流方式（一）](https://mp.weixin.qq.com/s/37WkBzmGb4Fevbk4HQEISw)
 
 #### 3.11 <span id="3.11">线程池</span>
-- [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
 - [线程池创建方式](https://github.com/xianliu18/ARTS/blob/master/jvm/threadpool/01线程池之Executors创建线程池.md)
 - [ThreadPoolExecutor深度解读](https://github.com/xianliu18/ARTS/blob/master/jvm/threadpool/02ThreadPoolExecutor深度解读.md)
+- [intertupt interrupted isInterrupted 方法对比](https://www.cnblogs.com/noteless/p/10372826.html)
 
 <br/>
 
@@ -573,7 +573,8 @@
 
 ----------- 第十章 完 ----------
 
-### 11. 面试软实力
+### 11. 面试软实力(详见注释)
+<!--
 - 招聘简介真面目
   - 简介中的薪资介绍
   - 简介中的加分项要求
@@ -595,6 +596,7 @@
     - 即虽然公司提供 14 薪，但是自己需要按 12 薪的最差情况去考虑，多争取一下自己的利益；
   - 您如何评价这家公司，对于这家公司的感觉？
   - 这个岗位的晋升路径是什么样子的？
+-->
 
 <br/>
 <br/>
