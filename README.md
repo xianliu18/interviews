@@ -400,10 +400,13 @@
 - [MySQL 中的二阶段提交](https://blog.csdn.net/weixin_39663729/article/details/110869452)
   - [两阶段提交](https://juejin.cn/post/7080366887695024141)
 - [for update 没有命中索引会锁表么？](https://blog.csdn.net/hardplay123/article/details/88774240)
+- [for update 锁机制分析](https://juejin.cn/post/7002103448427003940)
 
 #### 5.5 <span id = "5.5">MVCC</span>
 - [图解 MVCC 多版本并发控制](https://www.jianshu.com/p/b7f5f18cac94)
 - [MySQL 各种锁机制的学习](https://www.jianshu.com/p/615f3c7fbe6f)
+- [Spring 事务与数据库事务](https://blog.csdn.net/weixin_41605937/article/details/115368612)
+  - Spring 事务是对数据库事务的封装；
 
 <br/>
 
@@ -566,10 +569,12 @@
 
 ### 10.1 秒杀系统设计
 - [秒杀商品](https://mp.weixin.qq.com/s/l05_28xe6O4vZUQEmnu2Ug)
+  - [QPS,TPS,RT](https://mp.weixin.qq.com/s/LFBK_3Mfo644mzXZXxsSTw) 
   - [秒杀架构设计](https://www.cnblogs.com/xuwc/p/13858045.html)
 - [设计一个电商平台积分兑换系统](https://zhuanlan.zhihu.com/p/92848230)
 - [redis 延时队列（订单超时未支付）](https://developer.aliyun.com/article/784457)
 - [Kafka 延迟队列](https://zhuanlan.zhihu.com/p/365802989)
+- [规则引擎 Drools](https://mp.weixin.qq.com/s/32O2KwQxlQodac0IpYClLQ)
 
 ----------- 第十章 完 ----------
 
