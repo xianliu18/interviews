@@ -76,7 +76,7 @@
 
 #### 1.2 <span id="1.2">JVM 类加载机制</span>
 - [new 一个对象，背后发生了什么](https://zhuanlan.zhihu.com/p/257863129)
-- [JVM 加载机制：双亲委派模型](https://segmentfault.com/a/1190000021448897)
+- [JVM 双亲委派模型总结](https://github.com/xianliu18/ARTS/blob/master/jvm/classLoader/类加载机制深度解读.md)
 - [被破坏的双亲委派模型之服务商供应接口Java SPI](https://www.jianshu.com/p/e6f1f89a9e22)
 
 #### 1.3 <span id="1.3">JVM 内存模型</span>
@@ -98,6 +98,7 @@
 - [Minor GC，Full GC，Major GC介绍](https://www.cnblogs.com/cnndevelop/p/12142638.html)
 - [JVM 调优](https://www.zhihu.com/question/427461208/answer/2560449750)
   - [JVM 调优总结](https://zhuanlan.zhihu.com/p/363961261)
+  - [CMSInitiatingOccupancyFraction 解析](https://blog.csdn.net/insomsia/article/details/91802923)
 - [一次 JVM 内存泄漏问题](https://blog.csdn.net/wenyiCodeDog/article/details/119722179)
 - [频繁 Full GC 问题原因分析](https://blog.csdn.net/weixin_42228338/article/details/98685104)
 - [系统运行缓慢，CPU 100%，以及 Full GC 次数过多问题的排查思路](https://my.oschina.net/zhangxufeng/blog/3017521)
@@ -288,6 +289,7 @@
   - [Dubbo，JDK 和 Spring SPI 机制比较](https://juejin.cn/post/6950266942875779108)
 
 #### 4.3 <span id = "4.3">Spring IOC</span>
+- [Spring 重点内容总结](https://github.com/xianliu18/ARTS/blob/master/spring/依赖注入.md)
 - [@Autowired 和 @Resource 的区别是什么](https://blog.csdn.net/qq_45590494/article/details/114444371)
 - [Spring Bean的生命周期](https://blog.csdn.net/weixin_40834464/article/details/82829999)
   - [BeanFactoryPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10297202.html)
@@ -365,6 +367,7 @@
     - 当前读原理：幻读是什么，幻读有什么问题
     - 加锁原则：为什么我只改一行的语句，锁这么多
     - 普通索引和唯一索引，应该怎样选择（change buffer 和 redo log）
+- [SQL 语句是如何执行的](https://github.com/xianliu18/ARTS/blob/master/mysql/sql语句是如何执行的.md)
     
 <!--
 - [Mysql 专栏](https://juejin.cn/column/6969728433911758862)
@@ -434,6 +437,7 @@
 - [Redis 应用场景](https://java.isture.com/db/redis/db-redis-introduce.html#_3-redis的使用场景)
 - [如何使用 Redis 实现页面 UV 统计](https://juejin.cn/post/6844903785744056333)
   - [HyperLogLog](https://blog.yanxiaolong.cn/article/34)
+- [为啥 redis 使用跳表而不使用红黑树](https://www.zhihu.com/question/20202931)
 
 #### 6.3 <span id = "6.3">Redis 集群</span>
 - 集群的种类：
@@ -495,6 +499,7 @@
   - [既然有 HTTP 请求，为什么还要用 RPC 调用](https://www.zhihu.com/question/41609070)
 - [Dubbo 超时重试和异常处理](https://www.cnblogs.com/xuwc/p/8974709.html)
 - [Dubbo 和 SpringCloud 比较](https://zhuanlan.zhihu.com/p/135412402)
+- [Dubbo SPI 机制](https://github.com/xianliu18/ARTS/blob/master/dubbo/dubbo_spi机制.md)
 
 #### 7.2 Kafka
 - [为什么使用消息队列](https://zhuanlan.zhihu.com/p/372485966)
@@ -565,6 +570,8 @@
 ----------- 第九章 完 ----------
 
 ### 10. 系统设计
+- [DDD 内容总结](https://github.com/xianliu18/ARTS/blob/master/ddd/03总结.md)
+  - [设计模式之美之 DDD](https://time.geekbang.org/column/article/169600)
 - [github 系统设计](https://github.com/donnemartin/system-design-primer)
 
 ### 10.1 秒杀系统设计
