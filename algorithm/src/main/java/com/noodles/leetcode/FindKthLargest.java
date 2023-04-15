@@ -1,6 +1,7 @@
 package com.noodles.leetcode;
 
 import com.alibaba.fastjson.JSON;
+import org.junit.Test;
 
 /**
  * @ClassName FindKthLargest
@@ -12,10 +13,15 @@ import com.alibaba.fastjson.JSON;
 public class FindKthLargest {
     public static void main(String[] args) {
 //        int[] nums = {7, 8, 3, 2, 1, 5, 6, 4};
-        int[] nums = {3, 2, 1, 5, 6, 4};
-        int[] nums2 = {3, 2, 3, 1, 2, 4, 5, 5, 6};
-        System.out.println(findKthLargest(nums, 2));
-        System.out.println(findKthLargest(nums2, 4));
+//        int[] nums = {3, 2, 1, 5, 6, 4};
+//        int[] nums2 = {3, 2, 3, 1, 2, 4, 5, 5, 6};
+//        System.out.println(findKthLargest(nums, 2));
+//        System.out.println(findKthLargest(nums2, 4));
+
+        int[] nums3 = {10, 23, -41, 0, 452, 1, -44, 42, 0, 1, 15};
+
+        quickSelect2(nums3);
+        System.out.println(JSON.toJSON(nums3));
     }
 
     /**
@@ -52,6 +58,16 @@ public class FindKthLargest {
             return quickSelect(nums, pivot + 1, high, k);
         }
         return quickSelect(nums, low, pivot - 1, k - count);
+    }
+
+    private static void quickSelect2(int[] nums) {
+        int pivot = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] > 0) {
+                swap(nums, pivot++, j);
+            }
+        }
+        System.out.println(pivot);
     }
 
     private static void swap(int[] nums, int a, int b) {

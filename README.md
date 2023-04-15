@@ -165,6 +165,7 @@
 
 #### 3.1 <span id="3.1">Thread 介绍</span>
 - [Java 中创建线程的方式](https://www.cnblogs.com/noteless/p/10354753.html)
+  - [FutureTask 应用场景](https://blog.csdn.net/qq_44384533/article/details/111920875)
 - [Thread.start() 方法调用过程分析](https://bugstack.cn/interview/2020/11/25/面经手册-第19篇-Thread.start()-它是怎么让线程启动的呢.html)
 - [Thread 的状态分析](https://www.cnblogs.com/noteless/p/10372674.html)
 - [通过代码分析 Thread 的状态](https://bugstack.cn/interview/2020/12/02/面经手册-第20篇-Thread-线程-状态转换-方法使用-原理分析.html)
@@ -295,6 +296,7 @@
   - [BeanFactoryPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10297202.html)
   - [BeanPostProcessor 注册时机](https://www.cnblogs.com/xiaoxing/p/10249232.html)
   - [MapperScannerConfigurer 使用 BeanFactoryPostProcessor](https://www.cnblogs.com/fangjian0423/p/spring-mybatis-MapperScannerConfigurer-analysis.html)
+  - [Spring 和 Mybatis 整合](https://zhuanlan.zhihu.com/p/311373740)
 - [Spring Bean 的生命周期（二）](https://zhuanlan.zhihu.com/p/159554995)
   - [Spring IOC 容器构建流程](https://zhuanlan.zhihu.com/p/311373740)
 - [三级缓存和循环依赖](https://juejin.cn/post/6930904292958142478)
@@ -367,6 +369,7 @@
     - 当前读原理：幻读是什么，幻读有什么问题
     - 加锁原则：为什么我只改一行的语句，锁这么多
     - 普通索引和唯一索引，应该怎样选择（change buffer 和 redo log）
+    - MySQL 是怎么保证主备一致的(binlog 格式)
 - [SQL 语句是如何执行的](https://github.com/xianliu18/ARTS/blob/master/mysql/sql语句是如何执行的.md)
     
 <!--
@@ -400,6 +403,7 @@
 - [MySQL Innodb 引擎什么时候表锁，什么时候行锁？](https://blog.csdn.net/Frankltf/article/details/82976493)
   - [Innodb 解决幻读方案 -- LBCC & MVCC](https://zhuanlan.zhihu.com/p/364331468)
 - [MySQL 中的 Redo log 和 Binlog](https://mp.weixin.qq.com/s/XTpoYW--6PTqotcC8tpF2A)
+  - [binlog 内容格式](https://funnylog.gitee.io/mysql45/24讲MySQL是怎么保证主备一致的.html)
 - [MySQL 中的二阶段提交](https://blog.csdn.net/weixin_39663729/article/details/110869452)
   - [两阶段提交](https://juejin.cn/post/7080366887695024141)
 - [for update 没有命中索引会锁表么？](https://blog.csdn.net/hardplay123/article/details/88774240)
@@ -446,8 +450,10 @@
 - [Redis 日志：RDB 和 AOF](https://mp.weixin.qq.com/s/vpuMsen_s5Ye3Giz-59C3w)
 - [Redis 主从架构数据同步原理](https://mp.weixin.qq.com/s/j81A849iCe7B4FgT-TVeOA)
 - [图解 Redis Cluster 集群原理](https://www.cnblogs.com/detectiveHLH/p/14154665.html)
+  - [Hash 算法比较](https://www.cnblogs.com/mrmirror/p/13665018.html)
   - [Cluster 集群能支撑的数据有多大](https://mp.weixin.qq.com/s/qOF9hT_gDvkMH6HbaIvBwg)
   - [搭建集群需要的服务器个数: 三主三从](https://blog.csdn.net/m0_37688634/article/details/79799892)
+  - [什么是 Redis Cluster](https://it-blog-cn.com/blogs/redis/cluster.html)
 
 #### 6.4 <span id = "6.4">Redis 分布式锁</span>
 - [分布式锁用 Redis 还是 Zookeeper？](https://zhuanlan.zhihu.com/p/73807097)
